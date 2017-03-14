@@ -1,0 +1,22 @@
+
+Satu hari: 4 jam
+ 1. engineering laravel 								6 8 4 4 5 3
+ 2. Bikin home 											0 0 4 4 4 3
+ 3. Bikin button login dan register + bikin link 
+ 	register pada bagian halaman login 					0 0 1 1 1 3
+ 4. Bikin form login 									4 3 4 4 3 3 
+ 5. validasi form login dan register 					0 0 0 2 2 3
+ 6. Bikin register 										3 3 4 3 3 3
+ 7. User yang sama ga boleh daftar 2 kali 				1 1 1 1 1 3
+ 8. setelah login masuk dashboard 						3 3 1 2 1 3
+ 9. Halaman profile 									5 4 4 3 3 3
+10. Bisa edit profile (temasuk foto) 					4 5 4 2 4 3
+11. Sedang online										4 4 1 1 1 3
+------------------------------------------------------------------- +
+												  30 29 28 27 28 27
+Wauda	: 3.333
+Hafizh	: 3.222
+Rio		: 3.111
+Farhan	: 3
+Hishshah: 3.111
+Raihan	: 3
