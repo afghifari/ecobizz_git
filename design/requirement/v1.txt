@@ -1,0 +1,23 @@
++--------+
+| Client |
++--------+
+Mobile friendly
+Gampang daftarnya (user punya kategori)
+Advanced search (search pake filter)
+Input database manual (xlsx)
+Input media
+Jenis expertise user -> menengah kebawah
+
+Backlog
+- ST dapat register dan login
+- ST dapat CRUD forum
+- ST dapat CRUD topik
+- ST dapat mengirim pesan ke sesama ST
+- ST dapat melakukan search (dan advanced search)
+
++--------+
+| Admin  |
++--------+
+Statistik User
+Total user
+User per kategori
