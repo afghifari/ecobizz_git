@@ -1,5 +1,10 @@
 header {
-  background: url('../../design/assets/bg1.png');
+  background: url('../../design/assets/bg1.png') no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 10px;
 }
 
 header .header-content .header-content-inner p1 {
