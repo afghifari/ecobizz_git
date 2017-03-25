@@ -142,7 +142,7 @@ aside {
     color: #F05F40;
   }
 }
-header {
+/*header {
   position: relative;
   width: 100%;
   min-height: auto;
@@ -153,7 +153,7 @@ header {
   background-position: center;
   text-align: center;
   color: white;
-}
+}*/
 header .header-content {
   position: relative;
   text-align: center;
