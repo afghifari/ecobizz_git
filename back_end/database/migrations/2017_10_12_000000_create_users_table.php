@@ -23,6 +23,25 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
             $table->datetime('last_seen')->default(Carbon::now());
+
+            $table->string('address')->default('');
+            $table->string('mobile_number');
+            $table->integer('category_id')->unsigned()->nullable();
+            $table->string('description')->default('');
+            $table->string('owner');
+            $table->string('organization_name');
+            $table->string('website')->default('');
+            $table->string('organization_structure')->default('');
+            $table->string('needs')->default('');
+            $table->integer('role_id')->unsigned()->nullable();
+            $table->string('profile')->default('');
+
+            $table->foreign('role_id')
+                  ->references('id')->on('roles')
+                  ->onDelete('SET NULL');
+            $table->foreign('category_id')
+                  ->references('id')->on('categories')
+                  ->onDelete('SET NULL');
         });
     }
 
