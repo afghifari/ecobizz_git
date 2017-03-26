@@ -31,4 +31,12 @@ class User extends Authenticatable
     public function getOnlineAttribute() {
         return (Carbon::now()->diffInMinutes(new Carbon($this->last_seen))) <= 5;
     }
+
+    public function role() {
+        return $this->belongsTo(Role::class, 'role_id');
+    }
+
+    public function category() {
+        return $this->belongsTo(Category::class, 'category_id');
+    }
 }
