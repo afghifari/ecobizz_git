@@ -34,4 +34,11 @@ Route::get('user/{id}', function($id) {
     return App\User::find($id);
 });
 
+Route::post('/uploadPicExample', function() {
+    $user = App\User::first();
+    $image = request()->file('photo');
+    $user->uploadPhoto($image);
+    return $user;
+});
+
 Route::get('/home', 'HomeController@index');

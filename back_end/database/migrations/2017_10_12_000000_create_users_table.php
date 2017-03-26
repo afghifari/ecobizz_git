@@ -33,7 +33,7 @@ class CreateUsersTable extends Migration
             $table->string('owner');
             $table->string('organization_name');
             $table->string('website')->default('');
-            $table->string('organization_structure')->default('');
+            $table->string('organization_structure')->nullable();
             $table->string('needs')->default('');
             $table->integer('role_id')->unsigned()->nullable();
             $table->string('profile')->default('');

@@ -48,16 +48,30 @@ class User extends Authenticatable
      * @var UploadedFile
      */
     public function uploadPhoto(UploadedFile $photo) {
-        if (Storage::disk('photos')->exists($this->id)) {
+        if (Storage::disk('photos')->exists('profile/' . $this->id)) {
             Storage::disk('photos')->deleteDirectory($this->id);
         }
 
-        Storage::disk('photos')->put($this->id, $photo);
+        Storage::disk('photos')->put('profile/' . $this->id, $photo);
 
         $name = $photo->hashName();
-        $link = Storage::disk('photos')->url($this->id . "/" . $name);
+        $link = Storage::disk('photos')->url('profile/' . $this->id . "/" . $name);
 
         $this->profile_picture = $link;
+        $this->save();
+    }
+
+    public function uploadOrganizationChart(UploadedFile $photo) {
+        if (Storage::disk('photos')->exists('chart/' . $this->id)) {
+            Storage::disk('photos')->deleteDirectory($this->id);
+        }
+
+        Storage::disk('photos')->put('chart/' . $this->id, $photo);
+
+        $name = $photo->hashName();
+        $link = Storage::disk('photos')->url('chart/' . $this->id . "/" . $name);
+
+        $this->organization_structure = $link;
         $this->save();
     }
 }
