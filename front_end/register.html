@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-	<title>Ecobizz - Login Page</title>
+	<title>Ecobizz - Register</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -17,7 +17,7 @@
 
 	<!-- Theme CSS -->
 	<link rel="stylesheet" type="text/css" href="css/creative.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/register.css">
 </head>
 <body>
 
@@ -49,25 +49,56 @@
         <!-- /.container-fluid -->
     </nav>
 
-	<header>
-		<div class="header-content">
-			<div class="header-content-inner">
-				<p1>Get in to Your Account </p1> </br> </br> </br>
-				<form><!-- <form action="/action_page.php"> -->
-				    <input type="text" id="fname" name="firstname" placeholder="E-mail"> </br>
-				    <input type="text" id="paswod" name="password" placeholder="Password"></br></br>
-				    <input type="submit" value="Login">
-			  	</form>
-			  	</br></br></br></br>
-			  	<p1>Don't have account yet?
-			  		<a class="linkregister" href="#">
-			  			Register </br>
-			  		</a>
-			  	</p1>
-
-			</div>
+	<section class="section1">
+		<div id="createAccount">
+			<br><br>
+			Create a New Account <br><br>
 		</div>
-	</header>
+	</section>
+
+	<section class="section2">
+		<div class="mainText">  <bText>1</bText> Personal Information </div>
+	</section>
+
+	<section class="section3">
+		<form id="registerForm">
+		    <input type="text" name="name" placeholder="Nama"> </br>
+		    <h6>Nama lengkap, berupa huruf tanpa simbol dan angka</h6><br>
+		    <input type="text" name="address" placeholder="Alamat"></br>
+		    <h6>Alamat lengkap, tuliskan kecamatan, kelurahan, RT RW jika ada dan kode pos alamat</h6><br>
+		    <input type="text" name="email" placeholder="E-mail"></br>
+		    <h6>Email harus valid, misal wauda@itb.com</h6><br>
+		    <input type="text" name="hp" placeholder="No. Handphone"></br>
+		    <h6>Nomor Handphone. Misal = 085641234567</h6>
+	</section>
+
+	<section class="section2">
+		<div class="mainText">  <bText>2</bText> Business Section</div>
+	</section>
+
+	<section class="section5">
+		    <input type="text" name="kategori" placeholder="Kategori"> </br>
+		    <h6>Nama lengkap, berupa huruf tanpa simbol dan angka</h6><br>
+		    <textarea name="deskripsi" form="registerForm" placeholder="Deskripsi"></textarea>
+		    <h6>Deskripsikan bisnis yang anda jalankan secara singkat, padat, dan jelas</h6><br>
+		    <input type="text" name="pemilik" placeholder="Pemilik"></br>
+		    <h6>Tuliskan nama pemilik bisnis tersebut, jika anda adalah pemiliknya maka tuliskan nama anda sendiri</h6><br>
+		    <input type="text" name="web" placeholder="Website"></br>
+		    <h6>Berikan alamat website dari bisnis Anda jika ada</h6><br>
+		    <input type="text" name="strukturOrg" placeholder="Struktur Organisasi"></br>
+		    <h6>what the hulk is this ?</h6>
+	</section>
+
+	<section class="section2">
+		<div class="mainText"> <bText>3</bText> Confirmation</div>
+	</section>
+
+	<section class="section6">
+		<input type="checkbox" name="info" value="information">  My information is correct </br></br>
+		<input type="checkbox" name="tnc" value="tnc">  I have read the Terms and Condition </br></br>
+		<input class="registerButton" type="submit" value="REGISTER">
+		</form>
+	</section>
 
 	<section class="section4">
 		<img src = "../design/assets/ecobiz_putih.png" height="40" vspace="30px" style="margin-top: 50px">
