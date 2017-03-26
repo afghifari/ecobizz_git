@@ -3,6 +3,8 @@
 namespace App;
 
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Http\UploadedFile;
+use Storage;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Carbon\Carbon;
 
@@ -38,5 +40,24 @@ class User extends Authenticatable
 
     public function category() {
         return $this->belongsTo(Category::class, 'category_id');
+    }
+
+    /**
+     * Move uploaded file from request->file() to storage and store its link in the profile_picture attribue
+     *
+     * @var UploadedFile
+     */
+    public function uploadPhoto(UploadedFile $photo) {
+        if (Storage::disk('photos')->exists($this->id)) {
+            Storage::disk('photos')->deleteDirectory($this->id);
+        }
+
+        Storage::disk('photos')->put($this->id, $photo);
+
+        $name = $photo->hashName();
+        $link = Storage::disk('photos')->url($this->id . "/" . $name);
+
+        $this->profile_picture = $link;
+        $this->save();
     }
 }

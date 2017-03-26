@@ -24,6 +24,8 @@ class CreateUsersTable extends Migration
             $table->timestamps();
             $table->datetime('last_seen')->default(Carbon::now());
 
+            $table->string('profile_picture')->nullable();
+
             $table->string('address')->default('');
             $table->string('mobile_number');
             $table->integer('category_id')->unsigned()->nullable();
