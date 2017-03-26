@@ -3,7 +3,7 @@ body {
 }
 
 header {
-	background: url('../design/assets/bg1.png') no-repeat; 
+	background: url('../assets/bg1.png') no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -50,7 +50,7 @@ button:hover {
 }
 
 .button2 {
-	background-color: #FFFFFF; 
+	background-color: #FFFFFF;
 	color: #00aa44;
 	font-size: 14px;
 	text-decoration: none;
@@ -96,7 +96,7 @@ button:hover {
 }
 
 .section3 {
-	background: url('../design/assets/bg2.png') no-repeat; 
+	background: url('../assets/bg2.png') no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -134,13 +134,13 @@ hr {
 	margin-top: 60px;
 	float:left;
 	width: 200px;
-	color: LimeGreen; 
+	color: LimeGreen;
 	font-size: 35px;
 }
 
 .category {
-	color: black; 
-	font-size:16px; 
+	color: black;
+	font-size:16px;
 	margin-bottom: 40px;
 }
 
@@ -165,7 +165,7 @@ hr {
 	float:left;
 	width: 200px;
 	height: 350px;
-	color: #FFFFFF; 
+	color: #FFFFFF;
 	font-size: 20px;
 	background-color: rgba(0, 0, 0, 0.3);
 	padding-top: 20px;
@@ -183,19 +183,19 @@ hr {
 	margin-top: 60px;
 	float:left;
 	width: 200px;
-	color: #FFFFFF; 
-	font-size: 20px; 
+	color: #FFFFFF;
+	font-size: 20px;
 }
 
 #footer-sect-center {
 	margin-top: 60px;
 	float:left;
 	width: 400px;
-	color: #FFFFFF; 
-	font-size: 20px; 
+	color: #FFFFFF;
+	font-size: 20px;
 }
 
 .footer {
-	font-size: 14px; 
+	font-size: 14px;
 	line-height: 25px;
 }
