@@ -1,5 +1,5 @@
 header {
-  background: url('../../design/assets/bg1.png') no-repeat;
+  background: url('../assets/bg1.png') no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -90,7 +90,7 @@ input[type=submit]:hover {
   width: 25px;
   margin-right: 5px;
   margin-left: 5px;
-  
+
 }
 .container3 {
   width: 800px;
@@ -101,20 +101,20 @@ input[type=submit]:hover {
   margin-top: 60px;
   float:left;
   width: 200px;
-  color: #FFFFFF; 
-  font-size: 20px; 
+  color: #FFFFFF;
+  font-size: 20px;
 }
 
 #footer-sect-center {
   margin-top: 60px;
   float:left;
   width: 400px;
-  color: #FFFFFF; 
-  font-size: 20px; 
+  color: #FFFFFF;
+  font-size: 20px;
 }
 
 .footer {
-  font-size: 14px; 
+  font-size: 14px;
   line-height: 25px;
 }
 
