@@ -1,5 +1,5 @@
 .section1 {
-  background: url('../assets/bg1.png') no-repeat;
+  background: url('../../design/assets/bg1.png') no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: contain;
   -o-background-size: cover;
