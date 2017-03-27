@@ -3,6 +3,8 @@
 namespace App;
 
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Http\UploadedFile;
+use Storage;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Carbon\Carbon;
 
@@ -30,5 +32,46 @@ class User extends Authenticatable
 
     public function getOnlineAttribute() {
         return (Carbon::now()->diffInMinutes(new Carbon($this->last_seen))) <= 5;
+    }
+
+    public function role() {
+        return $this->belongsTo(Role::class, 'role_id');
+    }
+
+    public function category() {
+        return $this->belongsTo(Category::class, 'category_id');
+    }
+
+    /**
+     * Move uploaded file from request->file() to storage and store its link in the profile_picture attribue
+     *
+     * @var UploadedFile
+     */
+    public function uploadPhoto(UploadedFile $photo) {
+        if (Storage::disk('photos')->exists('profile/' . $this->id)) {
+            Storage::disk('photos')->deleteDirectory($this->id);
+        }
+
+        Storage::disk('photos')->put('profile/' . $this->id, $photo);
+
+        $name = $photo->hashName();
+        $link = Storage::disk('photos')->url('profile/' . $this->id . "/" . $name);
+
+        $this->profile_picture = $link;
+        $this->save();
+    }
+
+    public function uploadOrganizationChart(UploadedFile $photo) {
+        if (Storage::disk('photos')->exists('chart/' . $this->id)) {
+            Storage::disk('photos')->deleteDirectory($this->id);
+        }
+
+        Storage::disk('photos')->put('chart/' . $this->id, $photo);
+
+        $name = $photo->hashName();
+        $link = Storage::disk('photos')->url('chart/' . $this->id . "/" . $name);
+
+        $this->organization_structure = $link;
+        $this->save();
     }
 }
