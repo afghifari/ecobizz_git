@@ -1,4 +1,4 @@
-.section1 {
+.reg-section1 {
   background: url('../../design/assets/bg1.png') no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: contain;
@@ -8,7 +8,7 @@
   z-index: -1;
   padding: 10px;
 }
-.section1:after{
+.reg-section1:after{
 	content: "";
   position: absolute;
   top: 0%;
@@ -26,11 +26,11 @@
 	z-index: 1;
 	font-size: 25px;
 }
-.section2 {
+.reg-section2 {
 	background-color:  #d5ffd5;
 	max-height: 120px;
 }
-.mainText {
+.reg-mainText {
 	color: #00aa44;
 	margin-left: 10%;
 	font-size: 35px;
@@ -39,7 +39,7 @@ bText {
 	font-weight: bold;
 	font-size: 50px;
 }
-.section3 {
+.reg-section3 {
 	background-color: #8b9f8b;
 }
 h6 {
@@ -83,7 +83,7 @@ input[type=submit]:hover {
     color: #000000;
     border:2px solid #000000;
 }
-.section5 {
+.reg-section5 {
 	background-color: #6bb36b;
 }
 textarea {
@@ -96,11 +96,11 @@ textarea {
     border-radius: 4px;
     color: black;
 }
-.section6 {
+.reg-section6 {
 	background-color: #56c356;
 	color: white;
 }
-.section6 > input[type=submit] {
+.reg-section6 > input[type=submit] {
 	color: #00aa44;
     font-size: 14px;
     background-color: white;
@@ -140,7 +140,7 @@ button:hover {
   color: #000000;
   border:2px solid #000000;
 }
-.section4 {
+.reg-section4 {
   background-color: #00aa44;
   min-height: 450px;
   text-align: center;

@@ -10,56 +10,111 @@
     <link href="css/magnific-popup.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link rel="stylesheet" type="text/css" href="css/creative.css">
-    <link rel="stylesheet" href="css/Homepage.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/css/creative.css">
+    <link rel="stylesheet" href="/css/Homepage.css" type="text/css">
     <link href="css/bootstrap.css" rel="stylesheet">
 
      <!-- Plugin CSS -->
-    <link href="css/magnific-popup.css" rel="stylesheet">
+    <link href="/css/magnific-popup.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link rel="stylesheet" type="text/css" href="css/creative.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/creative.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <style type="text/css">
+        .navbar{
+            background-color: #00aa44;
+            position: fixed;
+            width: 100%;
+            border: none;
+        }
+        .bg-transparent{
+            background-color: transparent !important;
+        }
+    </style>
 </head>
 <body>
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <img src="/assets/ecobiz_putih.png" width="35%">
-                </a>
-            </div>
+        <nav class="navbar navbar-default navbar-static-top eco-nav">
+            <div class="container">
+                <div class="navbar-header">
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="page-scroll" href="#about">Forum</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#services">Apa itu Ecobiz?</a>
-                    </li>
-                    <li>
-                        @if (Auth::user())
-                            <button class="button1" style="float:right" onclick="location.href='logout'">LOGOUT</button>
+                    <!-- Collapsed Hamburger -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <!-- Branding Image -->
+                    <a class="navbar-brand" href="{{ url('/') }}">
+                        <img src="/img/ecobiz_putih.png" style="height: 100%;">
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="nav navbar-nav">
+                        &nbsp;
+                    </ul>
+
+                    <!-- Right Side Of Navbar -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <!-- Authentication Links -->
+                        @if (Auth::guest())
+                            <li><a href="#">Forum</a></li>
+                            <li><a href="#">Apa itu Ecobiz</a></li>
+                            <style type="text/css">
+                                #bar-login{
+                                    padding: 8px 12px;
+                                    border: solid 1px rgba(255, 255, 255, .5);
+                                    margin-top: 5px;
+                                    border-radius: 4px;
+                                }
+                            </style>
+                            <li><a href="{{ route('login') }}" id="bar-login">Login</a></li>
                         @else
-                            <button class="button1" style="float:right" onclick="location.href='login'">LOGIN</button>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    {{ Auth::user()->name }} &nbsp;
+                                    <img src="/img/pp.png" style="height: 32px; width: 32px; border-radius: 50%;">
+                                </a>
+
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="{{ '/user/' . Auth::user()->id }}">Profile</a>
+                                        <a href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
                         @endif
-                    </li>
-                </ul>
+                    </ul>
+                </div>
             </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-
-
-    @if (Auth::user())
-        Logged In as {{ Auth::user()->name }}
-    @else
-        Not Logged in
-    @endif
+        </nav>
+        <script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+        <script type="text/javascript">
+            if(!window.posx)
+                $('.eco-nav').addClass('bg-transparent');
+            $(window).scroll(function (event) {
+                var scroll = $(window).scrollTop();
+                console.log(scroll);
+                if(!window.posx)
+                    if(scroll == 0){
+                        $('.eco-nav').addClass('bg-transparent');
+                    }else{
+                        $('.eco-nav').removeClass('bg-transparent');
+                    }
+                // Do something
+            });
+        </script>
 
     @yield('content')
 
@@ -106,6 +161,8 @@
         Copyright © 2017 Ecobiz KUKM Jabar
         </div>
     </section>
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
 

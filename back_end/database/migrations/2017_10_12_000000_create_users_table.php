@@ -27,7 +27,7 @@ class CreateUsersTable extends Migration
             $table->string('profile_picture')->nullable();
 
             $table->string('address')->default('');
-            $table->string('mobile_number');
+            $table->string('mobile_number')->default('aaa');
             $table->integer('category_id')->unsigned()->nullable();
             $table->string('description')->default('');
             $table->string('owner');

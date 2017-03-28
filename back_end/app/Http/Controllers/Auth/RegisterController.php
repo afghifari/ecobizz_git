@@ -27,7 +27,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/login';
+    protected $redirectTo = '/home';
 
     /**
      * Create a new controller instance.
@@ -54,6 +54,21 @@ class RegisterController extends Controller
         ]);
     }
 
+    public function postRegister(Request $request){
+        $validator = $this->validator($request->all());
+
+        if ($validator->fails()) {
+            $this->throwValidationException(
+                $request, $validator
+            );
+        }
+
+        // Commenting this line should help.
+        Auth::login($this->create($request->all())); 
+
+        return redirect($this->redirectPath());
+    }
+
     /**
      * Create a new user instance after a valid registration.
      *
@@ -68,7 +83,7 @@ class RegisterController extends Controller
         $user->email = $data['email'];
         $user->password = bcrypt($data['password']);
         $user->address = $data['address'];
-        $user->description = $data['deskripsi'];
+        $user->description = $data['deskripsix'];
         $user->owner = $data['pemilik'];
         $user->organization_name = "Organisasi milik " . $data['pemilik'];
         $user->category_id = $data['kategori'];

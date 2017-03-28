@@ -1,138 +1,71 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>KUKM Ecobiz</title>
+@extends('layouts.app')
 
-    <!-- Bootstrap Core CSS -->
-    <link href="../css/bootstrap.css" rel="stylesheet">
-
-     <!-- Plugin CSS -->
-    <link href="../css/magnific-popup.css" rel="stylesheet">
-
-    <!-- Theme CSS -->
-    <link rel="stylesheet" type="text/css" href="../css/creative.css">
-    <link rel="stylesheet" href="../css/editprofile.css" type="text/css">
-</head>
-<body>
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <a class="navbar-brand page-scroll" href="#page-top">
-                <img src="/assets/ecobiz_hitam.png" width="35%">
-                </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <div class="header">Travis Barker
-                    </li>
-                    <li>
-                        <button class="photo"></button>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
+@section('content')
 
     <section class="section1">
         <div id="profile">
-            Edit Profile
+            Profile
             <div style="float:right;" align="right">
-                <input type="submit" name="Save" value="SAVE" class="button1">
+                <button class="button1">
+                    EDIT
+                </button>
             </div>
         </div>
+        <!-- <div align="right">
+            <button class="button1">
+                EDIT
+            </button>
+        </div> -->
     </section>
 
     <section class="section2">
         <div class="container2">
-            <div id="user">
+            <div id="activities">
                 <center>
-                    <img src="/assets/circle.png" height="120px" style="margin-top: 60px;"><br>
-                    <!-- <button class = "button2"> change </button> -->
-                    <input type="file" name="photo" id="photo" class="button2"/>
-                    <label for="photo">change</label>
+                    <img src="/assets/circle.png" height="120px" style="margin-top: 60px; margin-bottom: 60px;">
+                    <br>
+                    {{ Auth::user()->name }}
+                    <div style="font-size: 14px;">
+                        {{ Auth::user()->address }}<br>
+                        <ul class="ulist">
+                            <li class="list"><span>{{ Auth::user()->email }}</span></li>
+                            <li class="list"><span>{{ Auth::user()->mobile_number }}</span></li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div style="font-size: 15px;">
+                        Last Activities <br>
+                        <ul class="ulist" style="text-align: left;">
+                            <li class="list">Create a new Thread "Welcome to Bali Land" on <b>Tour and Trip Group</b></li>
+                            <li class="list">Comment on thread "Wow" on <b>Uncategorized Thread</b></li>
+                            <li class="list">Create a new Thread "Welcome to Bali Land" on <b>Tour and Trip Group</b></li>
+                            <li class="list">Comment on thread "Wow" on <b>Uncategorized Thread</b></li>
+                            <li class="list">Create a new Thread "Welcome to Bali Land" on <b>Tour and Trip Group</b></li>
+                            <li class="list">Comment on thread "Wow" on <b>Uncategorized Thread</b></li>
+                        </ul>
+                        </div>
+                    </div>
                 </center>
-
-                <div style="font-size: 14px;">
-                    <form id="editProfile">
-                        <input type="text" name="name" placeholder="Nama" value={{$user->name}}> </br>
-                        <input type="text" name="address" placeholder="Alamat" value={{$user->address}}></br>
-                        <input type="text" name="email" placeholder="E-mail" value={{$user->email}}></br>
-                        <input type="text" name="hp" placeholder="No. Handphone" value={{$user->mobile_number}}></br>
-                </div>
             </div>
 
-            <div id="organizationName">
-                <input type="text" name="organizationName" placeholder="Nama Organisasi" value={{$user->organization_name}} style="width: 600px;"></br>
+            <div id="organizationTitle"> Bisnis Percetakan Printer
+                <div class="feature-expl">
+                </div>              
             </div>
 
             <div id="organizationImage">
-                <input type="file" name="organizationImage" id="organizationImage" class="button3" />
-                    <label for="organizationImage">upload struktur organisasi</label>
-                <br>
                 GAMBAR
             </div>
 
             <div id="organizationProfile">
-                <input type="textarea" name="deskripsi" placeholder="Deskripsi" value={{$user->description}}> </br>
-                <input type="text" name="kategori" placeholder="Kategori" style="width: 600px;" value={{$user->category->name}}> </br>
-                <input type="text" name="pemilik" placeholder="Pemilik" style="width: 600px;" value={{$user->owner}}></br>
-                <input type="text" name="website" placeholder="Website" style="width: 600px;" value={{$user->website}}></br>
+                Lorem ipsum dolor sit amet, consectur adipiscing elit. Morbi eget dolor et nisi faubicus rutrum vel nec erat. Vivamus imperdiet ligula et finibus ornare. Nam interdum mauris non pharetra consectur. Vestibulum sit amet facilisis risus. Ut sem libero, condimentum at auctor non, lobortis sit amet turpis. Ut gravida ac arcu feugiat. <br><br>
+                <ul class="ulist" style="text-align: left;">
+                    <li class="list">{{ Auth::user()->owner }}</li>
+                    <li class="list">{{ Auth::user()->website }}</li>
+                    <li class="list">08111</li>
+                </ul>
             </div>
-            </form>
         </div>
-        <div style="clear:both;"><br>
-        <input type="submit" name="Save" value="Save" class="button4">
     </section>
 
-
-    <section class="section3">
-        <img src = "/assets/ecobiz_putih.png" height="40" vspace="30px" style="margin-top: 50px">
-        <br>
-        <button><img src="/assets/fb.png" height="25"></button>
-        <button><img src="/assets/twitter.png" height="25"></button>
-        <button><img src="/assets/linkedin.png" height="25"></button>
-        <button><img src="/assets/gplus.png" height="25"></button>
-        <br>
-        <div class = "container3">
-            <div id="footer-sect">Site Map
-                <br>
-                <a href="Homepage.html">Home</a><br>
-                <a href="">Tentang</a><br>
-                <a href="">Forum</a><br>
-                <a href="register.html">Daftar</a><br>
-                <a href="login.html">Login</a>
-            </div>
-            <div id="footer-sect-center">Kontak
-                <br>
-                <div class="footer">
-                    Ecobiz KUKM Jawa Barat<br>
-                    Jalan Ganesha No. 12<br>
-                    Bandung, Jawa Barat<br>
-                    40135<br>
-                    ☎ 022 - 11111
-                </div>
-            </div>
-            <div id="footer-sect">Fitur Utama
-                <br>
-                <div class="footer">
-                    Profil Pelaku Bisnis<br>
-                    Interaksi Ekosistem Bisnis<br>
-                    Forum<br>
-                    Menyerupai Facebook<br>
-                    & Kaskus
-                </div>
-            </div>
-        </div>
-        <div style="clear: both;">
-            <br><br>
-            Copyright © 2017 Ecobiz KUKM Jabar
-        </div>
-    </section>
-</body>
-</html>
+@endsection
