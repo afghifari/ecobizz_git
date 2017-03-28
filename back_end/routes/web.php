@@ -17,21 +17,29 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::post('/login', function() {
-    return request()->all();
-});
-
-Route::post('/register', function() {
-    return request()->all();
-});
+Route::get('/logout', 'Auth\LoginController@logout');
 
 Route::post('user/{id}', function($id) {
-    return request()->all();
+    $user = App\User::find($id);
+
+    $password = $user->password;
+
+    $user->fill(request()->all);
+
+    if ($password != $user->password) {
+        $user->password = bcrypt($user->password);
+    }
+
+    $user->uploadPhoto($user->profile_picture);
+    $user->uploadOrganizationChart($user->organization_structure);
+    $user->save();
+    return view('profile', [ 'user' => $user]);
 });
 
 //link profil
 Route::get('user/{id}', function($id) {
-    return App\User::find($id);
+    $user = App\User::find($id);
+    return view('profile', [ 'user' => $user]);
 });
 
 Route::post('/uploadPicExample', function() {
@@ -40,5 +48,3 @@ Route::post('/uploadPicExample', function() {
     $user->uploadPhoto($image);
     return $user;
 });
-
-Route::get('/home', 'HomeController@index');

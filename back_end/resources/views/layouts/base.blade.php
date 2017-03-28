@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Ecobizz - Register</title>
+    <title>KUKM Ecobiz</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -17,10 +11,17 @@
 
     <!-- Theme CSS -->
     <link rel="stylesheet" type="text/css" href="css/creative.css">
-    <link rel="stylesheet" type="text/css" href="css/register.css">
+    <link rel="stylesheet" href="css/Homepage.css" type="text/css">
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+     <!-- Plugin CSS -->
+    <link href="css/magnific-popup.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" type="text/css" href="css/creative.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -40,7 +41,11 @@
                         <a class="page-scroll" href="#services">Apa itu Ecobiz?</a>
                     </li>
                     <li>
-                        <button class="button1" style="float:right">LOGIN</button>
+                        @if (Auth::user())
+                            <button class="button1" style="float:right" onclick="location.href='logout'">LOGOUT</button>
+                        @else
+                            <button class="button1" style="float:right" onclick="location.href='login'">LOGIN</button>
+                        @endif
                     </li>
                 </ul>
             </div>
@@ -49,56 +54,14 @@
         <!-- /.container-fluid -->
     </nav>
 
-    <section class="section1">
-        <div id="createAccount">
-            <br><br>
-            Create a New Account <br><br>
-        </div>
-    </section>
 
-    <section class="section2">
-        <div class="mainText">  <bText>1</bText> Personal Information </div>
-    </section>
+    @if (Auth::user())
+        Logged In as {{ Auth::user()->name }}
+    @else
+        Not Logged in
+    @endif
 
-    <section class="section3">
-        <form id="registerForm">
-            <input type="text" name="name" placeholder="Nama"> </br>
-            <h6>Nama lengkap, berupa huruf tanpa simbol dan angka</h6><br>
-            <input type="text" name="address" placeholder="Alamat"></br>
-            <h6>Alamat lengkap, tuliskan kecamatan, kelurahan, RT RW jika ada dan kode pos alamat</h6><br>
-            <input type="text" name="email" placeholder="E-mail"></br>
-            <h6>Email harus valid, misal wauda@itb.com</h6><br>
-            <input type="text" name="hp" placeholder="No. Handphone"></br>
-            <h6>Nomor Handphone. Misal = 085641234567</h6>
-    </section>
-
-    <section class="section2">
-        <div class="mainText">  <bText>2</bText> Business Section</div>
-    </section>
-
-    <section class="section5">
-            <input type="text" name="kategori" placeholder="Kategori"> </br>
-            <h6>Nama lengkap, berupa huruf tanpa simbol dan angka</h6><br>
-            <textarea name="deskripsi" form="registerForm" placeholder="Deskripsi"></textarea>
-            <h6>Deskripsikan bisnis yang anda jalankan secara singkat, padat, dan jelas</h6><br>
-            <input type="text" name="pemilik" placeholder="Pemilik"></br>
-            <h6>Tuliskan nama pemilik bisnis tersebut, jika anda adalah pemiliknya maka tuliskan nama anda sendiri</h6><br>
-            <input type="text" name="web" placeholder="Website"></br>
-            <h6>Berikan alamat website dari bisnis Anda jika ada</h6><br>
-            <input type="text" name="strukturOrg" placeholder="Struktur Organisasi"></br>
-            <h6>what the hulk is this ?</h6>
-    </section>
-
-    <section class="section2">
-        <div class="mainText"> <bText>3</bText> Confirmation</div>
-    </section>
-
-    <section class="section6">
-        <input type="checkbox" name="info" value="information">  My information is correct </br></br>
-        <input type="checkbox" name="tnc" value="tnc">  I have read the Terms and Condition </br></br>
-        <input class="registerButton" type="submit" value="REGISTER">
-        </form>
-    </section>
+    @yield('content')
 
     <section class="section4">
         <img src = "/assets/ecobiz_putih.png" height="40" vspace="30px" style="margin-top: 50px">
@@ -143,8 +106,6 @@
         Copyright © 2017 Ecobiz KUKM Jabar
         </div>
     </section>
-
-
-
 </body>
 </html>
+
