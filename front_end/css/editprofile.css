@@ -1,0 +1,269 @@
+.header {
+	color: #000000;
+	font-family: "Verdana";
+	font-size: 16px;
+	margin-top: 15px;
+}
+
+.photo {
+	padding: 80px;
+	color: #000000;
+	font-size: 14px;
+	background-color: transparent;
+	text-decoration: none;
+	margin-top: 10px;
+	margin-right: 30px;
+	margin-left: 10px;
+	border:2px solid #000000;
+	width: 30px;
+	height: 30px;
+	padding: 6px 0;
+	border-radius: 15px;
+}
+
+button {
+	background-color: transparent;
+	border: none;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+.button1 {
+	color: #00aa44;
+	font-size: 20px;
+	background-color: transparent;
+	text-decoration: none;
+	padding: 10px 20px;
+	margin-top: 10px;
+	margin-right: 30px;
+	margin-left: 10px;
+	border-radius: 8px;
+	border:2px solid #00aa44;
+}
+
+.button1:hover {
+	cursor: pointer;
+	color: #000000;
+	border:2px solid #000000;
+}
+
+.button2 {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.button2 + label {
+	color: #696969;
+	font-size: 14px;
+	background-color: transparent;
+	border-radius: 8px;
+	border:2px solid #00aa44;
+	display: inline-block;
+	padding: 5px 10px;
+	margin-bottom: 30px;
+}
+
+.button2:hover + label {
+	cursor: pointer;
+	color: #000000;
+	border:2px solid #000000;
+}
+
+.button3 {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+}
+
+.button3 + label{
+	color: #FFFFFF;
+	font-size: 14px;
+	background-color: #00aa44;
+	text-decoration: none;
+	padding: 5px 10px;
+	border-radius: 8px;
+	border:2px solid #00aa44;
+	margin-bottom: 50px;
+}
+
+.button3:hover + label {
+	cursor: pointer;
+	color: #000000;
+	border:2px solid #000000;
+}
+
+.button4 {
+	color: #FFFFFF;
+	font-size: 20px;
+	background-color: #00aa44;
+	text-decoration: none;
+	padding: 5px 580px;
+	border:2px solid #00aa44;
+}
+
+.button4:hover {
+	cursor: pointer;
+	color: #000000;
+	border:2px solid #000000;
+}
+
+.section1 {
+	background: url('../../design/assets/bg3.png') no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: contain;
+	-o-background-size: cover;
+	background-size: cover;
+	position: relative;
+}
+
+#profile {
+	position: relative;
+	margin-left: 100px;
+	color: #000000;
+	z-index: 1;
+	font-size: 25px;
+	margin-top: 180px;
+	font-size: 30px;
+}
+
+#title {
+	margin-top: 180px;
+	margin-left: 80px;
+	text-align: left;
+	color: #FFFFFF;
+	font-size: 30px;
+}
+
+.section2 {
+	background-color: #FFFFFF;
+	min-height: 850px;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.container2 {
+	width: 1500px;
+}
+
+#user {
+	margin-left: 30px;
+	float:left;
+	width: 500px;
+	height: 700px;
+	color: #000000; 
+	font-size: 26px;
+	background-color: rgba(220, 220, 220, 0.3);
+	padding-top: 20px;
+	padding-left: 30px;
+	padding-right: 20px;
+	text-align: left;
+	border: solid 1px #DCDCDC;
+}
+
+input[type=text], select {
+    width: 420px;
+    padding: 5px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: black;
+    box-sizing: border-box;
+}
+
+input[type=textarea] {
+	width: 600px;
+	height: 150px;
+    padding: 5px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: black;
+    box-sizing: border-box;	
+}
+
+#organizationName {
+	margin-left: 30px;
+	float:left;
+	width: 700px;
+	height: 50px;
+	color: #000000; 
+	font-size: 14px;
+	background-color: rgba(220, 220, 220, 0.3);
+	padding-left: 30px;
+	padding-right: 20px;
+	text-align: left;
+	border: solid 1px #DCDCDC;
+}
+
+#organizationImage {
+	margin-left: 30px;
+	float:left;
+	width: 700px;
+	height: 280px;
+	color: #FFFFFF; 
+	font-size: 26px;
+	background-color: #696969;
+	padding-top: 20px;
+	padding-left: 30px;
+	padding-right: 20px;
+	text-align: left;
+	border: solid 1px #DCDCDC;
+}
+
+#organizationProfile {
+	margin-left: 30px;
+	float:left;
+	width: 700px;
+	height: 370px;
+	color: #696969; 
+	font-size: 14px;
+	background-color: rgba(220, 220, 220, 0.3);
+	padding-top: 20px;
+	padding-left: 30px;
+	padding-right: 20px;
+	text-align: left;
+	border: solid 1px #DCDCDC;
+}
+
+.section3 {
+	background-color: #00aa44;
+	min-height: 450px;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.container3 {
+	width: 800px;
+	margin: auto;
+}
+
+#footer-sect {
+	margin-top: 60px;
+	float:left;
+	width: 200px;
+	color: #FFFFFF; 
+	font-size: 20px; 
+}
+
+#footer-sect-center {
+	margin-top: 60px;
+	float:left;
+	width: 400px;
+	color: #FFFFFF; 
+	font-size: 20px; 
+}
+
+.footer {
+	font-size: 14px; 
+	line-height: 25px;
+}
