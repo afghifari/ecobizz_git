@@ -1,7 +1,9 @@
-@extends("layouts.base")
+@extends("layouts.app")
 
 @section('content')
-    <header>
+
+
+    <header id="login">
         <div class="header-content">
             <div class="header-content-inner">
                 <p1>Get in to Your Account </p1> </br> </br> </br>
@@ -20,5 +22,4 @@
             </div>
         </div>
     </header>
-
 @endsection

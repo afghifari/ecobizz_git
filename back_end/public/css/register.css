@@ -1,0 +1,180 @@
+.reg-section1 {
+  background: url('../../design/assets/bg1.png') no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: contain;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  z-index: -1;
+  padding: 10px;
+}
+.reg-section1:after{
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  opacity: .7;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00aa44;
+}
+#createAccount {
+  position: relative;
+  left: 10%;
+  color: white;
+  z-index: 1;
+  font-size: 25px;
+}
+.reg-section2 {
+  background-color:  #d5ffd5;
+  max-height: 120px;
+}
+.reg-mainText {
+  color: #00aa44;
+  margin-left: 10%;
+  font-size: 35px;
+}
+bText {
+  font-weight: bold;
+  font-size: 50px;
+}
+.reg-section3 {
+  background-color: #8b9f8b;
+}
+.reg-section1 h6, .reg-section2 h6, .reg-section4 h6, .reg-section5 h6, .reg-section3 h6 {
+  color: white;
+  margin-left: 11%;
+}
+.reg-section5 input[type=text], .reg-section5 select, .reg-section3 input[type=text], .reg-section3 select {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: black;
+    margin-left: 10%;
+    box-sizing: border-box;
+}
+.reg-section5 input[type=password], .reg-section5 select, .reg-section3 input[type=password], .reg-section3 select {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: black;
+    margin-left: 10%;
+    box-sizing: border-box;
+}
+.reg-section5 input[type=email], .reg-section5 select, .reg-section3 input[type=email], .reg-section3 select {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: black;
+    margin-left: 10%;
+    box-sizing: border-box;
+}
+.reg-section5 input[type=checkbox], .reg-section3 input[type=checkbox], .reg-section6 input[type=checkbox] {
+    margin-left: 10%;
+    margin-right: 10px;
+    -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+}
+.reg-section5 input[type=submit], .reg-section3 input[type=submit] {
+    color: #FFFFFF;
+    font-size: 14px;
+    background-color: transparent;
+    text-decoration: none;
+    padding: 10px 40px;
+    margin-top: 10px;
+    margin-right: 30px;
+    margin-left: 10px;
+    border-radius: 8px;
+    border:2px solid #FFFFFF;
+}
+
+.reg-section5 input[type=submit]:hover, .reg-section3 input[type=submit]:hover {
+    cursor: pointer;
+    color: #000000;
+    border:2px solid #000000;
+}
+.reg-section5 {
+  background-color: #6bb36b;
+}
+.reg-section3 textarea, .reg-section5 textarea {
+  width: 60%;
+  height: 120px;
+  margin-left: 10%;
+  padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: black;
+}
+.reg-section6 {
+  background-color: #56c356;
+  color: white;
+}
+.reg-section6 > input[type=submit] {
+  color: #00aa44;
+    font-size: 14px;
+    background-color: white;
+    text-decoration: none;
+    padding: 10px 40px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10%;
+    border-radius: 8px;
+    border:2px solid #FFFFFF;
+}
+
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.button1 {
+  color: #FFFFFF;
+  font-size: 14px;
+  background-color: transparent;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  margin-right: 30px;
+  margin-left: 10px;
+  border-radius: 8px;
+  border:2px solid #FFFFFF;
+}
+.button1:hover {
+  cursor: pointer;
+  color: #000000;
+  border:2px solid #000000;
+}
+.reg-section4 {
+  background-color: #00aa44;
+  min-height: 450px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.symbolsosmed > img{
+  width: 25px;
+  margin-right: 5px;
+  margin-left: 5px;
+
+}
+.container3 {
+  width: 800px;
+  margin: auto;
+}

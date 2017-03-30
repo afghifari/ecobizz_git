@@ -3,7 +3,7 @@ body {
 }
 
 header {
-	background: url('../../design/assets/bg1.png') no-repeat;
+	background: url('../../assets/bg1.png') no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -96,7 +96,7 @@ button:hover {
 }
 
 .section3 {
-	background: url('../../design/assets/bg2.png') no-repeat;
+	background: url('../assets/bg2.png') no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
