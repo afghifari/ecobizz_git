@@ -28,21 +28,18 @@ class CreateUsersTable extends Migration
 
             $table->string('address')->default('');
             $table->string('mobile_number');
-            $table->integer('category_id')->unsigned()->nullable();
             $table->string('description')->default('');
             $table->string('owner');
             $table->string('organization_name');
             $table->string('website')->default('');
             $table->string('organization_structure')->nullable();
             $table->string('needs')->default('');
+            $table->string('products')->default('');
             $table->integer('role_id')->unsigned()->nullable();
             $table->string('profile')->default('');
 
             $table->foreign('role_id')
                   ->references('id')->on('roles')
-                  ->onDelete('SET NULL');
-            $table->foreign('category_id')
-                  ->references('id')->on('categories')
                   ->onDelete('SET NULL');
         });
     }

@@ -74,4 +74,25 @@ class User extends Authenticatable
         $this->organization_structure = $link;
         $this->save();
     }
+
+    public function friends() {
+        return $this->belongsToMany(User::class, 'friend_lists', 'own_id', 'friend_id');
+    }
+
+    public function threads() {
+        return $this->hasMany(Thread::class, "owner_id", "id");
+    }
+
+    public function getMessages($friend) {
+        $own = Message::where("source_id", $this->id)->where("target_id", $friend->id)->get();
+        $theirs = Message::where("source_id", $friend->id)->where("target_id", $this->id)->get();
+        return [
+            "own" => $own,
+            "theirs" => $theirs
+        ];
+    }
+
+    public function timelines() {
+        return $this->hasMany(TimelinePost::class, "user_id", "id");
+    }
 }
