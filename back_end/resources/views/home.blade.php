@@ -65,7 +65,7 @@
 
             <div id="feature"> Forum
                 <div class="feature-expl">Ecobiz KUKM Jawa Barat didukung oleh forum yang kuat tempat Anda bertanya dan berbagi apa saja dengan seluruh anggota platform<br><br>
-                <button class="button1" style="margin-top: 0; margin-left: 0;">FORUM</button>
+                <button class="button1" style="margin-top: 0; margin-left: 0;" onclick="window.location.href='/forum'">FORUM</button>
                 </div>
             </div>
 
