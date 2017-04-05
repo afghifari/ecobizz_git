@@ -44,8 +44,6 @@
                 <h6>Tuliskan nama pemilik bisnis tersebut, jika anda adalah pemiliknya maka tuliskan nama anda sendiri</h6><br>
                 <input type="text" name="web" placeholder="Website"></br>
                 <h6>Berikan alamat website dari bisnis Anda jika ada</h6><br>
-                <input type="text" name="strukturOrg" placeholder="Struktur Organisasi"></br>
-                <h6>what the hulk is this ?</h6>
         </section>
 
         <section class="reg-section2">
