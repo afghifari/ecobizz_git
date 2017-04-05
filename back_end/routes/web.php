@@ -52,3 +52,7 @@ Route::post('/uploadPicExample', function() {
     $user->uploadPhoto($image);
     return $user;
 });
+
+Route::get('/forum', function() {
+    return view('forum');
+});
