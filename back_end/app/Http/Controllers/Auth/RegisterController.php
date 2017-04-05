@@ -50,7 +50,8 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
-            //'password' => 'required|min:6|confirmed',
+            'password' => 'required|min:6',
+            'password_confirm' => 'required|same:password'
         ]);
     }
 
@@ -64,7 +65,7 @@ class RegisterController extends Controller
         }
 
         // Commenting this line should help.
-        Auth::login($this->create($request->all())); 
+        Auth::login($this->create($request->all()));
 
         return redirect($this->redirectPath());
     }
@@ -78,17 +79,15 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         $user = new User;
-
         $user->name = $data['name'];
         $user->email = $data['email'];
         $user->password = bcrypt($data['password']);
         $user->address = $data['address'];
-        $user->description = $data['deskripsix'];
+        $user->description = $data['deskripsi'];
         $user->owner = $data['pemilik'];
         $user->organization_name = "Organisasi milik " . $data['pemilik'];
-        $user->category_id = $data['kategori'];
+        $user->role_id = $data['kategori'];
         $user->website = $data['web'];
-        $user->organization_structure = $data['strukturOrg'];
         $user->mobile_number = $data['hp'];
 
         $user->save();

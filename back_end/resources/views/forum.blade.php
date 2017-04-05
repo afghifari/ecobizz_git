@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-	<link rel="stylesheet" href="<?php echo asset('css/forum.css')?>" type="text/css"> 
+	<link rel="stylesheet" href="{{asset('css/forum.css')}}" type="text/css">
 
 	<section class="forum-section1">
 		<div id="forum">
@@ -22,26 +22,19 @@
 				<th>Postingan</th>
 				<th>Postingan Akhir</th>
 			</tr>
-			<tr>
-				<td align="justify">
-					<b>Bantuan Penggunaan Platform</b> <br>
-					Forum ini dikhususkan untuk diskusi mengenai keuntungan dan cara menggunakan platform Ecobiz KUKM
-				</td>
-				<td align="center">1</td>
-				<td align="center">1</td>
-				<td align="center">2 bulan yang lalu</td>
-			</tr>
-			<tr>
-				<td align="justify">
-					<b>Kemitraan dan Kolaborasi</b> <br>
-					Pembicaraan mengenai segala sesuatu seputar kemitraan dan kolaborasi
-				</td>
-				<td align="center">1</td>
-				<td align="center">1</td>
-				<td align="center">1 minggu yang lalu</td>
-			</tr>
+			@foreach ($forums as $forum)
+				<tr>
+					<td align="justify">
+						<b>{{ $forum->name }}</b> <br>
+						{{ $forum->description }}
+					</td>
+					<td align="center"> {{count($forum->threads)}}</td>
+					<td align="center">{{ $forum->postCount() }}</td>
+					<td align="center">{{ (new Carbon\Carbon($forum->last_update))->diffForHumans() }}</td>
+				</tr>
+			@endforeach
 		</table>
-		
+
 	</section>
 
 @endsection

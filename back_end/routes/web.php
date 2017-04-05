@@ -23,6 +23,7 @@ Auth::routes();
 
 Route::get('/logout', 'Auth\LoginController@logout');
 
+
 Route::post('user/{id}', function($id) {
     $user = App\User::find($id);
 
@@ -54,5 +55,11 @@ Route::post('/uploadPicExample', function() {
 });
 
 Route::get('/forum', function() {
-    return view('forum');
+    $forums = App\Forum::all();
+    return view('forum', ['forums' => $forums ]);
+});
+
+Route::get('/forum/{id}', function($id) {
+    $forum = App\Forum::with('threads', 'threads.posts')->find($id);
+    return $forum;
 });

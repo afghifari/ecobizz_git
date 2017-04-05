@@ -23,7 +23,7 @@
                 <h6>Alamat lengkap, tuliskan kecamatan, kelurahan, RT RW jika ada dan kode pos alamat</h6><br>
                 <input type="email" name="email" placeholder="E-mail"></br>
                 <h6>Email harus valid, misal wauda@itb.com</h6><br>
-                <input type="password" name="p" placeholder="Password"></br>
+                <input type="password" name="password_confirm" placeholder="Password"></br>
                 <h6>Password</h6><br>
                 <input type="password" name="password" placeholder="Re-password"></br>
                 <h6>Re-password</h6><br>
@@ -36,9 +36,9 @@
         </section>
 
         <section class="reg-section5">
-                <input type="text" name="kategori" placeholder="Kategori" value="1"> </br>
-                <h6>Sementara masukkan angka 1</h6><br>
-                <textarea name="deskripsix" placeholder="Deskripsi"></textarea>
+                {!! Form::select('kategori', App\Role::pluck('name', 'id'), null, ['class' => 'form-control input-lg'] ) !!}
+                <h6>Silahkan pilih peran organisasi anda</h6><br>
+                <textarea name="deskripsi" placeholder="Deskripsi"></textarea>
                 <h6>Deskripsikan bisnis yang anda jalankan secara singkat, padat, dan jelas</h6><br>
                 <input type="text" name="pemilik" placeholder="Pemilik"></br>
                 <h6>Tuliskan nama pemilik bisnis tersebut, jika anda adalah pemiliknya maka tuliskan nama anda sendiri</h6><br>
