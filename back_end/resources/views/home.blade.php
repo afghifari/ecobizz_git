@@ -44,7 +44,7 @@
     <section class="section2">
         <div class="title">BERGABUNGLAH DENGAN KAMI DAN MULAILAH <b>BERINTERAKSI</b></div>
         <center><p style="color: white; font-size: 18px; margin-bottom: 40px">Mulai dari pemilik tanah hingga retailer, pemerintah hingga universitas, organisasi bantuan finantsial hingga bantuan hukum, semuanya adalah anggota potensial untuk platform Ecobiz KUKM Jawa Barat. Kenalilah setiap aktor bisnis - profil, lingkup usaha, dan kebutuhan - dan mulailah berinteraksi untuk membangun ekosistem bisnis Jawa Barat.</p></center>
-        <button class="button2" onclick="location.href='register.html'">JOIN US</button>
+        <button class="button2" onclick="location.href='register'">JOIN US</button>
     </section>
 
     <section class="section3">
