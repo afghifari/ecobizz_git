@@ -63,3 +63,7 @@ Route::get('/forum/{id}', function($id) {
     $forum = App\Forum::with('threads', 'threads.posts')->find($id);
     return $forum;
 });
+
+Route::get('/topik', function () {
+    return view('topik');
+});

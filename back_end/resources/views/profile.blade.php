@@ -11,11 +11,6 @@
                 </button>
             </div>
         </div>
-        <!-- <div align="right">
-            <button class="button1">
-                EDIT
-            </button>
-        </div> -->
     </section>
 
     <section class="section2">

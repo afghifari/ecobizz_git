@@ -20,6 +20,8 @@
 .forum-section2 {
 	background-color: #FFFFFF;
 	min-height: 400px;
+	max-height: 500px;
+	overflow-y: auto;
 	text-align: center;
 	color: #FFFFFF;
 }

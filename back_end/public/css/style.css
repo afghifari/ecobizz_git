@@ -42,7 +42,7 @@ button:hover {
   color: #000000;
   border:2px solid #000000;
 }
-input[type=text], select {
+input[type=text], input[type=password], select {
     width: 40%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -52,6 +52,9 @@ input[type=text], select {
     color: black;
     box-sizing: border-box;
 }
+
+
+
 input[type=submit] {
     color: #FFFFFF;
     font-size: 14px;

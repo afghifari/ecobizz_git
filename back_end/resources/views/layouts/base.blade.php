@@ -61,7 +61,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><a href="#">Forum</a></li>
+                            <li><a href="/forum">Forum</a></li>
                             <li><a href="#">Apa itu Ecobiz</a></li>
                             <style type="text/css">
                                 #bar-login{
@@ -129,11 +129,11 @@
         <div class = "container3">
             <div id="footer-sect">Site Map
                 <br>
-                <a href="Homepage.html">Home</a><br>
+                <a href="/">Home</a><br>
                 <a href="">Tentang</a><br>
-                <a href="">Forum</a><br>
-                <a href="register.html">Daftar</a><br>
-                <a href="login.html">Login</a>
+                <a href="forum">Forum</a><br>
+                <a href="register">Daftar</a><br>
+                <a href="login">Login</a>
             </div>
             <div id="footer-sect-center">Kontak
                 <br>
