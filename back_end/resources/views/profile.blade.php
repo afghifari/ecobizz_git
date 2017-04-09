@@ -61,6 +61,35 @@
                 </ul>
             </div>
         </div>
+
+        <div style="float: clear; margin-left: 30px; margin-right: 25px;" >
+            <textarea name="timeline-post" placeholder="Apa yang baru?" wrap="hard"></textarea><br>
+            <div style="float: right; margin-right: 220px;">
+                <img src="/assets/photo.png" width="20px">
+                <button class="button2">Post</button>
+            </div>
+        </div>
+        <br><br>
+
+        <div style="float: clear;" class="timeline">
+            <div class="time">1 April 2017 pukul 13:00</div>
+            Lorem ipsum dolor sit amet, consectur adipiscing elit. 
+            <hr>
+            <div class="time">30 Maret 2017 pukul 10:00</div>
+            Lorem ipsum dolor sit amet, consectur adipiscing elit. 
+            <div id="timelineImage">
+                GAMBAR
+            </div>
+            <hr>
+            <div class="time">21 Maret 2017 pukul 21:00</div>
+            <div id="timelineImage">
+                GAMBAR
+            </div>
+            <hr>
+            <div class="time">1 Maret 2017 pukul 13:12</div>
+            Lorem ipsum dolor sit amet, consectur adipiscing elit. 
+            <hr>
+        </div>
     </section>
 
 @endsection
