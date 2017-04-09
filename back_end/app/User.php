@@ -34,6 +34,14 @@ class User extends Authenticatable
         return (Carbon::now()->diffInMinutes(new Carbon($this->last_seen))) <= 5;
     }
 
+    public function getProfilePictureAttribute($value) {
+        if ($value == null || $value == "") {
+            return "https://poppin.imgix.net/products/swatch/swatch_light_gray.jpg?w=600&h=600";
+        } else {
+            return $value;
+        }
+    }
+
     public function role() {
         return $this->belongsTo(Role::class, 'role_id');
     }

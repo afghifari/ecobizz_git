@@ -5,11 +5,13 @@
     <section class="section1">
         <div id="profile">
             Profile
-            <div style="float:right;" align="right">
-                <button class="button1">
-                    EDIT
-                </button>
-            </div>
+            @if (Auth::user()->id == $user->id)
+                <div style="float:right;" align="right">
+                    <button class="button1">
+                        EDIT
+                    </button>
+                </div>
+            @endif
         </div>
     </section>
 
@@ -17,14 +19,14 @@
         <div class="container2">
             <div id="activities">
                 <center>
-                    <img src="/assets/circle.png" height="120px" style="margin-top: 60px; margin-bottom: 60px;">
+                    <img src="{{$user->profile_picture}}" height="120px" style="margin-top: 60px; margin-bottom: 60px;">
                     <br>
-                    {{ Auth::user()->name }}
+                    {{ $user->name }}
                     <div style="font-size: 14px;">
-                        {{ Auth::user()->address }}<br>
+                        {{ $user->address }}<br>
                         <ul class="ulist">
-                            <li class="list"><span>{{ Auth::user()->email }}</span></li>
-                            <li class="list"><span>{{ Auth::user()->mobile_number }}</span></li>
+                            <li class="list"><span>{{ $user->email }}</span></li>
+                            <li class="list"><span>{{ $user->mobile_number }}</span></li>
                         </ul>
                     </div>
                     <br>
@@ -43,21 +45,20 @@
                 </center>
             </div>
 
-            <div id="organizationTitle"> Bisnis Percetakan Printer
+            <div id="organizationTitle"> {{$user->organization_name}}
                 <div class="feature-expl">
-                </div>              
+                </div>
             </div>
 
             <div id="organizationImage">
-                GAMBAR
+                <center><img src="{{$user->organization_structure}}" alt="Struktur Organisasi"></center>
             </div>
 
             <div id="organizationProfile">
-                Lorem ipsum dolor sit amet, consectur adipiscing elit. Morbi eget dolor et nisi faubicus rutrum vel nec erat. Vivamus imperdiet ligula et finibus ornare. Nam interdum mauris non pharetra consectur. Vestibulum sit amet facilisis risus. Ut sem libero, condimentum at auctor non, lobortis sit amet turpis. Ut gravida ac arcu feugiat. <br><br>
+                {{$user->description}}
                 <ul class="ulist" style="text-align: left;">
-                    <li class="list">{{ Auth::user()->owner }}</li>
-                    <li class="list">{{ Auth::user()->website }}</li>
-                    <li class="list">08111</li>
+                    <li class="list">{{ $user->owner }}</li>
+                    <li class="list">{{ $user->website }}</li>
                 </ul>
             </div>
         </div>
@@ -73,10 +74,10 @@
 
         <div style="float: clear;" class="timeline">
             <div class="time">1 April 2017 pukul 13:00</div>
-            Lorem ipsum dolor sit amet, consectur adipiscing elit. 
+            Lorem ipsum dolor sit amet, consectur adipiscing elit.
             <hr>
             <div class="time">30 Maret 2017 pukul 10:00</div>
-            Lorem ipsum dolor sit amet, consectur adipiscing elit. 
+            Lorem ipsum dolor sit amet, consectur adipiscing elit.
             <div id="timelineImage">
                 GAMBAR
             </div>
@@ -87,7 +88,7 @@
             </div>
             <hr>
             <div class="time">1 Maret 2017 pukul 13:12</div>
-            Lorem ipsum dolor sit amet, consectur adipiscing elit. 
+            Lorem ipsum dolor sit amet, consectur adipiscing elit.
             <hr>
         </div>
     </section>

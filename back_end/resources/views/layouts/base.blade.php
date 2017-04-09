@@ -76,7 +76,7 @@
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} &nbsp;
-                                    <img src="/img/pp.png" style="height: 32px; width: 32px; border-radius: 50%;">
+                                    <img src="{{Auth::user()->profile_picture }}" style="height: 32px; width: 32px; border-radius: 50%;">
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">

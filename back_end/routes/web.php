@@ -60,14 +60,11 @@ Route::get('/forum', function() {
 });
 
 Route::get('/forum/{id}', function($id) {
-    $forum = App\Forum::with('threads', 'threads.posts')->find($id);
-    return $forum;
+    $threads = App\Forum::find($id)->threads;
+    return view('topik', ['threads' => $threads ]);
 });
 
-Route::get('/topik', function () {
-    return view('topik');
-});
-
-Route::get('/thread', function () {
-    return view('thread');
+Route::get('/thread/{id}', function($id) {
+    $posts = App\Thread::find($id)->posts;
+    return view('thread', ['posts' => $posts ]);
 });

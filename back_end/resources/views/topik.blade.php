@@ -22,23 +22,16 @@
 				<th>Postingan</th>
 				<th>Postingan Akhir</th>
 			</tr>
+			@foreach ($threads as $thread)
 			<tr>
 				<td align="justify">
-					<b>Lupa password</b> <br>
+					<b><a class='h4' href="{{url("thread/".$thread->id)}}">{{$thread->name}}</a></b> <br>
 				</td>
-				<td align="left" style="font-size: 14px">Koperasi Tirta Bangun Karya</td>
-				<td>1</td>
-				<td>2 bulan yang lalu</td>
+				<td align="left" style="font-size: 14px">{{$thread->user->name}}</td>
+				<td>{{count($thread->posts)}}</td>
+				<td>{{ (new Carbon\Carbon($thread->last_update))->diffForHumans() }}</td>
 			</tr>
-			<tr>
-				<td align="justify">
-					<b>Melengkapi informasi profil</b> <br>
-				</td>
-				<td align="left" style="font-size: 14px">Koperasi Kerupuk Asri</td>
-				<td>1</td>
-				<td>1 minggu yang lalu</td>
-			</tr>
-			
+			@endforeach
 		</table>
 
 	</section>

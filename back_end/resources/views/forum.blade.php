@@ -25,7 +25,7 @@
 			@foreach ($forums as $forum)
 				<tr>
 					<td align="justify">
-						<b>{{ $forum->name }}</b> <br>
+						<b><a class='h3' href="{{url("forum/".$forum->id)}}">{{ $forum->name }}</a></b> <br>
 						{{ $forum->description }}
 					</td>
 					<td align="center"> {{count($forum->threads)}}</td>
