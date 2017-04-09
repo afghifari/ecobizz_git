@@ -147,6 +147,73 @@ button:hover {
 	border: solid 1px #DCDCDC;
 }
 
+textarea {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	width: 700px;
+	height: 50px;
+	vertical-align: text-top;
+	color: #000000;
+	resize: none;
+	border: solid 1px #DCDCDC;
+	padding: 2px;
+}
+
+.button2 {
+	margin-top: 2px;
+	margin-right: 2px;
+	color: #000000;
+	font-size: 14px;
+	background-color: transparent;
+	text-decoration: none;
+	margin-left: 10px;
+	border-radius: 8px;
+	border:2px solid #000000;
+	padding: 0px 5px;
+}
+
+.button2:hover {
+	cursor: pointer;
+	background-color: #00aa44;
+	color: #FFFFFF;
+	border:2px solid #00aa44;
+}
+
+.timeline {
+	margin-left: 30px;
+	margin-bottom: 30px;
+	margin-right: 25px;
+	height: 300px;
+	color: #000000; 
+	font-size: 14px;
+	background-color: rgba(220, 220, 220, 0.3);
+	padding-top: 20px;
+	padding-left: 30px;
+	padding-right: 20px;
+	text-align: left;
+	border: solid 1px #DCDCDC;
+	overflow-y: auto;
+}
+
+.time {
+	font-size: 11px;
+}
+
+hr {
+	border: 0.5px solid #000000;
+}
+
+#timelineImage {
+	width: 250px;
+	height: 150px;
+	color: #FFFFFF; 
+	background-color: #696969;
+	text-align: center;
+	vertical-align: middle;
+	border: solid 1px #DCDCDC;
+}
+
 .section3 {
 	background-color: #00aa44;
 	min-height: 450px;
