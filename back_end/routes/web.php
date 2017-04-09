@@ -67,3 +67,7 @@ Route::get('/forum/{id}', function($id) {
 Route::get('/topik', function () {
     return view('topik');
 });
+
+Route::get('/thread', function () {
+    return view('thread');
+});

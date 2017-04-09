@@ -44,6 +44,8 @@
                 <h6>Tuliskan nama pemilik bisnis tersebut, jika anda adalah pemiliknya maka tuliskan nama anda sendiri</h6><br>
                 <input type="text" name="web" placeholder="Website"></br>
                 <h6>Berikan alamat website dari bisnis Anda jika ada</h6><br>
+                <input type="text" name="produk" placeholder="Produk"></br>
+                <h6>Tuliskan produk apa yang bisnis Anda sediakan</h6><br>
         </section>
 
         <section class="reg-section2">
