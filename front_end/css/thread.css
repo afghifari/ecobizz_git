@@ -122,6 +122,37 @@ a {
 	text-decoration: underline;
 }
 
+textarea {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 1000px;
+	height: 100px;
+	vertical-align: text-top;
+	color: #000000;
+	resize: none;
+	border: solid 1px #DCDCDC;
+	padding: 2px;
+}
+
+.button2 {
+	margin-top: 2px;
+	color: #000000;
+	font-size: 14px;
+	background-color: transparent;
+	text-decoration: none;
+	margin-left: 10px;
+	border-radius: 8px;
+	border:2px solid #000000;
+	padding: 0px 5px;
+}
+
+.button2:hover {
+	cursor: pointer;
+	background-color: #00aa44;
+	color: #FFFFFF;
+	border:2px solid #00aa44;
+}
+
 .section3 {
 	background-color: #00aa44;
 	min-height: 450px;

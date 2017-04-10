@@ -20,14 +20,20 @@
 		<div id="content">
 			{{$post->content}}
 		</div>
-			@if (Auth::user())
-			<!-- ditampilkan jika sudah login -->
-				<img src="../assets/comment.png" width="20px" style="margin-top: 5px; margin-right: 20px; float: right;">
-			@else
-			<!-- ditampilkan jika belum login -->
-				<div style="color: #000000; margin-bottom: 40px;">Anda harus <a href="{{url('login')}}" class="link">login</a> untuk membalas.</div>
-			@endif
+		<br>
 		@endforeach
+
+		@if (Auth::user())
+		<!-- ditampilkan jika sudah login -->
+			<textarea name="comment" placeholder="Tinggalkan komentar.." wrap="hard"></textarea>
+			<br>
+			<div style="float: right; margin-right: 150px;">
+				<button class="button2">Kirim</button>
+			</div>
+		@else
+		<!-- ditampilkan jika belum login -->
+			<div style="color: #000000; margin-bottom: 40px;">Anda harus <a href="{{url('login')}}" class="link">login</a> untuk membalas.</div>
+		@endif
 
 
 	</section>
