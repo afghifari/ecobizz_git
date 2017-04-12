@@ -49,7 +49,8 @@ Route::get('user/{id}', function($id) {
 });
 
 Route::get('user/{id}/edit', function($id) {
-    return view('editprofile', ['user' => App\User::find($id)]);
+    $user = App\User::find($id);
+    return view('edit', ['user' => App\User::find($id)]);
 });
 
 Route::post('user/{id}/edit', function($id) {

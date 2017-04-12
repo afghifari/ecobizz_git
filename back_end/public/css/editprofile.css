@@ -115,8 +115,8 @@ button:hover {
 	border:2px solid #000000;
 }
 
-.section1 {
-	background: url('../../design/assets/bg3.png') no-repeat;
+.editprofile-section1 {
+	background: url('../assets/bg3.png') no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: contain;
 	-o-background-size: cover;
@@ -134,15 +134,7 @@ button:hover {
 	font-size: 30px;
 }
 
-#title {
-	margin-top: 180px;
-	margin-left: 80px;
-	text-align: left;
-	color: #FFFFFF;
-	font-size: 30px;
-}
-
-.section2 {
+.editprofile-section2 {
 	background-color: #FFFFFF;
 	min-height: 850px;
 	text-align: center;
