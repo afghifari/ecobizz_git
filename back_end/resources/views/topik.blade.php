@@ -11,6 +11,8 @@
 
 	<section class="forum-section2">
 		<center><input type="text" name="search" placeholder="Search"> <input type="submit" name="submit" value=""></center>
+		<div style="float: right; margin-right: 100px;"><button class="button1">Topik Baru</button></div>
+		<div style="clear: both;"></div><br>
 		<table>
 			<col width="150">
 			<col width="100">

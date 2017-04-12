@@ -98,3 +98,7 @@ Route::post('/thread/{id}', function($id) {
     $post->save();
     return Redirect::back();
 });
+
+Route::get('/new', function () {
+    return view('newthread');
+});
