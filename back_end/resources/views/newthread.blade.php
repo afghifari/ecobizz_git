@@ -5,11 +5,12 @@
 
 	<section class="newthread-section1">
 		<div id="newthread">
-			Forum 1
+			{{$forum->name}}
 		</div>
 	</section>
 
 	<section class="newthread-section2">
+		{!! Form::open(['method' => 'post', 'url' => url('forum/'.$forum->id)]) !!}
 		Judul<br>
 		<input type="text" name="judul">
 		<br><br>

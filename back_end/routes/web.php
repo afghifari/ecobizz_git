@@ -93,12 +93,32 @@ Route::get('/thread/{id}', function($id) {
 Route::post('/thread/{id}', function($id) {
     $post = new App\ForumPost;
     $post->thread_id = $id;
-    $post->owner_id = request()->user_id;
+    $post->owner_id = Auth::user()->id;
     $post->content = request()->comment;
     $post->save();
     return Redirect::back();
 });
 
-Route::get('/new', function () {
-    return view('newthread');
+Route::get('/create-forum/{id}', function ($id) {
+    if (!Auth::user()) {
+        return Redirect::back();
+    }
+    $forum = App\Forum::find($id);
+    return view('newthread', ['forum' => $forum ]);
+});
+
+Route::post('/forum/{id}', function($id) {
+    $thread = new App\Thread;
+    $thread->name = request()->judul;
+    $thread->forum_id =$id;
+    $thread->owner_id = Auth::user()->id;
+    $thread->save();
+
+    $post = new App\ForumPost;
+    $post->thread_id = $thread->id;
+    $post->owner_id = Auth::user()->id;
+    $post->content = request()->isi;
+    $post->save();
+
+    return redirect('forum/'.$id);
 });

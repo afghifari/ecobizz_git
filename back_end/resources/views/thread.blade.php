@@ -26,7 +26,6 @@
 		@if (Auth::user())
 		<!-- ditampilkan jika sudah login -->
 			{!! Form::open(['method' => 'post', 'url' => url('thread/'.$thread->id)]) !!}
-			{!! Form::hidden('user_id', Auth::user()->id) !!}
 			{!! Form::textarea("comment", null, ['placeholder' => 'Tinggalkan Komentar']) !!}
 			<br>
 			<div style="float: right; margin-right: 150px;">
