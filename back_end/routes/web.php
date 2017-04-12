@@ -44,8 +44,26 @@ Route::post('user/{id}', function($id) {
 //link profil
 Route::get('user/{id}', function($id) {
     $user = App\User::find($id);
-    return view('profile', [ 'user' => $user]);
+    $posts = $user->timelines;
+    return view('profile', [ 'user' => $user, 'posts' => $posts]);
 });
+
+Route::get('user/{id}/edit', function($id) {
+    return view('editprofile', ['user' => App\User::find($id)]);
+});
+
+Route::post('user/{id}/edit', function($id) {
+    return request()->all();
+});
+
+Route::post('user/{id}/timeline', function($id) {
+    $post = new App\TimelinePost;
+    $post->user_id = $id;
+    $post->message = request()->timeline_post;
+    $post->save();
+    return Redirect::back();
+});
+
 
 Route::post('/uploadPicExample', function() {
     $user = App\User::first();
@@ -60,11 +78,22 @@ Route::get('/forum', function() {
 });
 
 Route::get('/forum/{id}', function($id) {
-    $threads = App\Forum::find($id)->threads;
-    return view('topik', ['threads' => $threads ]);
+    $forum = App\Forum::find($id);
+    $threads = $forum->threads;
+    return view('topik', ['threads' => $threads, 'forum' => $forum ]);
 });
 
 Route::get('/thread/{id}', function($id) {
-    $posts = App\Thread::find($id)->posts;
-    return view('thread', ['posts' => $posts ]);
+    $thread = App\Thread::find($id);
+    $posts = $thread->posts;
+    return view('thread', [ 'thread' => $thread,'posts' => $posts ]);
+});
+
+Route::post('/thread/{id}', function($id) {
+    $post = new App\ForumPost;
+    $post->thread_id = $id;
+    $post->owner_id = request()->user_id;
+    $post->content = request()->comment;
+    $post->save();
+    return Redirect::back();
 });

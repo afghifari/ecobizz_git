@@ -5,7 +5,7 @@
 
 	<section class="thread-section1">
 		<div id="thread">
-			< JUDUL TOPIK >
+			{{$thread->name}}
 		</div>
 	</section>
 
@@ -25,11 +25,15 @@
 
 		@if (Auth::user())
 		<!-- ditampilkan jika sudah login -->
-			<textarea name="comment" placeholder="Tinggalkan komentar.." wrap="hard"></textarea>
+			{!! Form::open(['method' => 'post', 'url' => url('thread/'.$thread->id)]) !!}
+			{!! Form::hidden('user_id', Auth::user()->id) !!}
+			{!! Form::textarea("comment", null, ['placeholder' => 'Tinggalkan Komentar']) !!}
 			<br>
 			<div style="float: right; margin-right: 150px;">
 				<button class="button2">Kirim</button>
+
 			</div>
+			{!! Form::close() !!}
 		@else
 		<!-- ditampilkan jika belum login -->
 			<div style="color: #000000; margin-bottom: 40px;">Anda harus <a href="{{url('login')}}" class="link">login</a> untuk membalas.</div>

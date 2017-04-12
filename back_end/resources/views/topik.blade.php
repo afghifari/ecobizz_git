@@ -5,7 +5,7 @@
 
 	<section class="forum-section1">
 		<div id="forum">
-			< Nama Forum >
+			{{$forum->name}}
 		</div>
 	</section>
 
