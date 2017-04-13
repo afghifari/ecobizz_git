@@ -50,6 +50,7 @@ input[type=textarea] {
     border-radius: 4px;
     color: black;
     box-sizing: border-box;	
+    vertical-align: top;
 }
 
 .button1 {

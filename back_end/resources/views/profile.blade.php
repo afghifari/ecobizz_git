@@ -70,7 +70,8 @@
             {!! Form::open(['method' => 'post', 'url' => url('user/'. $user->id . '/timeline')]) !!}
             {!! Form::textarea("timeline_post", null, ['placeholder' => 'Apa yang baru?']) !!}
             <div style="float: right; margin-right: 220px;">
-                <img src="/assets/photo.png" width="20px">
+            	<input type="file" name="media" id="media" class="button3" accept="image/*">
+            	<label for="media"><img src="/assets/photo.png" width="20px"></label>
                 <button class="button2">Post</button>
             </div>
             @endif

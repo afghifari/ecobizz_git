@@ -15,7 +15,7 @@
 		<input type="text" name="judul">
 		<br><br>
 		Isi<br>
-		<input type="textarea" name="isi">
+		<input type="textarea" name="isi" wrap="hard" style="vertical-align: top;">
 		<br><br>
 		<div style="float: right; margin-right: 250px;"><button class="button1">Buat Topik</button></div>
 
