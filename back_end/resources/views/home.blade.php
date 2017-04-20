@@ -9,7 +9,9 @@
             <div style="font-size:20px">Membangun ekosistem bisnis dengan berbagi informasi</div>
         </div>
         <br>
-        <center><button class="button1" onclick="window.location.href='/register'">JOIN US</button></center>
+        @if (Auth::guest())
+            <center><button class="button1" onclick="window.location.href='/register'">JOIN US</button></center>
+        @endif
         <br>
         <div class="down-button">
             <center><button class="button1" style="border:none" onclick="location.href='#ecobiz'"><img src="/assets/down_arrow.png"></button></center>
@@ -44,7 +46,9 @@
     <section class="section2">
         <div class="title">BERGABUNGLAH DENGAN KAMI DAN MULAILAH <b>BERINTERAKSI</b></div>
         <center><p style="color: white; font-size: 18px; margin-bottom: 40px">Mulai dari pemilik tanah hingga retailer, pemerintah hingga universitas, organisasi bantuan finantsial hingga bantuan hukum, semuanya adalah anggota potensial untuk platform Ecobiz KUKM Jawa Barat. Kenalilah setiap aktor bisnis - profil, lingkup usaha, dan kebutuhan - dan mulailah berinteraksi untuk membangun ekosistem bisnis Jawa Barat.</p></center>
-        <button class="button2" onclick="location.href='register'">JOIN US</button>
+        @if (Auth::guest())
+            <button class="button2" onclick="location.href='register'">JOIN US</button>
+        @endif
     </section>
 
     <section class="section3">

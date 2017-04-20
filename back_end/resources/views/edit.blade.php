@@ -30,22 +30,22 @@
         <div class="container2">
             <div id="user">
                 <center>
-                    <img src="/assets/circle.png" height="120px" style="margin-top: 60px;"><br>
+                    <img src="{{$user->profile_picture}}" height="120px" style="margin-top: 60px;"><br>
                     <input type="file" name="photo" id="photo" class="button2" />
                     <label for="photo">change</label>
                 </center>
 
                 <div style="font-size: 14px;">
                     <form id="editProfile">
-                        <input type="text" name="name" placeholder="Nama"> </br>
-                        <input type="text" name="address" placeholder="Alamat"></br>
-                        <input type="text" name="email" placeholder="E-mail"></br>
-                        <input type="text" name="hp" placeholder="No. Handphone"></br>
+                        <input type="text" name="name" placeholder="Nama" value="{{ $user->name }}"> </br>
+                        <input type="text" name="address" placeholder="Alamat" value="{{ $user->address }}"></br>
+                        <input type="text" name="email" placeholder="E-mail" value="{{ $user->email }}"></br>
+                        <input type="text" name="hp" placeholder="No. Handphone" value="{{ $user->mobile_number }}"></br>
                 </div>
             </div>
 
             <div id="organizationName">
-                <input type="text" name="organizationName" placeholder="Nama Organisasi" style="width: 600px;"></br>
+                <input type="text" name="organizationName" placeholder="Nama Organisasi" style="width: 600px;" value="{{$user->organization_name}}"></br>
             </div>
 
             <div id="organizationImage">
@@ -56,10 +56,10 @@
             </div>
 
             <div id="organizationProfile">
-                <input type="textarea" name="deskripsi" placeholder="Deskripsi"> </br>
+                <input type="textarea" name="deskripsi" placeholder="Deskripsi" value="{{$user->description}}"> </br>
                 <input type="text" name="kategori" placeholder="Kategori" style="width: 600px;"> </br>
-                <input type="text" name="pemilik" placeholder="Pemilik" style="width: 600px;"></br>
-                <input type="text" name="website" placeholder="Website" style="width: 600px;"></br>
+                <input type="text" name="pemilik" placeholder="Pemilik" style="width: 600px;" value="{{ $user->owner }}"></br>
+                <input type="text" name="website" placeholder="Website" style="width: 600px;" value="{{ $user->website }}"></br>
             </div>
             </form>
         </div>

@@ -57,10 +57,11 @@
             </div>
 
             <div id="organizationProfile">
-                {{$user->description}}
                 <ul class="ulist" style="text-align: left;">
-                    <li class="list">{{ $user->owner }}</li>
-                    <li class="list">{{ $user->website }}</li>
+                    <li class="list">Deskripsi: <br>{{$user->description}}</li><br>
+                    <li class="list">Owner: <br>{{ $user->owner }}</li><br>
+                    <li class="list">Kategori: <br></li><br>
+                    <li class="list">Website: <br>{{ $user->website }}</li><br>
                 </ul>
             </div>
         </div>
