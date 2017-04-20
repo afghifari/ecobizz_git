@@ -122,3 +122,7 @@ Route::post('/forum/{id}', function($id) {
 
     return redirect('forum/'.$id);
 });
+
+Route::get('/admin', function () {
+    return view('admin');
+});

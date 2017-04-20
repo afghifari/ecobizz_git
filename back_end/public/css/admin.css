@@ -1,0 +1,169 @@
+.header {
+	color: #000000;
+	font-family: "Verdana";
+	font-size: 16px;
+	margin-top: 15px;
+}
+
+.photo {
+	padding: 80px;
+	color: #000000;
+	font-size: 14px;
+	background-color: transparent;
+	text-decoration: none;
+	margin-top: 10px;
+	margin-right: 30px;
+	margin-left: 10px;
+	border:2px solid #000000;
+	width: 30px;
+	height: 30px;
+	padding: 6px 0;
+	border-radius: 15px;
+}
+
+button {
+	background-color: transparent;
+	border: none;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+.button1 {
+	color: #00aa44;
+	font-size: 16px;
+	background-color: transparent;
+	text-decoration: none;
+	padding: 5px 20px;
+	margin-top: 10px;
+	margin-right: 60px;
+	margin-left: 10px;
+	border-radius: 8px;
+	border:2px solid #00aa44;
+}
+
+.button1:hover {
+	cursor: pointer;
+	color: #000000;
+	border:2px solid #000000;
+}
+
+.admin-section1 {
+	background: url('../assets/bg3.png') no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: contain;
+	-o-background-size: cover;
+	background-size: cover;
+	position: relative;
+}
+
+#admin {
+	position: relative;
+	margin-left: 100px;
+	color: #000000;
+	z-index: 1;
+	font-size: 25px;
+	margin-top: 180px;
+	font-size: 30px;
+}
+
+.container {
+	width: 100%;
+}
+
+#left {
+	float:left;
+	width: 45%;
+	padding-top: 20px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+#right {
+	float:left;
+	width: 45%;
+	margin-left: 30px;
+	padding-top: 20px;
+	padding-left: 30px;
+	padding-right: 20px;
+}
+
+.admin-section2 {
+	background-color: #FFFFFF;
+	min-height: 250px;
+	color: #FFFFFF;
+
+}
+
+.section-title {
+	background-color: #00aa44;
+	font-size: 18px;
+	margin-left: 30px;
+	margin-bottom: 20px;
+	padding: 10px;
+	width: 100%;
+}
+
+.section-content {
+	background-color: transparent;
+	font-size: 16px;
+	color: #696969;
+	margin-left: 30px;
+	margin-bottom: 60px;
+	padding: 10px;
+	line-height: 30px;
+	word-wrap: break-word;
+}
+
+.section3 {
+	background-color: #00aa44;
+	min-height: 450px;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.ulist {
+	list-style: square;
+	list-style-position: inside;
+	text-align: center;
+	text-indent: -2em;
+}
+
+.list {
+	position: relative;
+	left: -5px;
+	color: #696969;
+}
+
+li span {
+	position: relative;
+	left: -15px;
+	color: #696969;
+}
+
+.container3 {
+	width: 800px;
+	margin: auto;
+}
+
+#footer-sect {
+	margin-top: 60px;
+	float:left;
+	width: 200px;
+	color: #FFFFFF; 
+	font-size: 20px; 
+}
+
+#footer-sect-center {
+	margin-top: 60px;
+	float:left;
+	width: 400px;
+	color: #FFFFFF; 
+	font-size: 20px; 
+}
+
+.footer {
+	font-size: 14px; 
+	line-height: 25px;
+}
