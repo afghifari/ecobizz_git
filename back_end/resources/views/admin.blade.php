@@ -25,21 +25,46 @@
 							<td align="justify">
 								<b>Forum 1</b>
 							</td>
-							<td align="center">Edit</td>
-							<td align="center">Hapus</td>
+							<td align="center"><button>Edit</button></td>
+							<td align="center"><button>Hapus</button></td>
 						</tr>
 						<tr>
 							<td align="justify">
 								<b>Forum 2</b>
 							</td>
-							<td align="center">Edit</td>
-							<td align="center">Hapus</td>
+							<td align="center"><button>Edit</button></td>
+							<td align="center"><button>Hapus</button></td>
 						</tr>
-					</table>
+					</table><br>
+					Forum Baru<br>
+					<input type="text" name="judul" placeholder="Judul"><br>
+					<input type="text" name="deskripsi" placeholder="Deskripsi"><br>
+					<button class="button1" style="float: right;">Tambah Forum</button>
+					<br><br>
 				</div>
 
+				<div style="clear: both;"></div>
+
 				<div class="section-title">
-					Dashboard Statistik
+					Statistik User
+				</div>
+				<div class="total-user">
+					Jumlah pengguna: <b>X</b> orang<br><br>
+					Pengguna baru hari ini: <b>X</b> orang<br><br>
+					Jumlah pengguna per kategori: <br>
+					<div style="margin-left: 20px;">
+						Dekopinda: <b>X</b> orang<br>
+						Dekopinwil: <b>X</b> orang<br>
+						Eksportir: <b>X</b> orang<br>
+						Investor: <b>X</b> orang<br>
+						ICT: <b>X</b> orang<br>
+						Konsultan: <b>X</b> orang<br>
+						Koperasi: <b>X</b> orang<br>
+						Perguruan Tinggi: <b>X</b> orang<br>
+						Industri: <b>X</b> orang<br>
+						Lainnya: <b>X</b> orang<br>
+					</div>
+					<br>
 				</div>
 			</div>
 

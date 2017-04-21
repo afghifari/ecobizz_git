@@ -105,6 +105,12 @@ button:hover {
 	width: 100%;
 }
 
+input[type=text] {
+	width: 400px;
+	height: 40px;
+	font-size: 14px;
+}
+
 .section-content {
 	background-color: transparent;
 	font-size: 16px;
@@ -114,6 +120,12 @@ button:hover {
 	padding: 10px;
 	line-height: 30px;
 	word-wrap: break-word;
+}
+
+.total-user {
+	margin-left: 40px;
+	color: #696969;
+	font-size: 16px;
 }
 
 .section3 {
