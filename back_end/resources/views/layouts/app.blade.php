@@ -104,7 +104,7 @@
             border: none;
         }
         .bg-transparent{
-            background-color: transparent !important;
+            background-color: #00aa44 !important;
         }
     </style>
 </head>
