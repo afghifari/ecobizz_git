@@ -70,6 +70,83 @@
 
 			<div id="right">
 				<div class="section-title">
+					Kelola Kategori Pengguna
+				</div>
+				<div class="section-content">
+					<table>
+						<col width="210">
+						<col width="200">
+						<col width="200">
+						<tr>
+							<td align="justify">
+								<b>Dekopinda</b>
+							</td>
+							<td align="center"><button>Edit</button></td>
+							<td align="center"><button>Hapus</button></td>
+						</tr>
+						<tr>
+							<td align="justify">
+								<b>Dekopinwil</b>
+							</td>
+							<td align="center"><button>Edit</button></td>
+							<td align="center"><button>Hapus</button></td>
+						</tr>
+						<tr>
+							<td align="justify">
+								<b>Eksportir</b>
+							</td>
+							<td align="center"><button>Edit</button></td>
+							<td align="center"><button>Hapus</button></td>
+						</tr>
+						<tr>
+							<td align="justify">
+								<b>Investor</b>
+							</td>
+							<td align="center"><button>Edit</button></td>
+							<td align="center"><button>Hapus</button></td>
+						</tr>
+						<tr>
+							<td align="justify">
+								<b>ICT</b>
+							</td>
+							<td align="center"><button>Edit</button></td>
+							<td align="center"><button>Hapus</button></td>
+						</tr>
+						<tr>
+							<td align="justify">
+								<b>Konsultan</b>
+							</td>
+							<td align="center"><button>Edit</button></td>
+							<td align="center"><button>Hapus</button></td>
+						</tr>
+						<tr>
+							<td align="justify">
+								<b>Koperasi</b>
+							</td>
+							<td align="center"><button>Edit</button></td>
+							<td align="center"><button>Hapus</button></td>
+						</tr>
+						<tr>
+							<td align="justify">
+								<b>Perguruan Tinggi</b>
+							</td>
+							<td align="center"><button>Edit</button></td>
+							<td align="center"><button>Hapus</button></td>
+						</tr>
+						<tr>
+							<td align="justify">
+								<b>Industri</b>
+							</td>
+							<td align="center"><button>Edit</button></td>
+							<td align="center"><button>Hapus</button></td>
+						</tr>
+					</table><br>
+					Kategori Baru<br>
+					<input type="text" name="kategori" placeholder="Kategori"><br>
+					<button class="button1" style="float: right;">Tambah Kategori</button>
+					<br><br>
+				</div>
+				<div class="section-title">
 					Export Data User
 				</div>
 				<div class="section-content">
