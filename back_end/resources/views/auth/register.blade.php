@@ -7,12 +7,12 @@
         <section class="reg-section1">
             <div id="createAccount">
                 <br><br>
-                Create a New Account <br><br>
+                Membuat Akun Baru <br><br>
             </div>
         </section>
 
         <section class="reg-section2">
-            <div class="reg-mainText">  <bText>1</bText> Personal Information </div>
+            <div class="reg-mainText">  <bText>1</bText> Informasi Pribadi </div>
 
         </section>
 
@@ -42,7 +42,7 @@
         </section>
 
         <section class="reg-section2">
-            <div class="reg-mainText">  <bText>2</bText> Business Section</div>
+            <div class="reg-mainText">  <bText>2</bText> Informasi Bisnis</div>
         </section>
 
         <section class="reg-section5">
@@ -59,12 +59,12 @@
         </section>
 
         <section class="reg-section2">
-            <div class="reg-mainText"> <bText>3</bText> Confirmation</div>
+            <div class="reg-mainText"> <bText>3</bText> Konfirmasi</div>
         </section>
 
         <section class="reg-section6">
-            <input type="checkbox" name="info" value="information">  My information is correct </br></br>
-            <input type="checkbox" name="tnc" value="tnc">  I have read the Terms and Condition </br></br>
+            <input type="checkbox" name="info" value="information">  Informasi saya sudah benar </br></br>
+            <input type="checkbox" name="tnc" value="tnc">  Saya telah membaca dan menyetujui Syarat dan Ketentuan </br></br>
             <input class="registerButton" type="submit" value="REGISTER">
             </form>
         </section>
