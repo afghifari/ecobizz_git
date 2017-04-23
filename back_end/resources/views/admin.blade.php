@@ -126,8 +126,12 @@
 					Import Data
 				</div>
 				<div class="section-content">
+				{!! Form::open(['method' => 'post', 'url' => url("import"), 'files' => true]) !!}
+					<input type="file" name="file" accept="image/*">
 					<button class="button1">USER</button>
+				{!! Form::close() !!}
 					{{-- <button class="button1">FORUM</button> --}}
+
 				</div>
 			</div>
 		</div>

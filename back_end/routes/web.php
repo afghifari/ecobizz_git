@@ -15,6 +15,36 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::post('/import', function () {
+    $file = request()->file('file');
+    $datas = \Excel::load($file, function ($reader) {
+    })->get();
+    $count = 0;
+    foreach ($datas as $data) {
+        $user = App\User::where('email', $data->email)->first();
+        if ($user)
+            continue;
+
+        $count++;
+        return $data;
+        $user = new App\User;
+        $user->name = $data->name;
+        $user->email = $data->email;
+        $user->password = bcrypt($data->mobile_number);
+        $user->address = $data->address;
+        $user->description = $data->description;
+        $user->owner = $data->owner;
+        $user->organization_name = $data->organization_name;
+        $user->role_id = App\Role::where('name', $data->role)->first() ? App\Role::where('name', $data->role)->first()->id : null;
+        $user->website = $data->website;
+        $user->mobile_number = $data->mobile_number;
+        $user->products = $data->products;
+        $user->save();
+
+    }
+    return redirect()->back()->with(['success' => 1, 'message'=>'Import berhasil, ' . $count . ' User baru']);
+});
+
 Route::get('/export', function () {
     if (Auth::guest()) {
         return redirect('/');
