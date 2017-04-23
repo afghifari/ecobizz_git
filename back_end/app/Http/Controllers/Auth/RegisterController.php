@@ -6,6 +6,8 @@ use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
+use Illuminate\Auth\Events\Registered;
 
 class RegisterController extends Controller
 {
@@ -27,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/login';
 
     /**
      * Create a new controller instance.
@@ -55,19 +57,13 @@ class RegisterController extends Controller
         ]);
     }
 
-    public function postRegister(Request $request){
-        $validator = $this->validator($request->all());
+    public function register(Request $request)
+    {
+        $this->validator($request->all())->validate();
 
-        if ($validator->fails()) {
-            $this->throwValidationException(
-                $request, $validator
-            );
-        }
+        event(new Registered($user = $this->create($request->all())));
 
-        // Commenting this line should help.
-        Auth::login($this->create($request->all()));
-
-        return redirect($this->redirectPath());
+        return redirect('login')->with(['success' => 1, 'message' => "Registrasi Berhasil"]);
     }
 
     /**
