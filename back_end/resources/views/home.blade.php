@@ -2,6 +2,12 @@
 
 @section('content')
     <header id="header">
+        <br><br><br><br>
+        @if (Session::has('success'))
+            <div class="alert alert-success">
+                {{ Session::get('success') }}
+            </div>
+        @endif
         <div class="start">
             <b><div style="font-size:70px">KUKM</div></b>
             <br>

@@ -7,15 +7,25 @@
         <section class="reg-section1">
             <div id="createAccount">
                 <br><br>
-                Create a New Account <br><br>
+                Membuat Akun Baru <br><br>
             </div>
         </section>
 
         <section class="reg-section2">
-            <div class="reg-mainText">  <bText>1</bText> Personal Information </div>
+            <div class="reg-mainText">  <bText>1</bText> Informasi Pribadi </div>
+
         </section>
 
         <section class="reg-section3">
+            @if (count($errors) > 0)
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <form id="registerForm">
                 <input type="text" name="name" placeholder="Nama"> </br>
                 <h6>Nama lengkap, berupa huruf tanpa simbol dan angka</h6><br>
@@ -32,7 +42,7 @@
         </section>
 
         <section class="reg-section2">
-            <div class="reg-mainText">  <bText>2</bText> Business Section</div>
+            <div class="reg-mainText">  <bText>2</bText> Informasi Bisnis</div>
         </section>
 
         <section class="reg-section5">
@@ -49,12 +59,12 @@
         </section>
 
         <section class="reg-section2">
-            <div class="reg-mainText"> <bText>3</bText> Confirmation</div>
+            <div class="reg-mainText"> <bText>3</bText> Konfirmasi</div>
         </section>
 
         <section class="reg-section6">
-            <input type="checkbox" name="info" value="information">  My information is correct </br></br>
-            <input type="checkbox" name="tnc" value="tnc">  I have read the Terms and Condition </br></br>
+            <input type="checkbox" name="info" value="information">  Informasi saya sudah benar </br></br>
+            <input type="checkbox" name="tnc" value="tnc">  Saya telah membaca dan menyetujui Syarat dan Ketentuan </br></br>
             <input class="registerButton" type="submit" value="REGISTER">
             </form>
         </section>

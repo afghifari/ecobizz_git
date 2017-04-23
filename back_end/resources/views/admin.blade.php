@@ -12,7 +12,7 @@
 	{{-- Ini Error --}}
 	@if (session()->has('success'))
 		@if (session()->get('success'))
-			<h1>{{session()->get('message')}}</h1><br>
+			{{session()->get('message')}}<br>
 		@else
 			@foreach (session()->get('errors')->all() as $error)
 				{{$error}}<br>
@@ -68,7 +68,7 @@
 				<div class="total-user">
 					Jumlah pengguna: <b>{{count(App\User::all())}}</b> orang<br><br>
 					Pengguna baru hari ini: <b>{{count(App\User::newUsers())}}</b> orang<br><br>
-					Jumlah pengguna per kategori: <br>
+					Jumlah pengguna per kategori peran: <br>
 					<div style="margin-left: 20px;">
 						<justify>
 						@foreach ($roles as $role)
@@ -83,7 +83,7 @@
 
 			<div id="right">
 				<div class="section-title">
-					Kelola Kategori Pengguna
+					Kelola Peran Pengguna
 				</div>
 				<div class="section-content">
 					<table>
@@ -102,15 +102,15 @@
 					</table><br>
 					{!! Form::open(['method' => 'post', 'url' => url('admin')]) !!}
 					@if ($category = App\Role::find($categoryId))
-						Edit Kategori<br>
-						<input type="text" name="kategori" placeholder="Kategori" value="{{$category->name}}"><br>
+						Edit Peran<br>
+						<input type="text" name="kategori" placeholder="Peran" value="{{$category->name}}"><br>
 						<input type="hidden" name="categoryId" value={{$categoryId}}>
-						<button class="button1" style="float: right;">Edit Kategori</button>
+						<button class="button1" style="float: right;">Edit Peran</button>
 					@else
-						Kategori Baru<br>
-						<input type="text" name="kategori" placeholder="Kategori"><br>
+						Peran Baru<br>
+						<input type="text" name="kategori" placeholder="Peran"><br>
 						<input type="hidden" name="categoryId" value=-1>
-						<button class="button1" style="float: right;">Tambah Kategori</button>
+						<button class="button1" style="float: right;">Tambah Peran</button>
 					@endif
 					{!! Form::close() !!}
 					<br><br>
