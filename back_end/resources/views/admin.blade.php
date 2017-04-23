@@ -9,37 +9,54 @@
 		</div>
 	</section>
 
+	{{-- Ini Error --}}
+	@if (session()->has('success'))
+		@if (session()->get('success'))
+			<h1>{{session()->get('message')}}</h1><br>
+		@else
+			@foreach (session()->get('errors')->all() as $error)
+				{{$error}}<br>
+			@endforeach
+		@endif
+	@endif
+
 	<section class="admin-section2">
 		<div class="container">
 			<div id="left">
 				<div class="section-title">
 					Kelola Forum<br>
 				</div>
-		
+
 				<div class="section-content">
 					<table>
 						<col width="210">
 						<col width="200">
 						<col width="200">
-						<tr>
-							<td align="justify">
-								<b>Forum 1</b>
-							</td>
-							<td align="center"><button>Edit</button></td>
-							<td align="center"><button>Hapus</button></td>
-						</tr>
-						<tr>
-							<td align="justify">
-								<b>Forum 2</b>
-							</td>
-							<td align="center"><button>Edit</button></td>
-							<td align="center"><button>Hapus</button></td>
-						</tr>
+						@foreach ($forums as $forum)
+							<tr>
+								<td align="justify">
+									<b>{{$forum->name}}</b>
+								</td>
+								<td align="center"><button onclick="window.location.href='/admin?forumId={{$forum->id}}'">Edit</button></td>
+								<td align="center"><button onclick="window.location.href='/admin/delete?forumId={{$forum->id}}'">Hapus</button></td>
+							</tr>
+						@endforeach
 					</table><br>
-					Forum Baru<br>
-					<input type="text" name="judul" placeholder="Judul"><br>
-					<input type="text" name="deskripsi" placeholder="Deskripsi"><br>
-					<button class="button1" style="float: right;">Tambah Forum</button>
+					{!! Form::open(['method' => 'post', 'url' => url('admin')]) !!}
+					@if ($forum = \App\Forum::find($forumId))
+						Edit Forum<br>
+						<input type="text" name="judul" placeholder="Judul" value="{{$forum->name}}"><br>
+						<input type="text" name="deskripsi" placeholder="Deskripsi" value="{{$forum->description}}"><br>
+						<input type="hidden" name="forumId" value={{$forumId}}>
+						<button class="button1" style="float: right;">Edit Forum</button>
+					@else
+						Forum Baru<br>
+						<input type="text" name="judul" placeholder="Judul"><br>
+						<input type="text" name="deskripsi" placeholder="Deskripsi"><br>
+						<input type="hidden" name="forumId" value=-1>
+						<button class="button1" style="float: right;">Tambah Forum</button>
+					@endif
+					{!! Form::close() !!}
 					<br><br>
 				</div>
 
@@ -49,20 +66,16 @@
 					Statistik User
 				</div>
 				<div class="total-user">
-					Jumlah pengguna: <b>X</b> orang<br><br>
-					Pengguna baru hari ini: <b>X</b> orang<br><br>
+					Jumlah pengguna: <b>{{count(App\User::all())}}</b> orang<br><br>
+					Pengguna baru hari ini: <b>{{count(App\User::newUsers())}}</b> orang<br><br>
 					Jumlah pengguna per kategori: <br>
 					<div style="margin-left: 20px;">
-						Dekopinda: <b>X</b> orang<br>
-						Dekopinwil: <b>X</b> orang<br>
-						Eksportir: <b>X</b> orang<br>
-						Investor: <b>X</b> orang<br>
-						ICT: <b>X</b> orang<br>
-						Konsultan: <b>X</b> orang<br>
-						Koperasi: <b>X</b> orang<br>
-						Perguruan Tinggi: <b>X</b> orang<br>
-						Industri: <b>X</b> orang<br>
-						Lainnya: <b>X</b> orang<br>
+						<justify>
+						@foreach ($roles as $role)
+							{{$role->name}}: <b>{{count($role->users)}}</b> orang<br>
+						@endforeach
+							Unknown: <b> {{count(App\User::where('role_id', null))}}</b> orang<br>
+						</justify>
 					</div>
 					<br>
 				</div>
@@ -77,73 +90,29 @@
 						<col width="210">
 						<col width="200">
 						<col width="200">
-						<tr>
-							<td align="justify">
-								<b>Dekopinda</b>
-							</td>
-							<td align="center"><button>Edit</button></td>
-							<td align="center"><button>Hapus</button></td>
-						</tr>
-						<tr>
-							<td align="justify">
-								<b>Dekopinwil</b>
-							</td>
-							<td align="center"><button>Edit</button></td>
-							<td align="center"><button>Hapus</button></td>
-						</tr>
-						<tr>
-							<td align="justify">
-								<b>Eksportir</b>
-							</td>
-							<td align="center"><button>Edit</button></td>
-							<td align="center"><button>Hapus</button></td>
-						</tr>
-						<tr>
-							<td align="justify">
-								<b>Investor</b>
-							</td>
-							<td align="center"><button>Edit</button></td>
-							<td align="center"><button>Hapus</button></td>
-						</tr>
-						<tr>
-							<td align="justify">
-								<b>ICT</b>
-							</td>
-							<td align="center"><button>Edit</button></td>
-							<td align="center"><button>Hapus</button></td>
-						</tr>
-						<tr>
-							<td align="justify">
-								<b>Konsultan</b>
-							</td>
-							<td align="center"><button>Edit</button></td>
-							<td align="center"><button>Hapus</button></td>
-						</tr>
-						<tr>
-							<td align="justify">
-								<b>Koperasi</b>
-							</td>
-							<td align="center"><button>Edit</button></td>
-							<td align="center"><button>Hapus</button></td>
-						</tr>
-						<tr>
-							<td align="justify">
-								<b>Perguruan Tinggi</b>
-							</td>
-							<td align="center"><button>Edit</button></td>
-							<td align="center"><button>Hapus</button></td>
-						</tr>
-						<tr>
-							<td align="justify">
-								<b>Industri</b>
-							</td>
-							<td align="center"><button>Edit</button></td>
-							<td align="center"><button>Hapus</button></td>
-						</tr>
+						@foreach ($roles as $role)
+							<tr>
+								<td align="justify">
+									<b>{{$role->name}}</b>
+								</td>
+								<td align="center"><button onclick="window.location.href='/admin?categoryId={{$role->id}}'">Edit</button></td>
+								<td align="center"><button onclick="window.location.href='/admin/delete?categoryId={{$role->id}}'">Hapus</button></td>
+							</tr>
+						@endforeach
 					</table><br>
-					Kategori Baru<br>
-					<input type="text" name="kategori" placeholder="Kategori"><br>
-					<button class="button1" style="float: right;">Tambah Kategori</button>
+					{!! Form::open(['method' => 'post', 'url' => url('admin')]) !!}
+					@if ($category = App\Role::find($categoryId))
+						Edit Kategori<br>
+						<input type="text" name="kategori" placeholder="Kategori" value="{{$category->name}}"><br>
+						<input type="hidden" name="categoryId" value={{$categoryId}}>
+						<button class="button1" style="float: right;">Edit Kategori</button>
+					@else
+						Kategori Baru<br>
+						<input type="text" name="kategori" placeholder="Kategori"><br>
+						<input type="hidden" name="categoryId" value=-1>
+						<button class="button1" style="float: right;">Tambah Kategori</button>
+					@endif
+					{!! Form::close() !!}
 					<br><br>
 				</div>
 				<div class="section-title">
@@ -162,9 +131,9 @@
 				</div>
 			</div>
 		</div>
-		
-		
-		
+
+
+
 	</section>
 
 @endsection

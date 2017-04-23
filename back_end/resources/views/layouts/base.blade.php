@@ -73,6 +73,9 @@
                             </style>
                             <li><a href="{{ route('login') }}" id="bar-login">Login</a></li>
                         @else
+                            @if (Auth::user()->is_admin)
+                                <li style="margin-top: 4px;"><a href="/admin">Admin</a></li>
+                            @endif
                             <li style="margin-top: 4px;"><a href="/forum">Forum</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">

@@ -103,4 +103,8 @@ class User extends Authenticatable
     public function timelines() {
         return $this->hasMany(TimelinePost::class, "user_id", "id");
     }
+
+    public static function newUsers() {
+        return User::whereDate('created_at', \DB::raw('CURDATE()'))->get();
+    }
 }

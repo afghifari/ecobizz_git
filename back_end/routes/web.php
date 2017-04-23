@@ -124,5 +124,93 @@ Route::post('/forum/{id}', function($id) {
 });
 
 Route::get('/admin', function () {
-    return view('admin');
+    if (Auth::guest()) {
+        return redirect('/');
+    }
+    if (!Auth::user()->is_admin) {
+        return redirect('/');
+    }
+    $forums = App\Forum::all();
+    $roles = App\Role::all();
+
+    $forumId = request()->forumId;
+    $categoryId = request()->categoryId;
+
+    return view('admin', [ 'forums' => $forums, "roles" => $roles, 'forumId' => $forumId, 'categoryId' => $categoryId]);
+});
+
+Route::get('/admin/delete', function () {
+    if (Auth::guest()) {
+        return redirect('/');
+    }
+    if (!Auth::user()->is_admin) {
+        return redirect('/');
+    }
+
+    $forumId = request()->forumId;
+    $categoryId = request()->categoryId;
+
+    $forum = App\Forum::find($forumId);
+    $category = App\Role::find($categoryId);
+
+    if ($forum)
+        $forum->delete();
+    if ($category)
+        $category->delete();
+
+    return redirect()->back()->with(['success' => 1, 'message'=>'Penghapusan berhasil']);
+});
+
+Route::post('/admin', function () {
+    if (Auth::guest()) {
+        return redirect('/');
+    }
+    if (!Auth::user()->is_admin) {
+        return redirect('/');
+    }
+    if (request()->forumId) {
+        $validator = Validator::make(request()->all(), [
+        'judul' => 'required|string',
+        'deskripsi' => 'required|string',
+        ]);
+        if ($validator->fails()) {
+            return redirect()->back()->with(['success' => 0, 'errors' => $validator->errors()]);
+        }
+        $new = request()->forumId == -1;
+        $forum = null;
+        $message = '';
+        if ($new) {
+            $forum = new App\Forum;
+            $message = "Forum berhasil ditambahkan";
+        }
+        else {
+            $forum = App\Forum::find(request()->forumId);
+            $message = "Forum berhasil diperbarui";
+        }
+        $forum->name = request()->judul;
+        $forum->description = request()->deskripsi;
+        $forum->save();
+        return redirect()->back()->with(['success' => 1, 'message' => $message]);
+    } else if (request()->categoryId) {
+        $validator = Validator::make(request()->all(), [
+        'kategori' => 'required|string',
+        ]);
+        if ($validator->fails()) {
+            return redirect()->back()->with(['success' => 0, 'errors' => $validator->errors()]);
+        }
+        $new = request()->categoryId == -1;
+        $role = null;
+        $message = '';
+        if ($new) {
+            $role = new App\Role;
+            $message = "Kategori berhasil ditambahkan";
+        }
+        else {
+            $role = App\Role::find(request()->categoryId);
+            $message = "Kategori berhasil diperbarui";
+        }
+        $role->name = request()->kategori;
+        $role->save();
+        return redirect()->back()->with(['success' => 1, 'message' => $message]);
+    }
 });
