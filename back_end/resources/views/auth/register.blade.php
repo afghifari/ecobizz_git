@@ -13,9 +13,19 @@
 
         <section class="reg-section2">
             <div class="reg-mainText">  <bText>1</bText> Personal Information </div>
+
         </section>
 
         <section class="reg-section3">
+            @if (count($errors) > 0)
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
             <form id="registerForm">
                 <input type="text" name="name" placeholder="Nama"> </br>
                 <h6>Nama lengkap, berupa huruf tanpa simbol dan angka</h6><br>

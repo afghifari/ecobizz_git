@@ -51,7 +51,7 @@
 				<div class="total-user">
 					Jumlah pengguna: <b>X</b> orang<br><br>
 					Pengguna baru hari ini: <b>X</b> orang<br><br>
-					Jumlah pengguna per kategori: <br>
+					Jumlah pengguna per peran: <br>
 					<div style="margin-left: 20px;">
 						Dekopinda: <b>X</b> orang<br>
 						Dekopinwil: <b>X</b> orang<br>
@@ -70,7 +70,7 @@
 
 			<div id="right">
 				<div class="section-title">
-					Kelola Kategori Pengguna
+					Kelola Peran Pengguna
 				</div>
 				<div class="section-content">
 					<table>
@@ -141,8 +141,8 @@
 							<td align="center"><button>Hapus</button></td>
 						</tr>
 					</table><br>
-					Kategori Baru<br>
-					<input type="text" name="kategori" placeholder="Kategori"><br>
+					Peran Baru<br>
+					<input type="text" name="peran" placeholder="Peran"><br>
 					<button class="button1" style="float: right;">Tambah Kategori</button>
 					<br><br>
 				</div>
