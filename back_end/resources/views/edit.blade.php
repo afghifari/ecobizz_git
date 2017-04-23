@@ -17,6 +17,8 @@
         }
     </style>
 
+    {!! Form::open(['method' => 'post', 'url' => url('user/'.$user->id."/edit"), 'files' => true]) !!}
+
 	<section class="editprofile-section1">
         <div id="profile">
             Edit Profile
@@ -57,7 +59,7 @@
 
             <div id="organizationProfile">
                 <input type="textarea" name="deskripsi" placeholder="Deskripsi" value="{{$user->description}}"> </br>
-                <input type="text" name="kategori" placeholder="Kategori" style="width: 600px;"> </br>
+                {!! Form::select('kategori', App\Role::pluck('name', 'id'), $user->role_id, ['class' => 'form-control'] ) !!}
                 <input type="text" name="pemilik" placeholder="Pemilik" style="width: 600px;" value="{{ $user->owner }}"></br>
                 <input type="text" name="website" placeholder="Website" style="width: 600px;" value="{{ $user->website }}"></br>
             </div>

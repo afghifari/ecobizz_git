@@ -27,7 +27,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'remember_token', 'profile_picture', 'organization_structure', 'role_id', 'is_admin', 'last_seen',
     ];
 
     public function getOnlineAttribute() {
@@ -102,6 +102,10 @@ class User extends Authenticatable
 
     public function timelines() {
         return $this->hasMany(TimelinePost::class, "user_id", "id");
+    }
+
+    public function posts() {
+        return $this->hasMany(ForumPost::class, "owner_id", "id");
     }
 
     public static function newUsers() {

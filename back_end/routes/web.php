@@ -15,6 +15,44 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/export', function () {
+    if (Auth::guest()) {
+        return redirect('/');
+    }
+    if (!Auth::user()->is_admin) {
+        return redirect('/');
+    }
+
+    $mode = request()->mode;
+
+
+    Excel::create($mode." Data", function($excel) {
+         $excel->sheet('Sheetname', function($sheet) {
+
+            /*$query = App\User::join('roles', 'users.role_id', '=', 'roles.id')->select('users.*', 'roles.name as role')->get();
+            $query = $query->join()*/
+
+            $users = App\User::all();
+            $data = [];
+
+            foreach ($users as $user){
+                $temp = $user->toArray();
+                $temp['role'] = $user->role ? $user->role->name : "";
+                $temp['friend_count'] = count($user->friends);
+                $temp['post_count'] = count($user->posts);
+                $temp['thread_count'] = count($user->threads);
+
+                array_push($data, $temp);
+            }
+
+            $sheet->fromArray($data
+                , null, 'A1', false, true);
+
+
+        });
+    })->download('xls');
+});
+
 Route::get('/home', function () {
     return view('home');
 });
@@ -54,7 +92,35 @@ Route::get('user/{id}/edit', function($id) {
 });
 
 Route::post('user/{id}/edit', function($id) {
-    return request()->all();
+    if (Auth::user()->id != $id)
+        return redirect("home");
+
+    $data = request()->all();
+
+    $user = App\User::find($id);
+
+    $user->name = $data['name'];
+    $user->email = $data['email'];
+    $user->address = $data['address'] ? $data['address'] : "";
+    $user->description = $data['deskripsi'];
+    $user->owner = $data['pemilik'];
+    $user->organization_name = $data['organizationName'];
+    $user->role_id = $data['kategori'];
+    $user->website = $data['website'];
+    $user->mobile_number = $data['hp'];
+
+    $user->save();
+
+    if (request()->photo) {
+        $user->uploadPhoto($data['photo']);
+    }
+
+    if (request()->organizationImage) {
+        $user->uploadOrganizationChart($data['organizationImage']);
+    }
+
+
+    return redirect('user/'.$id);
 });
 
 Route::post('user/{id}/timeline', function($id) {

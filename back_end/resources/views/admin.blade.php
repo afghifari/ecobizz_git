@@ -116,18 +116,18 @@
 					<br><br>
 				</div>
 				<div class="section-title">
-					Export Data User
+					Export Data
 				</div>
 				<div class="section-content">
-					<button class="button1">XLSX</button>
-					<button class="button1">CSV</button>
+					<button class="button1" onclick="window.location.href='/export?mode=USER'">USER</button>
+					{{-- <button class="button1" onclick="window.location.href='/export?mode=FORUM'">FORUM</button> --}}
 				</div>
 				<div class="section-title">
-					Import Data User
+					Import Data
 				</div>
 				<div class="section-content">
-					<button class="button1">XLSX</button>
-					<button class="button1">CSV</button>
+					<button class="button1">USER</button>
+					{{-- <button class="button1">FORUM</button> --}}
 				</div>
 			</div>
 		</div>

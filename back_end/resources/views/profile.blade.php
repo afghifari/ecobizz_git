@@ -60,7 +60,7 @@
                 <ul class="ulist" style="text-align: left;">
                     <li class="list">Deskripsi: <br>{{$user->description}}</li><br>
                     <li class="list">Owner: <br>{{ $user->owner }}</li><br>
-                    <li class="list">Kategori: <br></li><br>
+                    <li class="list">Peran: <br>{{$user->role->name}}</li><br>
                     <li class="list">Website: <br>{{ $user->website }}</li><br>
                 </ul>
             </div>
