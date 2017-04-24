@@ -134,7 +134,6 @@
             <div id="footer-sect">Site Map
                 <br>
                 <a href="/">Home</a><br>
-                <a href="">Tentang</a><br>
                 <a href="forum">Forum</a><br>
                 <a href="register">Daftar</a><br>
                 <a href="login">Login</a>

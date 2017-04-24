@@ -12,11 +12,17 @@
 	{{-- Ini Error --}}
 	@if (session()->has('success'))
 		@if (session()->get('success'))
-			{{session()->get('message')}}<br>
+			<div class="alert alert-success">
+                {{session()->get('message')}}<br>
+            </div>
 		@else
-			@foreach (session()->get('errors')->all() as $error)
-				{{$error}}<br>
-			@endforeach
+			<div class="alert alert-danger">
+                <ul>
+                    @foreach (session()->get('errors')->all() as $error)
+						{{$error}}<br>
+					@endforeach
+                </ul>
+            </div>
 		@endif
 	@endif
 
@@ -127,8 +133,8 @@
 				</div>
 				<div class="section-content">
 				{!! Form::open(['method' => 'post', 'url' => url("import"), 'files' => true]) !!}
-					<input type="file" name="file" accept="image/*">
-					<button class="button1">USER</button>
+					<input type="file" name="file">
+					<button class="button1">IMPORT</button>
 				{!! Form::close() !!}
 					{{-- <button class="button1">FORUM</button> --}}
 
