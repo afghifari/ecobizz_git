@@ -8,7 +8,7 @@
             <div class="header-content-inner">
                @if (Session::has('success'))
                     <div class="alert alert-success">
-                        {{ Session::get('success') }}
+                        {{ Session::get('message') }}
                     </div>
                 @endif
                 <br><br>

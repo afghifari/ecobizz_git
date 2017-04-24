@@ -62,6 +62,7 @@
                     <li class="list">Owner: <br>{{ $user->owner }}</li><br>
                     <li class="list">Peran: <br>{{$user->role->name}}</li><br>
                     <li class="list">Website: <br>{{ $user->website }}</li><br>
+                    <li class="list">Kebutuhan: <br>{{ $user->needs }}</li><br>
                 </ul>
             </div>
         </div>

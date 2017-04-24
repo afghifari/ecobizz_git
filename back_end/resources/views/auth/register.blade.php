@@ -56,6 +56,8 @@
                 <h6>Berikan alamat website dari bisnis Anda jika ada</h6><br>
                 <textarea name="produk" placeholder="Produk">{{request()->old('produk')}}</textarea>
                 <h6>Tuliskan produk apa yang bisnis Anda sediakan</h6><br>
+                <input type="text" name="kebutuhan" placeholder="Kebutuhan" value="{{request()->old('kebutuhan')}}"></br>
+                <h6>Tuliskan kebutuhan bisnis Anda</h6><br>
         </section>
 
         <section class="reg-section2">
