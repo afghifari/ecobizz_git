@@ -310,3 +310,13 @@ Route::post('/admin', function () {
         return redirect()->back()->with(['success' => 1, 'message' => $message]);
     }
 });
+
+
+
+Route::get('/forum-search/{query}', function ($query) {
+    $data = DB::table('users')
+                ->where('name', 'like', "%$query%")
+                ->get();
+
+    return json_encode($data);
+});
