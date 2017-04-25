@@ -58,7 +58,14 @@
 					Postingan
 				</div>
 			</div>
-			@foreach ($forums as $forum)
+			@if(sizeof($forums) == 0)
+			<div class="row f-header">
+				<div class="col-md-12">
+					No Forum
+				</div>
+			</div>
+			@endif
+			@foreach($forums as $forum)
 			<div class="row f-header">
 				<div class="col-md-10">
 					<div class="x-header">

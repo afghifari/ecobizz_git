@@ -76,6 +76,13 @@
 					Topik
 				</div>
 			</div>
+			@if(sizeof($threads) == 0)
+			<div class="row f-header">
+				<div class="col-md-12">
+					No Topic
+				</div>
+			</div>
+			@endif
 			@foreach ($threads as $thread)
 			<div class="row f-header">
 				<div class="col-md-10">
