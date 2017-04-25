@@ -310,3 +310,39 @@ Route::post('/admin', function () {
         return redirect()->back()->with(['success' => 1, 'message' => $message]);
     }
 });
+
+Route::get('/forum-search/{query}', function ($query) {
+   $data = array();
+	$forums_name = DB::table('users')
+				//-> where('name', 'like', "%query%")
+				-> where('name', 'LIKE', "%$query%")
+				-> get();
+				//dd($forums_name);
+	return json_encode($forums_name);
+	array_push($data, $forums_name);
+				
+	$forums_description = DB::table('forums')
+				-> where('description', 'like', '%$query&')
+				-> get();
+				//dd($forums_description);
+	array_push($data, $forums_description);
+	
+	$forum_posts_content = DB::table('forum_posts')
+				-> where('content', 'like', '%$query&')
+				-> get();
+				//dd($forum_posts_content);
+	array_push($data, $forum_posts_content);
+	
+	$threads_name = DB::table('threads')
+				-> where('name', 'like', '%$query&')
+				-> get();
+				//dd($threads_name);
+				
+	//dd($data);
+	array_push($data, $threads_name);
+	
+	//dd($data);
+	
+    return json_encode ($data);
+	
+});
