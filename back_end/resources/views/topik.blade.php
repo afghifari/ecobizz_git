@@ -71,11 +71,16 @@
 	</div>
 	<div class="row forum">
 		<div class="col-md-10 col-md-offset-1">
+			<div class="row f-header head-md">
+				<div class="col-md-12">
+					Topik
+				</div>
+			</div>
 			@foreach ($threads as $thread)
 			<div class="row f-header">
 				<div class="col-md-10">
 					<div class="x-header">
-						<a href="{{url("forum/".$forum->id)}}" style="color: unset">{{$thread->name}}</a>
+						<a href="{{url("thread/".$thread->id)}}" style="color: unset">{{$thread->name}}</a>
 					</div>
 					<div class="x-description">
 						{{$thread->user->name}}
