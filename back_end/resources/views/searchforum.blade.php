@@ -6,7 +6,7 @@
 	</div>
 	<section class="forum-section1">
 		<div id="forum">
-			Forum
+			Hasil Pencarian '...'
 		</div>
 	</section>
 
@@ -92,7 +92,7 @@
 					Jumlah Postingan
 				</div>
 				<div class="row filter">
-					Minimal: <br><input type="number" name="min" style="width: 50%;"><br><br>
+					Minimal: <br><input type="number" name="min" value=1 style="width: 50%;"><br><br>
 					Maksimal: <br><input type="number" name="max" style="width: 50%"><br>
 				</div>
 			</div>
