@@ -359,3 +359,7 @@ Route::get('/message', function() {
 Route::get('/searchforum', function () {
     return view('searchforum');
 });
+
+Route::get('/searchuser', function () {
+    return view('searchuser');
+});
