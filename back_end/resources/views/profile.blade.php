@@ -2,6 +2,7 @@
 
 @section('content')
 
+    </div>
     <section class="section1">
         <div id="profile">
             Profile
@@ -18,7 +19,6 @@
             @endif
         </div>
     </section>
-    </div>
 
 
         <style type="text/css">
@@ -147,7 +147,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="key">
-                                        <i class="glyphicon glyphicon-align-left"></i> Deskripsi
+                                        <i class="fa fa-book"></i> Deskripsi
                                     </div>
                                     <div class="value">
                                         {{$user->description}}
@@ -157,7 +157,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="key">
-                                        <i class="glyphicon glyphicon-knight"></i> Owner
+                                        <i class="fa fa-user"></i> Owner
                                     </div>
                                     <div class="value">
                                         {{ $user->owner }}
@@ -167,7 +167,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="key">
-                                        <i class="glyphicon glyphicon-leaf"></i> Peran
+                                        <i class="fa fa-diamond"></i> Peran
                                     </div>
                                     <div class="value">
                                         {{$user->role->name}}
@@ -177,7 +177,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="key">
-                                        <i class="glyphicon glyphicon-globe"></i> Website
+                                        <i class="fa fa-globe"></i> Website
                                     </div>
                                     <div class="value">
                                         {{ $user->website }}
@@ -187,7 +187,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="key">
-                                        <i class="glyphicon glyphicon-grain"></i> Kebutuhan
+                                        <i class="fa fa-rss"></i> Kebutuhan
                                     </div>
                                     <div class="value">
                                         {{ $user->needs }}
@@ -211,7 +211,6 @@
                         @if (Auth::user()->id == $user->id)
                         {!! Form::open(['method' => 'post', 'url' => url('user/'. $user->id . '/timeline')]) !!}
                         {!! Form::textarea("timeline_post", null, ['placeholder' => 'Whats going on?', 'size' => '20x5']) !!}
-                        @endif
                         <div class="row" style="padding: 0">
                             <div class="col-md-12 post-entity" style="padding: 0">
                                 <input type="file" name="media" id="media" class="button3" accept="image/*">
@@ -219,6 +218,7 @@
                                 <button class="button-post">Post</button>
                             </div>
                         </div>
+                        @endif
                     </div>
                 </div>
                 @endif
