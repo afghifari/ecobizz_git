@@ -346,3 +346,12 @@ Route::get('/forum-search/{query}', function ($query) {
     return json_encode ($data);
 	
 });
+
+Route::get('/message', function() {
+	if (!Auth::user()) {
+        return Redirect::back();
+    }
+	$user = Auth::user();
+	$friend_lists = $user->friends();
+	return view('message', ['friend_lists' => $friend_lists]);
+});
