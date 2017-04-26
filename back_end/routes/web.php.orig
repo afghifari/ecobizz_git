@@ -311,16 +311,6 @@ Route::post('/admin', function () {
     }
 });
 
-<<<<<<< HEAD
-
-
-Route::get('/forum-search/{query}', function ($query) {
-    $data = DB::table('users')
-                ->where('name', 'like', "%$query%")
-                ->get();
-
-    return json_encode($data);
-=======
 Route::get('/forum-search/{query}', function ($query) {
    $data = array();
 	$forums_name = DB::table('users')
@@ -355,5 +345,25 @@ Route::get('/forum-search/{query}', function ($query) {
 	
     return json_encode ($data);
 	
->>>>>>> 3ca9446d0af96457245ceea2c5efbc7d580cd6b5
 });
+
+Route::get('/message', function() {
+	if (!Auth::user()) {
+        return Redirect::back();
+    }
+	$user = Auth::user();
+	$friend_lists = $user->friends();
+	return view('message', ['friend_lists' => $friend_lists]);
+});
+
+Route::get('/searchforum', function () {
+    return view('searchforum');
+});
+
+<<<<<<< HEAD
+Route::get('/search', 'SearchHandler@search');
+=======
+Route::get('/searchuser', function () {
+    return view('searchuser');
+});
+>>>>>>> 4266b2e72f16e65ef8d1ef5a2d37e06ec67ad4bb

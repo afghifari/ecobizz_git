@@ -61,6 +61,15 @@
 		.link-forum {
 			color: #00AA44;
 		}
+		.btn-success {
+			background-color: #00AA44;
+			margin-top: 5px;
+			width: 100%;
+		}
+		.btn-success:hover {
+			background-color: #000000;
+			box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+		}
 	</style>
 
 	<div class="row">
@@ -77,9 +86,15 @@
 					Forum
 				</div>
 				<div class="row filter">
-					<a href="#" class="link-forum">Forum 1</a><br>
-					<a href="#" class="link-forum">Forum 2</a><br>
-					<a href="#" class="link-forum">Forum 3</a><br>
+					<div class="checkbox">
+						<label><input type="checkbox">Forum 1</label>
+					</div>
+					<div class="checkbox">
+						<label><input type="checkbox">Forum 2</label>
+					</div>
+					<div class="checkbox">
+						<label><input type="checkbox">Forum 3</label>
+					</div>
 				</div>
 				<div class="row f-filterheader head-filter">
 					Tanggal
@@ -94,6 +109,9 @@
 				<div class="row filter">
 					Minimal: <br><input type="number" name="min" value=1 style="width: 50%;"><br><br>
 					Maksimal: <br><input type="number" name="max" style="width: 50%"><br>
+				</div>
+				<div class="row">
+					<center><button type="button" class="btn btn-success">CARI</button></center>
 				</div>
 			</div>
 
