@@ -28,7 +28,22 @@
             border: none;
         }
         .bg-transparent{
-            background-color: transparent !important;
+            background-color: #00aa44 !important;
+        }
+
+        .searchbar {
+            size: 100;
+            height: 30px;
+            vertical-align: middle;
+        }
+
+        .radio-inline {
+            color: #FFFFFF;
+            text-transform: uppercase;
+        }
+
+        .btn {
+            border-radius: 0;
         }
     </style>
 </head>
@@ -54,8 +69,18 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        &nbsp;
+                        &nbsp;&nbsp;&nbsp;
                     </ul>
+
+                    <!-- Search Bar -->
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Cari user atau forum...">
+                        </div>
+                        <button type="submit" class="btn btn-default">Cari</button>
+                        <label class="radio-inline"><input type="radio" name="optradio" checked>User</label>
+                        <label class="radio-inline"><input type="radio" name="optradio">Forum</label>  
+                    </form>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
