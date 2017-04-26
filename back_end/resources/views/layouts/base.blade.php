@@ -75,11 +75,11 @@
                     <!-- Search Bar -->
                     <form class="navbar-form navbar-left">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Cari user atau forum...">
+                            <input type="text" class="form-control" placeholder="Cari user atau topik...">
                         </div>
                         <button type="submit" class="btn btn-default">Cari</button>
                         <label class="radio-inline"><input type="radio" name="optradio" checked>User</label>
-                        <label class="radio-inline"><input type="radio" name="optradio">Forum</label>  
+                        <label class="radio-inline"><input type="radio" name="optradio">Topik</label>  
                     </form>
 
                     <!-- Right Side Of Navbar -->

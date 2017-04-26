@@ -355,3 +355,7 @@ Route::get('/message', function() {
 	$friend_lists = $user->friends();
 	return view('message', ['friend_lists' => $friend_lists]);
 });
+
+Route::get('/searchforum', function () {
+    return view('searchforum');
+});
