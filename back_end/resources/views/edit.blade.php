@@ -7,13 +7,13 @@
 
     <style type="text/css">
         .navbar{
-            background-color: #00aa44;
+            background-color: #fefefe !important;
             position: fixed;
             width: 100%;
             border: none;
         }
         .bg-transparent{
-            background-color: #00aa44 !important;
+            background-color: #fefefe !important;
         }
     </style>
 

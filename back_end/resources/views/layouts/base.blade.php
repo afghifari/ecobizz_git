@@ -20,30 +20,72 @@
     <!-- Theme CSS -->
     <link rel="stylesheet" type="text/css" href="/css/creative.css">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style type="text/css">
         .navbar{
-            background-color: #00aa44;
+            color: #333 !important;
+            background-color: #FEFEFE;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, .5) !important;
             position: fixed;
             width: 100%;
             border: none;
         }
+        .navbar-nav{
+            margin-top: 6px !important;
+        }
+        .navbar-brand img{
+            margin-top: 6px !important;
+        }
+        .nav{
+            margin-top: 6px !important;
+        }
+        .nav a{
+            color: #333 !important;
+            font-weight: normal !important;
+        }
         .bg-transparent{
-            background-color: #00aa44 !important;
+            color: #333 !important;
+            background-color: #FEFEFE !important;
+            opacity: 0;
+        }
+        .search-barx{
+            margin: 0px !important;
+            border: solid 1px rgba(0, 0, 0, .1) !important;
+            border-radius: 0px !important;
+            padding: 20px 24px !important;
+            margin-top: -8px !important;
+            width: 300px !important;
+            border-top-left-radius: 24px !important;
+            border-bottom-left-radius: 24px !important;
+            transition: 0.5s;
+        }
+        .search-barx:focus{
+            width: 300px !important;
+            background: rgba(0, 0, 0, .05);
         }
 
-        .searchbar {
-            size: 100;
-            height: 30px;
-            vertical-align: middle;
+        .search-barx-option{
+            border: solid 1px rgba(0, 0, 0, .1) !important;
+            border-radius: 0px !important;
+            margin-left: -4px !important;
+            position: relative;
+            padding: 9px !important;
+            padding-top: 10px !important;
+            top: -2px;
+            width: unset !important;
         }
 
-        .radio-inline {
-            color: #FFFFFF;
-            text-transform: uppercase;
-        }
-
-        .btn {
-            border-radius: 0;
+        .search-barx-submit{
+            border: solid 1px rgba(0, 0, 0, .1) !important;
+            border-radius: 0px !important;
+            position: relative;
+            padding: 10px !important;
+            margin-left: -4px !important;
+            width: 24px !important;
+            border-top-right-radius: 24px !important;
+            border-bottom-right-radius: 24px !important;
+            top: -4px;
+            width: unset !important;
         }
     </style>
 </head>
@@ -62,7 +104,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        <img src="/img/ecobiz_putih.png" style="height: 100%;">
+                        <img src="/img/ecobiz_hitam.png" style="height: 100%;">
                     </a>
                 </div>
 
@@ -73,30 +115,30 @@
                     </ul>
 
                     <!-- Search Bar -->
-                    <form class="navbar-form navbar-left">
+                    <form class="navbar-form navbar-left" action="/search" method="GET">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Cari user atau topik...">
+                            <input type="text" name="q" class="form-control search-barx" placeholder="Cari user atau topik...">
                         </div>
-                        <button type="submit" class="btn btn-default">Cari</button>
-                        <label class="radio-inline"><input type="radio" name="optradio" checked>User</label>
-                        <label class="radio-inline"><input type="radio" name="optradio">Topik</label>  
+                        <select class="search-barx-option" name="type">
+                            <option value="user">
+                                User
+                            </option>
+                            <option value="topik">
+                                Topik
+                            </option>
+                        </select>
+                        <button type="submit" class="btn btn-default search-barx-submit">
+                            <i class="fa fa-search"></i>
+                        </button>
                     </form>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><a href="/forum">Forum</a></li>
-                            <li><a href="#">Apa itu Ecobiz</a></li>
-                            <style type="text/css">
-                                #bar-login{
-                                    padding: 8px 12px;
-                                    border: solid 1px rgba(255, 255, 255, .5);
-                                    margin-top: 5px;
-                                    border-radius: 4px;
-                                }
-                            </style>
-                            <li><a href="{{ route('login') }}" id="bar-login">Login</a></li>
+                            <li style="margin-top: 4px;"><a href="/forum">Forum</a></li>
+                            <li style="margin-top: 4px;"><a href="#">Apa itu Ecobiz</a></li>
+                            <li style="margin-top: 4px;"><a href="{{ route('login') }}" id="bar-login">Login</a></li>
                         @else
                             @if (Auth::user()->is_admin)
                                 <li style="margin-top: 4px;"><a href="/admin">Admin</a></li>
@@ -132,11 +174,14 @@
         <script type="text/javascript">
             if(!window.posx)
                 $('.eco-nav').addClass('bg-transparent');
+            var last_scroll = 0;
+            var scroll = 0;
             $(window).scroll(function (event) {
-                var scroll = $(window).scrollTop();
+                last_scroll = scroll;
+                scroll = $(window).scrollTop();
                 console.log(scroll);
                 if(!window.posx)
-                    if(scroll == 0){
+                    if(last_scroll - scroll > 0){
                         $('.eco-nav').addClass('bg-transparent');
                     }else{
                         $('.eco-nav').removeClass('bg-transparent');

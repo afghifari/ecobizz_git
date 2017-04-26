@@ -59,7 +59,7 @@
 		<div class="col-md-10 col-md-offset-1 search-section" style="padding: 0">
 			<div class="row">
 				<div class="col-md-8">
-					<input type="text" name="search" placeholder="Search"> <input type="submit" name="submit" value="">
+					<!-- <input type="text" name="search" placeholder="Search"> <input type="submit" name="submit" value=""> -->
 				</div>
 				<div class="col-md-4" style="text-align: right;">
 					@if (Auth::user())

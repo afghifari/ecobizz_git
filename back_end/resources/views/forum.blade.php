@@ -42,7 +42,7 @@
 
 	<div class="row">
 		<div class="col-md-10 col-md-offset-1 search-section" style="padding: 0">
-			<input type="text" name="search" placeholder="Search"> <input type="submit" name="submit" value="">
+			<!-- <input type="text" name="search" placeholder="Search"> <input type="submit" name="submit" value=""> -->
 		</div>
 	</div>
 	<div class="row forum">

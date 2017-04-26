@@ -5,14 +5,16 @@
     <section class="section1">
         <div id="profile">
             Profile
-            @if (Auth::user()->id == $user->id)
-                <div style="float:right;" align="right">
-                    <a href={{url('user/'.$user->id . "/edit")}}>
-                    <button class="button1">
-                        EDIT
-                    </button>
-                    </a>
-                </div>
+            @if (Auth::user())
+                @if (Auth::user()->id == $user->id)
+                    <div style="float:right;" align="right">
+                        <a href={{url('user/'.$user->id . "/edit")}}>
+                        <button class="button1">
+                            EDIT
+                        </button>
+                        </a>
+                    </div>
+                @endif
             @endif
         </div>
     </section>
@@ -202,8 +204,10 @@
                     </div>
                 </div>
 
+                @if (Auth::user())
                 <div class="the-post input-post row" style="padding: 0">
                     <div class="col-md-12" style="padding: 0">
+
                         @if (Auth::user()->id == $user->id)
                         {!! Form::open(['method' => 'post', 'url' => url('user/'. $user->id . '/timeline')]) !!}
                         {!! Form::textarea("timeline_post", null, ['placeholder' => 'Whats going on?', 'size' => '20x5']) !!}
@@ -217,6 +221,7 @@
                         </div>
                     </div>
                 </div>
+                @endif
                 @for($i = sizeof($posts) - 1; $i > -1; $i--)
                 <div class="the-post row">
                     <div class="col-md-12" style="padding: 0">
@@ -226,7 +231,7 @@
                             </div>
                             <div class="col-md-11" style="padding: 0; margin-top: 5px;">
                                 <div style="font-weight: bold;">
-                                    {{ Auth::user()->name }}
+                                    {{ $user->name }}
                                 </div>
                                 <div class="tanggal-post">
                                     {{$posts[$i]->created_at}}
