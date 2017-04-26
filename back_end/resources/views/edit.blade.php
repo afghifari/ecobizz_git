@@ -17,6 +17,21 @@
         }
     </style>
 
+    <script type="text/javascript">
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#image')
+                    .attr('src', e.target.result)
+                    .width("120px")
+                    .height("120px");
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+
     {!! Form::open(['method' => 'post', 'url' => url('user/'.$user->id."/edit"), 'files' => true]) !!}
 
 	<section class="editprofile-section1">
@@ -32,8 +47,8 @@
         <div class="container2">
             <div id="user">
                 <center>
-                    <img src="{{$user->profile_picture}}" height="120px" style="margin-top: 60px;"><br>
-                    <input type="file" name="photo" id="photo" class="button2" />
+                    <img id="image" src="{{$user->profile_picture}}" height="120px" style="margin-top: 60px;"><br>
+                    <input type="file" name="photo" id="photo" class="button2" onchange="readURL(this);" />
                     <label for="photo">change</label>
                 </center>
 
@@ -54,7 +69,6 @@
                 <input type="file" name="organizationImage" id="organizationImage" class="button3" />
                     <label for="organizationImage">upload struktur organisasi</label>
                 <br>
-                GAMBAR
             </div>
 
             <div id="organizationProfile">
