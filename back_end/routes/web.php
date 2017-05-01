@@ -360,4 +360,8 @@ Route::get('/message', function () {
     return view('message');
 });
 
+Route::get('/newmessage', function () {
+    return view('newmessage');
+});
+
 Route::get('/search', 'SearchHandler@search');

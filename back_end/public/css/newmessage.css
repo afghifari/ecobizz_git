@@ -1,0 +1,52 @@
+.newmessage-section1 {
+	background: url('../assets/bg3.png') no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: contain;
+	-o-background-size: cover;
+	background-size: cover;
+	position: relative;
+}
+
+#newmessage {
+	position: relative;
+	margin-left: 100px;
+	color: #000000;
+	z-index: 1;
+	font-size: 25px;
+	margin-top: 180px;
+	font-size: 30px;
+}
+
+.newmessage-section2 {
+	background-color: #FFFFFF;
+	min-height: 400px;
+	max-height: 800px;
+	text-align: left;
+	color: #00aa44;
+	font-size: 18px;
+}
+
+input[type=text], select {
+	width: 900px;
+	padding: 5px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	color: black;
+	box-sizing: border-box;
+	/*margin-bottom: 60px;*/
+}
+
+input[type=textarea] {
+	width: 900px;
+	height: 150px;
+    padding: 5px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: black;
+    box-sizing: border-box;	
+    vertical-align: top;
+}
