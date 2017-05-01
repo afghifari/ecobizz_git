@@ -100,6 +100,32 @@
 				</div>
 			</div> -->
 			@if($type == "user")
+				<div class="row">
+					<div class="col-md-3 col-md-offset-2">
+						<div class="dropdown">
+							<b>Kategori:</b>
+							<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Peran
+							<span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li><a href="#">Dekopinda</a></li>
+								<li><a href="#">Dekopinwil</a></li>
+								<li><a href="#">Eksportir</a></li>
+								<li><a href="#">Investor</a></li>
+								<li><a href="#">ICT</a></li>
+								<li><a href="#">Konsultan</a></li>
+								<li><a href="#">Koperasi</a></li>
+								<li><a href="#">Perguruan Tinggi</a></li>
+								<li><a href="#">Industri</a></li>
+								<li><a href="#">Lainnya</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-3 col-md-offset-2">
+						<b>Lokasi:</b>
+						<input type="text" name="kota" placeholder="Kota/Kabupaten" style="width: 150px; padding-top: 0; padding-bottom: 0;">
+					</div>
+				</div>
+				<br>
 				@foreach($result as $data)
 				<div class="row f-header">
 					<div class="col-md-10">
@@ -125,6 +151,31 @@
 			@endif
 
 			@if($type == "topik")
+				<div class="row">
+					<div class="col-md-3 col-md-offset-2">
+						<div class="dropdown">
+							<b>Kategori:</b>
+							<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Forum
+							<span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li><a href="#">Forum 1</a></li>
+								<li><a href="#">Forum 2</a></li>
+								<li><a href="#">Forum 3</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<b>Tanggal dibuat:</b><br>
+						Tanggal awal: <input type="date" name="start" style="width: 70%;"><br><br>
+						Tanggal akhir: <input type="date" name="end" style="width: 70%"><br>
+					</div>
+					<div class="col-md-3">
+						<b>Jumlah Postingan:</b><br>
+						Minimal: <br><input type="number" name="min" value=1 style="width: 50%;"><br><br>
+						Maksimal: <br><input type="number" name="max" style="width: 50%"><br>
+					</div>
+				</div>
+				<br>
 				@foreach($result as $data)
 				<div class="row f-header">
 					<div class="col-md-10">
