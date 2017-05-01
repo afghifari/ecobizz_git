@@ -347,7 +347,7 @@ Route::get('/forum-search/{query}', function ($query) {
 	
 });
 
-Route::get('/message', function() {
+Route::get('/messagelist', function() {
 	if (!Auth::user()) {
         return Redirect::back();
     }
@@ -356,8 +356,8 @@ Route::get('/message', function() {
 	return view('messagelist', ['friend_lists' => $friend_lists]);
 });
 
-Route::get('/searchforum', function () {
-    return view('searchforum');
+Route::get('/message', function () {
+    return view('message');
 });
 
 Route::get('/search', 'SearchHandler@search');

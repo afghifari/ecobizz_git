@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-	<link rel="stylesheet" href="{{asset('css/message.css')}}" type="text/css">
+	<link rel="stylesheet" href="{{asset('css/messagelist.css')}}" type="text/css">
 
 	</div>
 	<section class="message-section1">
@@ -9,6 +9,15 @@
 			Pesan Masuk
 		</div>
 	</section>
+
+	<br>
+
+	<div class="row">
+		<div class="col-md-1 col-md-offset-10">
+			<button class="btn btn-success">Pesan Baru</button>
+		</div>
+		
+	</div>
 
 	<div class="row">
 		<div class="col-md-10 col-md-offset-1 search-section" style="padding: 0">
