@@ -86,6 +86,7 @@ class RegisterController extends Controller
         $user->website = $data['web'];
         $user->mobile_number = $data['hp'];
         $user->products = $data['produk'];
+        $user->needs = $data['kebutuhan'];
         $user->save();
 
         return $user;

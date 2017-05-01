@@ -2,6 +2,13 @@
 
 @section('content')
 	<link rel="stylesheet" href="{{ URL::asset('css/message.css') }}" type="text/css">
+
+	<section class="message-section1">
+		<div id="message">
+			Pesan
+		</div>
+	</section>
+
 	<section class="message-section">
 		<div>
 			<button id="newmsg">

@@ -6,7 +6,7 @@
 	</div>
 	<section class="forum-section1">
 		<div id="forum">
-			Search
+			Pencarian
 		</div>
 	</section>
 
@@ -70,7 +70,8 @@
 		.view-profile{
 			text-align: center;
 			background: rgba(0, 0, 0, .1);
-			padding: 10px 0;
+			padding: 5px 0;
+			margin-bottom: 5px;
 			transition: .1s;
 		}
 		.view-profile:hover{
@@ -83,13 +84,13 @@
 	@if(sizeof($result) == 0)
 	<div class="row">
 		<div class="col-md-10 col-md-offset-1 search-section" style="padding: 0">
-			No result for: <span class="special-text">{{ $query }}</span> ({{ $type }})
+			Tidak ada hasil untuk: <span class="special-text">{{ $query }}</span> ({{ $type }})
 		</div>
 	</div>
 	@else
 	<div class="row">
 		<div class="col-md-10 col-md-offset-1 search-section" style="padding: 0">
-			Search result for: <span class="special-text">{{ $query }}</span> ({{ $type }})
+			Hasil pencarian untuk: <span class="special-text">{{ $query }}</span> ({{ $type }})
 		</div>
 	</div>
 	<div class="row forum">
@@ -143,8 +144,13 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-2 view-profile" onclick="window.location.href = '/user/' + {{ $data->id }};">
-						View Profile
+					<div class="col-md-2">
+						<div class="row view-profile" onclick="window.location.href = '/user/' + {{ $data->id }};">
+							Lihat Profil
+						</div>
+						<div class="row view-profile">
+							Kirim Pesan
+						</div>
 					</div>
 				</div>
 				@endforeach
@@ -185,13 +191,13 @@
 									{{ $data->name }}
 								</div>
 								<div class="organization">
-									<i>Created by</i> {{ $data->thread_maker }}
+									<i>Dibuat oleh</i> {{ $data->thread_maker }}
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-2 view-profile" onclick="window.location.href = '/thread/' + {{ $data->id }};">
-						View Topic
+						Lihat Topik
 					</div>
 				</div>
 				@endforeach

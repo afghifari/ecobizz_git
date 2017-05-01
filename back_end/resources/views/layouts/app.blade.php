@@ -40,7 +40,8 @@
       background-size: cover;
       padding: 10px;
       height: 100vh !important;
-      color: #333 !important;
+      /*color: #333 !important;*/
+      color: white;
     }
 
     #login .header-content .header-content-inner p1 {
@@ -52,7 +53,8 @@
     }
 
     input[type=text] {
-        color: #333 !important;
+        /*color: #333 !important;*/
+        color: black;
         width: 40%;
         padding: 12px 20px;
         margin: 8px 0;
@@ -62,7 +64,8 @@
         box-sizing: border-box;
     }
     input[type=submit] {
-        color: #333 !important;
+        /*color: #333 !important;*/
+        color: white;
         font-size: 14px;
         background-color: transparent;
         text-decoration: none;
@@ -120,14 +123,15 @@
     </script>
     <style type="text/css">
         .navbar{
-            color: #333 !important;
+            background-color: #00aa44;
+            /*color: #333 !important;
             background-color: #FEFEFE;
-            box-shadow: 0 1px 1px rgba(0, 0, 0, .5) !important;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, .5) !important;*/
             position: fixed;
             width: 100%;
             border: none;
         }
-        .navbar-brand img{
+        /*.navbar-brand img{
             margin-top: 6px !important;
         }
         .nav{
@@ -136,11 +140,12 @@
         .nav a{
             color: #333 !important;
             font-weight: normal !important;
-        }
+        }*/
         .bg-transparent{
-            color: #333 !important;
+            /*color: #333 !important;
             background-color: #FEFEFE !important;
-            opacity: 0;
+            opacity: 0;*/
+            background-color: #00aa44;
         }
         .search-barx{
             margin: 0px !important;
@@ -153,10 +158,10 @@
             border-bottom-left-radius: 24px !important;
             transition: 0.5s;
         }
-        .search-barx:focus{
+        /*.search-barx:focus{
             width: 300px !important;
             background: rgba(0, 0, 0, .05);
-        }
+        }*/
 
         .search-barx-option{
             border: solid 1px rgba(0, 0, 0, .1) !important;
@@ -199,7 +204,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        <img src="/img/ecobiz_hitam.png" style="height: 100%;">
+                        <img src="/img/ecobiz_putih.png" style="height: 100%;">
                     </a>
                 </div>
 
@@ -247,8 +252,10 @@
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
+                                    <li><a href="{{ '/user/' . Auth::user()->id }}">Profil</a></li>
+                                    <li><a href="#">Pesan</a></li>
+                                    <li class="divider"></li>
                                     <li>
-                                        <a href="{{ '/user/' . Auth::user()->id }}">Profile</a>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

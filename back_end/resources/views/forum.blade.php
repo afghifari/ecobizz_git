@@ -61,7 +61,7 @@
 			@if(sizeof($forums) == 0)
 			<div class="row f-header">
 				<div class="col-md-12">
-					No Forum
+					Tidak ada forum
 				</div>
 			</div>
 			@endif

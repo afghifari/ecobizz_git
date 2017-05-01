@@ -353,7 +353,7 @@ Route::get('/message', function() {
     }
 	$user = Auth::user();
 	$friend_lists = $user->friends();
-	return view('message', ['friend_lists' => $friend_lists]);
+	return view('messagelist', ['friend_lists' => $friend_lists]);
 });
 
 Route::get('/searchforum', function () {
