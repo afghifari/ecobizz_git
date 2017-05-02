@@ -5,7 +5,7 @@
     </div>
     <section class="section1">
         <div id="profile">
-            Profile
+            Profil
             @if (Auth::user())
                 @if (Auth::user()->id == $user->id)
                     <div style="float:right;" align="right">
@@ -83,6 +83,12 @@
                 border: none;
                 background: unset;
             }
+            .top-buffer{
+                margin-top: 60px;
+            }
+            .btn-danger {
+                font-size: 12px;
+            }
         </style>
         <div class="row rowx">
             <div class="col-md-4 left-section">
@@ -106,18 +112,16 @@
                 <br>
                 <div style="font-size: 15px;">
                     <div>
-                        Last Activities
+                        Media Sosial
                     </div>
-                    <div>
-                        <ul class="ulist" style="text-align: left;">
-                            <li class="list">Create a new Thread "Welcome to Bali Land" on <b>Tour and Trip Group</b></li>
-                            <li class="list">Comment on thread "Wow" on <b>Uncategorized Thread</b></li>
-                            <li class="list">Create a new Thread "Welcome to Bali Land" on <b>Tour and Trip Group</b></li>
-                            <li class="list">Comment on thread "Wow" on <b>Uncategorized Thread</b></li>
-                            <li class="list">Create a new Thread "Welcome to Bali Land" on <b>Tour and Trip Group</b></li>
-                            <li class="list">Comment on thread "Wow" on <b>Uncategorized Thread</b></li>
-                        </ul>
+                    <div style="line-height: 30px;">
+                        <img src="/assets/whatsapp.png" width="20"> 08123456890<br>
+                        <img src="/assets/fb.png" width="20"> Lorem Ipsum<br>
+                        <img src="/assets/twitter.png" width="20"> @LoremIpsum<br>
                     </div>
+                </div>
+                <div class="row top-buffer">
+                    <button class="btn btn-danger">Verifikasi Akun</button>
                 </div>
             </div>
             <div class="col-md-8" style="margin-top: 2px;">
@@ -157,7 +161,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="key">
-                                        <i class="fa fa-user"></i> Owner
+                                        <i class="fa fa-user"></i> Pemilik
                                     </div>
                                     <div class="value">
                                         {{ $user->owner }}
@@ -210,7 +214,7 @@
 
                         @if (Auth::user()->id == $user->id)
                         {!! Form::open(['method' => 'post', 'url' => url('user/'. $user->id . '/timeline')]) !!}
-                        {!! Form::textarea("timeline_post", null, ['placeholder' => 'Whats going on?', 'size' => '20x5']) !!}
+                        {!! Form::textarea("timeline_post", null, ['placeholder' => 'Apa yang baru?', 'size' => '20x5']) !!}
                         <div class="row" style="padding: 0">
                             <div class="col-md-12 post-entity" style="padding: 0">
                                 <input type="file" name="media" id="media" class="button3" accept="image/*">

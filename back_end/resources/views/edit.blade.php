@@ -7,13 +7,13 @@
 
     <style type="text/css">
         .navbar{
-            background-color: #fefefe !important;
+            background-color: #00aa44;
             position: fixed;
             width: 100%;
             border: none;
         }
         .bg-transparent{
-            background-color: #fefefe !important;
+            background-color: #00aa44;
         }
     </style>
 
@@ -36,7 +36,7 @@
 
 	<section class="editprofile-section1">
         <div id="profile">
-            Edit Profile
+            Edit Profil
             <div style="float:right;" align="right">
                 <input type="submit" name="Save" value="SAVE" class="button1">
             </div>
@@ -58,6 +58,9 @@
                         <input type="text" name="address" placeholder="Alamat" value="{{ $user->address }}"></br>
                         <input type="text" name="email" placeholder="E-mail" value="{{ $user->email }}"></br>
                         <input type="text" name="hp" placeholder="No. Handphone" value="{{ $user->mobile_number }}"></br>
+                        <input type="text" name="whatsapp" placeholder="WhatsApp" value=""></br>
+                        <input type="text" name="facebook" placeholder="Facebook" value=""></br>
+                        <input type="text" name="twitter" placeholder="Twitter" value=""></br>
                 </div>
             </div>
 
