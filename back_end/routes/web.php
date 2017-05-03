@@ -95,6 +95,9 @@ Route::get('/logout', 'Auth\LoginController@logout');
 Route::get('user/{id}', function($id) {
     $user = App\User::find($id);
     $posts = $user->timelines;
+
+    \App\UserView::newView(\Auth::user(), $user);
+
     return view('profile', [ 'user' => $user, 'posts' => $posts]);
 });
 
@@ -161,6 +164,9 @@ Route::get('/forum/{id}', function($id) {
 Route::get('/thread/{id}', function($id) {
     $thread = App\Thread::find($id);
     $posts = $thread->posts;
+
+    \App\ForumView::newView(\Auth::user(), $thread);
+
     return view('thread', [ 'thread' => $thread,'posts' => $posts ]);
 });
 
