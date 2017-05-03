@@ -13,7 +13,7 @@ class UserLastSeen extends Model
             $lastSeen->touch();
         } else {
             $lastSeen = new UserLastSeen;
-            $lastSeen->updated_at = $user->id;
+            $lastSeen->user_id = $user->id;
             $lastSeen->save();
         }
     }
