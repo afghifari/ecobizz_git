@@ -227,6 +227,10 @@ hr {
 	border: solid 1px #DCDCDC;
 }
 
+.status:hover {
+	cursor: pointer;
+}
+
 .section3 {
 	background-color: #00aa44;
 	min-height: 450px;

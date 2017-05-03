@@ -5,7 +5,11 @@
     </div>
     <section class="section1">
         <div id="profile">
-            Profil
+            Profil 
+            <!-- Kalo online --> <img src="/assets/online.png" title="Online" class="status">
+            <!-- Kalo offline --> <!-- <img src="/assets/offline.png" title="Offline" class="status"> -->
+            
+            <!-- Kalo diri sendiri yang liat -->
             @if (Auth::user())
                 @if (Auth::user()->id == $user->id)
                     <div style="float:right;" align="right">
@@ -17,6 +21,19 @@
                     </div>
                 @endif
             @endif
+
+            <!-- Kalo orang lain yang liat -->
+            {{-- @if (Auth::user()) --}}
+                {{-- @if (Auth::user()->id == $user->id) --}}
+                    <!-- <div style="float:right;" align="right">
+                        <a href="#">
+                        <button class="button1">
+                            Tambahkan Teman
+                        </button>
+                        </a>
+                    </div> -->
+                {{-- @endif --}}
+            {{-- @endif --}}
         </div>
     </section>
 
@@ -195,6 +212,16 @@
                                     </div>
                                     <div class="value">
                                         {{ $user->needs }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="key">
+                                        <i class="fa fa-asterisk"></i> Produk
+                                    </div>
+                                    <div class="value">
+                                        {{ $user->products }}
                                     </div>
                                 </div>
                             </div>
