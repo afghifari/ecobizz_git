@@ -27,7 +27,22 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token', 'profile_picture', 'organization_structure', 'role_id', 'is_admin', 'last_seen',
+        'password',
+        'remember_token',
+        'profile_picture',
+        'organization_structure',
+        'role_id',
+        'is_admin',
+        'threads',
+        'views',
+        'posts',
+        'activity_score',
+        'online'
+    ];
+
+    protected $appends = [
+        'activity_score',
+        'online',
     ];
 
     public function getOnlineAttribute() {
@@ -125,5 +140,9 @@ class User extends Authenticatable
 
     public function views() {
         return $this->hasMany(UserView::class, "viewed_id", "id");
+    }
+
+    public function getActivityScoreAttribute() {
+        return 0.2*count($this->friends) + 0.05*count($this->views) + 0.5*count($this->posts) + count($this->threads) + 0.5*count($this->timeline_post);
     }
 }

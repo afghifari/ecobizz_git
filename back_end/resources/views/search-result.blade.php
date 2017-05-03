@@ -56,10 +56,10 @@
 			border-radius: 50%;
 		}
 		.search-result-item{
-			
+
 		}
 		.search-result-item div{
-			
+
 		}
 		.search-result-item div .nama{
 			color: black;
@@ -101,6 +101,7 @@
 				</div>
 			</div> -->
 			@if($type == "user")
+<<<<<<< HEAD
 				<div class="form-inline">
 					<div class="row">
 						<div class="col-md-3 col-md-offset-1" action="">
@@ -129,6 +130,17 @@
 						<div class="col-md-3 col-md-offset-1">
 							<button type="submit" class="btn btn-success">Cari</button>
 						</div>
+=======
+				<div class="row">
+					<div class="col-md-3 col-md-offset-2">
+							<b>Kategori:</b>
+							{!! Form::select('kategori', App\Role::pluck('name', 'id'), null, ['class' => 'form-control input-sm'] ) !!}
+
+					</div>
+					<div class="col-md-3 col-md-offset-2">
+						<b>Lokasi:</b>
+						<input type="text" name="kota" placeholder="Kota/Kabupaten" style="width: 150px; padding-top: 0; padding-bottom: 0;">
+>>>>>>> 9ab344a71153ca4e87e24c43b942207ec69e6090
 					</div>
 				</div>
 

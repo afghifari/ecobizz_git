@@ -132,9 +132,9 @@
                         Media Sosial
                     </div>
                     <div style="line-height: 30px;">
-                        <img src="/assets/whatsapp.png" width="20"> 08123456890<br>
-                        <img src="/assets/fb.png" width="20"> Lorem Ipsum<br>
-                        <img src="/assets/twitter.png" width="20"> @LoremIpsum<br>
+                        <img src="/assets/whatsapp.png" width="20"> {{$user->whatsapp_number}}<br>
+                        <img src="/assets/fb.png" width="20"> <a href="https://www.facebook.com/search/top/?q={{$user->facebook_id}}"> {{$user->facebook_id}} </a> <br>
+                        <img src="/assets/twitter.png" width="20"> <a href="https://www.twitter.com/{{$user->twitter_id}}">  {{$user->twitter_id}} </a> <br>
                     </div>
                 </div>
                 <div class="row top-buffer">
