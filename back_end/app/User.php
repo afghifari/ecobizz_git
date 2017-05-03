@@ -31,7 +31,10 @@ class User extends Authenticatable
     ];
 
     public function getOnlineAttribute() {
-        return (Carbon::now()->diffInMinutes(new Carbon($this->last_seen))) <= 5;
+        if (!$this->last_seen)
+            return false;
+
+        return $this->last_seen->updated_at->diffInMinutes(Carbon::now()) <= 5;
     }
 
     public function getProfilePictureAttribute($value) {
@@ -106,6 +109,10 @@ class User extends Authenticatable
 
     public function posts() {
         return $this->hasMany(ForumPost::class, "owner_id", "id");
+    }
+
+    public function last_seen() {
+        return $this->hasOne(UserLastSeen::class, "user_id", "id");
     }
 
     public static function newUsers() {

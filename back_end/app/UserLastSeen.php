@@ -10,7 +10,6 @@ class UserLastSeen extends Model
     public static function check(User $user) {
         $lastSeen = UserLastSeen::where("user_id", $user->id)->first();
         if ($lastSeen) {
-            /*$lastSeen->updated_at = \Carbon\Carbon::now();*/
             $lastSeen->touch();
         } else {
             $lastSeen = new UserLastSeen;
