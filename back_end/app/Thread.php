@@ -21,4 +21,8 @@ class Thread extends Model
     public function views() {
         return $this->hasMany(ForumView::class, "viewed_id", "id");
     }
+
+    public function contributorCount() {
+        return count($this->posts()->select('owner_id')->groupBy('owner_id')->get());
+    }
 }

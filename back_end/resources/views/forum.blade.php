@@ -75,7 +75,7 @@
 						{{ $forum->description }}
 					</div>
 					<div class="x-last-seen">
-						{{ (new Carbon\Carbon($forum->last_update))->diffForHumans() }}
+						{{ (new Carbon\Carbon($forum->updated_at))->diffForHumans() }}
 					</div>
 				</div>
 				<div class="col-md-1">

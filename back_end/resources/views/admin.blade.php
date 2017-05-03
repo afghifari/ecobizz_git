@@ -126,7 +126,8 @@
 				</div>
 				<div class="section-content">
 					<button class="button1" onclick="window.location.href='/export?mode=USER'">USER</button>
-					{{-- <button class="button1" onclick="window.location.href='/export?mode=FORUM'">FORUM</button> --}}
+					<button class="button1" onclick="window.location.href='/export?mode=FORUM'">FORUM</button>
+					<button class="button1" onclick="window.location.href=''">CHAT</button>
 				</div>
 				<div class="section-title">
 					Import Data

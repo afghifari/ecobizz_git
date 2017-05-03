@@ -55,32 +55,73 @@ Route::get('/export', function () {
 
     $mode = request()->mode;
 
+    if ($mode=="USER") {
+        Excel::create($mode." Data", function($excel) {
+             $excel->sheet('User Data', function($sheet) {
+                $users = App\User::all();
+                $data = [];
 
-    Excel::create($mode." Data", function($excel) {
-         $excel->sheet('Sheetname', function($sheet) {
+                foreach ($users as $user){
+                    $temp = $user->toArray();
+                    $temp['role'] = $user->role ? $user->role->name : "";
+                    $temp['num_activity'] = count($user->activities);
+                    $temp['last_activity'] = $user->activities()->orderBy('created_at', 'desc')->first() ? $user->activities()->orderBy('created_at', 'desc')->first()->created_at : "";
+                    $temp['view_count'] = count($user->views);
+                    $temp['friend_count'] = count($user->friends);
+                    $temp['thread_count'] = count($user->threads);
+                    $temp['forum_post_count'] = count($user->posts);
+                    $temp['timeline_post_count'] = count($user->timelines);
+                    $temp['thread_count'] = count($user->threads);
+                    array_push($data, $temp);
+                }
+                /*dd($data);*/
+                $sheet->fromArray($data
+                    , null, 'A1', false, true);
+            });
 
-            /*$query = App\User::join('roles', 'users.role_id', '=', 'roles.id')->select('users.*', 'roles.name as role')->get();
-            $query = $query->join()*/
+             $excel->sheet('User Activities Data', function($sheet) {
+                $sheet->fromArray(\App\UserActivity::orderBy("created_at", 'desc')->get()
+                    , null, 'A1', false, true);
+            });
+         })->download('xls');
 
-            $users = App\User::all();
-            $data = [];
+    } else if ($mode=="FORUM") {
+        Excel::create($mode." Data", function($excel) {
+             $excel->sheet('Forum Data', function($sheet) {
+                $forums = App\Forum::all();
+                $data = [];
 
-            foreach ($users as $user){
-                $temp = $user->toArray();
-                $temp['role'] = $user->role ? $user->role->name : "";
-                $temp['friend_count'] = count($user->friends);
-                $temp['post_count'] = count($user->posts);
-                $temp['thread_count'] = count($user->threads);
+                foreach ($forums as $forum){
+                    $temp = $forum->toArray();
+                    $temp['thread_count'] = count($forum->threads);
+                    $temp['total_view'] = $forum->viewCount();
+                    $temp['post_count'] = $forum->postCount();
+                    $temp['contributor_count'] = $forum->contributorCount();
 
-                array_push($data, $temp);
-            }
+                    array_push($data, $temp);
+                }
 
-            $sheet->fromArray($data
-                , null, 'A1', false, true);
+                $sheet->fromArray($data
+                    , null, 'A1', false, true);
+            });
+            $excel->sheet('Thread Data', function($sheet) {
+                $threads = App\Thread::orderBy('forum_id','asc')->get();
+                $data = [];
 
+                foreach ($threads as $thread){
+                    $temp = $thread->toArray();
+                    $temp['total_view'] = count($thread->views);
+                    $temp['post_count'] = count($thread->posts);
+                    $temp['contributor_count'] = $thread->contributorCount();
 
-        });
-    })->download('xls');
+                    array_push($data, $temp);
+                }
+
+                $sheet->fromArray($data
+                    , null, 'A1', false, true);
+            });
+         })->download('xls');
+    }
 });
 
 Route::get('/home', function () {
@@ -181,6 +222,12 @@ Route::post('/thread/{id}', function($id) {
     $post->content = request()->comment;
     $post->save();
 
+    $thread = App\Thread::find($id);
+    $thread->touch();
+
+    $forum = App\Forum::find($thread->forum_id);
+    $forum->touch();
+
     \App\UserActivity::postForumActivity($post);
 
     return Redirect::back();
@@ -206,6 +253,9 @@ Route::post('/forum/{id}', function($id) {
     $post->owner_id = Auth::user()->id;
     $post->content = request()->isi;
     $post->save();
+
+    $forum = App\Forum::find($forum->id);
+    $forum->touch();
 
     \App\UserActivity::createThreadActivity($thread);
 

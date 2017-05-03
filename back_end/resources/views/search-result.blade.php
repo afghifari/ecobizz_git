@@ -56,10 +56,10 @@
 			border-radius: 50%;
 		}
 		.search-result-item{
-			
+
 		}
 		.search-result-item div{
-			
+
 		}
 		.search-result-item div .nama{
 			color: black;
@@ -103,23 +103,9 @@
 			@if($type == "user")
 				<div class="row">
 					<div class="col-md-3 col-md-offset-2">
-						<div class="dropdown">
 							<b>Kategori:</b>
-							<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Peran
-							<span class="caret"></span></button>
-							<ul class="dropdown-menu">
-								<li><a href="#">Dekopinda</a></li>
-								<li><a href="#">Dekopinwil</a></li>
-								<li><a href="#">Eksportir</a></li>
-								<li><a href="#">Investor</a></li>
-								<li><a href="#">ICT</a></li>
-								<li><a href="#">Konsultan</a></li>
-								<li><a href="#">Koperasi</a></li>
-								<li><a href="#">Perguruan Tinggi</a></li>
-								<li><a href="#">Industri</a></li>
-								<li><a href="#">Lainnya</a></li>
-							</ul>
-						</div>
+							{!! Form::select('kategori', App\Role::pluck('name', 'id'), null, ['class' => 'form-control input-sm'] ) !!}
+
 					</div>
 					<div class="col-md-3 col-md-offset-2">
 						<b>Lokasi:</b>

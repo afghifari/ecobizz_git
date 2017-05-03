@@ -93,7 +93,7 @@
 						{{$thread->user->name}}
 					</div>
 					<div class="x-last-seen">
-						{{ (new Carbon\Carbon($thread->last_update))->diffForHumans() }}
+						{{ (new Carbon\Carbon($thread->updated_at))->diffForHumans() }}
 					</div>
 				</div>
 				<div class="col-md-2">

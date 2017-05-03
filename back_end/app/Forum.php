@@ -10,10 +10,25 @@ class Forum extends Model
         return $this->hasMany(Thread::class, "forum_id", "id");
     }
     public function postCount() {
-        $threads = $this->threads;
         $count = 0;
-        foreach ($threads as $thread) {
+        foreach ($this->threads as $thread) {
             $count += count($thread->posts);
+        }
+        return $count;
+    }
+
+    public function viewCount() {
+        $count = 0;
+        foreach ($this->threads as $thread) {
+            $count += count($thread->views);
+        }
+        return $count;
+    }
+
+    public function contributorCount() {
+        $count = 0;
+        foreach ($this->threads as $thread) {
+            $count += $thread->contributorCount();
         }
         return $count;
     }
