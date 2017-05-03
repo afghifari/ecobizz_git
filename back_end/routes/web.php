@@ -117,12 +117,16 @@ Route::post('user/{id}/edit', function($id) {
     $user->name = $data['name'];
     $user->email = $data['email'];
     $user->address = $data['address'] ? $data['address'] : "";
-    $user->description = $data['deskripsi'];
-    $user->owner = $data['pemilik'];
-    $user->organization_name = $data['organizationName'];
+    $user->description = $data['deskripsi'] ? $data['deskripsi'] : "";
+    $user->owner = $data['pemilik'] ? $data['pemilik'] : "";
+    $user->organization_name = $data['organizationName'] ? $data['organizationName'] : "";
     $user->role_id = $data['kategori'];
-    $user->website = $data['website'];
-    $user->mobile_number = $data['hp'];
+    $user->website = $data['website'] ? $data['website'] : "";
+    $user->mobile_number = $data['hp'] ? $data['hp'] : "";
+    $user->needs = $data['kebutuhan'] ? $data['kebutuhan'] : "";
+    $user->whatsapp_number = $data['whatsapp'] ? $data['whatsapp'] : "";
+    $user->facebook_id = $data['facebook'] ? $data['facebook'] : "";
+    $user->twitter_id = $data['twitter'] ? $data['twitter'] : "";
 
     $user->save();
 

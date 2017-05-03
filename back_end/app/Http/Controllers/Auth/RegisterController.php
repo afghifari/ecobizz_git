@@ -87,6 +87,9 @@ class RegisterController extends Controller
         $user->mobile_number = $data['hp'];
         $user->products = $data['produk'];
         $user->needs = $data['kebutuhan'];
+        $user->twitter_id = $data['twitter'];
+        $user->facebook_id = $data['facebook'];
+        $user->whatsapp_number = $data['whatsapp'];
         $user->save();
 
         return $user;
