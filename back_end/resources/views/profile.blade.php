@@ -174,7 +174,7 @@
                                         <i class="fa fa-diamond"></i> Peran
                                     </div>
                                     <div class="value">
-                                        {{$user->role->name}}
+                                        {{ $user->role ? $user->role->name : null}}
                                     </div>
                                 </div>
                             </div>
