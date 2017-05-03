@@ -115,7 +115,15 @@ class User extends Authenticatable
         return $this->hasOne(UserLastSeen::class, "user_id", "id");
     }
 
+    public function activities() {
+        return $this->hasMany(UserActivity::class, "user_id", "id");
+    }
+
     public static function newUsers() {
         return User::whereDate('created_at', \DB::raw('CURDATE()'))->get();
+    }
+
+    public function views() {
+        return $this->hasMany(UserView::class, "viewed_id", "id");
     }
 }

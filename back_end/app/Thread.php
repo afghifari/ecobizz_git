@@ -17,4 +17,8 @@ class Thread extends Model
     public function posts() {
         return $this->hasMany(ForumPost::class, "thread_id", "id");
     }
+
+    public function views() {
+        return $this->hasMany(ForumView::class, "viewed_id", "id");
+    }
 }

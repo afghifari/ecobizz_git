@@ -9,6 +9,9 @@ class SearchHandler extends Controller{
     public function search(Request $req){
     	$query = $req->get("q");
     	$type = $req->get("type");
+
+        \App\UserActivity::searchActivity("Search $type, Query = $query");
+
     	if($type == "user"){
 			$user_result = DB::table('users')
 						 -> where('name', 'LIKE', "%$query%")
@@ -23,6 +26,7 @@ class SearchHandler extends Controller{
 						   -> get();
 	        return view('search-result', ['result' => $thread_result, 'query' => $query, 'type' => $type]);
 	    }
+
         return view('search-result', ['result' => array(), 'query' => "", 'type' => ""]);
     }
 }

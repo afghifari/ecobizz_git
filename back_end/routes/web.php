@@ -91,24 +91,6 @@ Auth::routes();
 
 Route::get('/logout', 'Auth\LoginController@logout');
 
-
-Route::post('user/{id}', function($id) {
-    $user = App\User::find($id);
-
-    $password = $user->password;
-
-    $user->fill(request()->all);
-
-    if ($password != $user->password) {
-        $user->password = bcrypt($user->password);
-    }
-
-    $user->uploadPhoto($user->profile_picture);
-    $user->uploadOrganizationChart($user->organization_structure);
-    $user->save();
-    return view('profile', [ 'user' => $user]);
-});
-
 //link profil
 Route::get('user/{id}', function($id) {
     $user = App\User::find($id);
@@ -149,6 +131,7 @@ Route::post('user/{id}/edit', function($id) {
         $user->uploadOrganizationChart($data['organizationImage']);
     }
 
+    \App\UserActivity::updateActivity();
 
     return redirect('user/'.$id);
 });
@@ -158,15 +141,10 @@ Route::post('user/{id}/timeline', function($id) {
     $post->user_id = $id;
     $post->message = request()->timeline_post;
     $post->save();
+
+    \App\UserActivity::postTimelineActivity();
+
     return Redirect::back();
-});
-
-
-Route::post('/uploadPicExample', function() {
-    $user = App\User::first();
-    $image = request()->file('photo');
-    $user->uploadPhoto($image);
-    return $user;
 });
 
 Route::get('/forum', function() {
@@ -192,6 +170,9 @@ Route::post('/thread/{id}', function($id) {
     $post->owner_id = Auth::user()->id;
     $post->content = request()->comment;
     $post->save();
+
+    \App\UserActivity::postForumActivity($post);
+
     return Redirect::back();
 });
 
@@ -215,6 +196,8 @@ Route::post('/forum/{id}', function($id) {
     $post->owner_id = Auth::user()->id;
     $post->content = request()->isi;
     $post->save();
+
+    \App\UserActivity::createThreadActivity($thread);
 
     return redirect('forum/'.$id);
 });
@@ -320,31 +303,31 @@ Route::get('/forum-search/{query}', function ($query) {
 				//dd($forums_name);
 	return json_encode($forums_name);
 	array_push($data, $forums_name);
-				
+
 	$forums_description = DB::table('forums')
 				-> where('description', 'like', '%$query&')
 				-> get();
 				//dd($forums_description);
 	array_push($data, $forums_description);
-	
+
 	$forum_posts_content = DB::table('forum_posts')
 				-> where('content', 'like', '%$query&')
 				-> get();
 				//dd($forum_posts_content);
 	array_push($data, $forum_posts_content);
-	
+
 	$threads_name = DB::table('threads')
 				-> where('name', 'like', '%$query&')
 				-> get();
 				//dd($threads_name);
-				
+
 	//dd($data);
 	array_push($data, $threads_name);
-	
+
 	//dd($data);
-	
+
     return json_encode ($data);
-	
+
 });
 
 Route::get('/messagelist', function() {
