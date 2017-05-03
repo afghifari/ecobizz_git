@@ -18,8 +18,7 @@ class ActivityMonitor
     {
         $user = $request->user();
         if ($user) {
-            $user->last_seen = Carbon::now();
-            $user->save();
+            \App\UserLastSeen::check($user);
         }
         return $next($request);
     }
