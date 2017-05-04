@@ -150,7 +150,7 @@
                         </div>
 
                         <div id="organizationImage" style="width: 100%;">
-                            <img src="{{$user->organization_structure}}" alt="Struktur Organisasi">
+                            <img src="{{$user->organization_structure}}" alt="Struktur Organisasi" width="800" height="280">
                         </div>
 
                         <style type="text/css">

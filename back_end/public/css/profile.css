@@ -119,9 +119,9 @@ button:hover {
 	color: #FFFFFF; 
 	font-size: 26px;
 	background-color: #696969;
-	padding-top: 20px;
+	/*padding-top: 20px;
 	padding-left: 30px;
-	padding-right: 20px;
+	padding-right: 20px;*/
 	text-align: left;
 	border: solid 1px #DCDCDC;
 }
