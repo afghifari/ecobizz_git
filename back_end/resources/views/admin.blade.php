@@ -127,10 +127,7 @@
 				<div class="section-content">
 					<button class="button1" onclick="window.location.href='/export?mode=USER'">USER</button>
 					<button class="button1" onclick="window.location.href='/export?mode=FORUM'">FORUM</button>
-<<<<<<< HEAD
-=======
 					<button class="button1" onclick="window.location.href=''">CHAT</button>
->>>>>>> 9ab344a71153ca4e87e24c43b942207ec69e6090
 				</div>
 				<div class="section-title">
 					Import Data (User)

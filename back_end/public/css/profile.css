@@ -101,6 +101,15 @@ button:hover {
 	border: solid 1px #DCDCDC;
 }
 
+.socialmedia {
+	color: black;
+}
+
+.socialmedia:hover {
+	cursor: pointer;
+	color: #00aa44;
+}
+
 #organizationTitle {
 	float:left;
 	width: 700px;
