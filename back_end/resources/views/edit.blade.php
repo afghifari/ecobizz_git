@@ -80,6 +80,7 @@
                 <input type="text" name="pemilik" placeholder="Pemilik" style="width: 600px;" value="{{ $user->owner }}"></br>
                 <input type="text" name="website" placeholder="Website" style="width: 600px;" value="{{ $user->website }}"></br>
                 <input type="text" name="kebutuhan" placeholder="Kebutuhan" style="width: 600px;" value="{{ $user->needs }}"></br>
+                <input type="text" name="produk" placeholder="Produk" style="width: 600px;" value="{{ $user->products }}"></br>
             </div>
             </form>
         </div>
