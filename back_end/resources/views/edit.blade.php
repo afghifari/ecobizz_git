@@ -58,9 +58,9 @@
                         <input type="text" name="address" placeholder="Alamat" value="{{ $user->address }}"></br>
                         <input type="text" name="email" placeholder="E-mail" value="{{ $user->email }}"></br>
                         <input type="text" name="hp" placeholder="No. Handphone" value="{{ $user->mobile_number }}"></br>
-                        <input type="text" name="whatsapp" placeholder="WhatsApp" value=""></br>
-                        <input type="text" name="facebook" placeholder="Facebook" value=""></br>
-                        <input type="text" name="twitter" placeholder="Twitter" value=""></br>
+                        <input type="text" name="whatsapp" placeholder="WhatsApp" value="{{ $user->whatsapp_number }}"></br>
+                        <input type="text" name="facebook" placeholder="Facebook" value="{{ $user->facebook_id }}"></br>
+                        <input type="text" name="twitter" placeholder="Twitter" value="{{ $user->twitter_id }}"></br>
                 </div>
             </div>
 
