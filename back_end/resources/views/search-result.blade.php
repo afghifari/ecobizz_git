@@ -101,7 +101,7 @@
 				</div>
 			</div> -->
 			@if($type == "user")
-				<div class="form-inline">
+				<form class="form-inline" action="#" method="GET">
 					<div class="row">
 						<div class="col-md-3 col-md-offset-1">
 							<b>Kategori: </b>{!! Form::select('kategori', App\Role::pluck('name', 'id'), null, ['class' => 'form-control input-sm'] ) !!}
@@ -114,7 +114,7 @@
 							<button type="submit" class="btn btn-success">Cari</button>
 						</div>
 					</div>
-				</div>
+				</form>
 				<br>
 				@foreach($result as $data)
 				<div class="row f-header">
@@ -146,7 +146,7 @@
 			@endif
 
 			@if($type == "topik")
-				<div class="form-inline">
+				<form class="form-inline">
 					<div class="row">
 						<div class="col-md-3 col-md-offset-1">
 							<div class="dropdown">
@@ -174,7 +174,7 @@
 							<button type="submit" class="btn btn-success">Cari</button>
 						</div>
 					</div>
-				</div>
+				</form>
 				<br>
 				@foreach($result as $data)
 				<div class="row f-header">

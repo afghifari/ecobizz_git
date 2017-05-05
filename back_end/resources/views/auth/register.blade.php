@@ -70,12 +70,12 @@
             <div class="reg-mainText"> <bText>3</bText> Konfirmasi</div>
         </section>
 
-        <!-- <section class="reg-section6">
+        <section class="reg-section6">
             <input type="checkbox" name="info" value="information">  Informasi saya sudah benar </br></br>
             <input type="checkbox" name="tnc" value="tnc">  Saya telah membaca dan menyetujui Syarat dan Ketentuan </br></br>
             <input class="registerButton" type="submit" value="REGISTER">
             </form>
-        </section> -->
+        </section>
     </form>
 
 @endsection
