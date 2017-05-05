@@ -5,7 +5,11 @@
     </div>
     <section class="section1">
         <div id="profile">
-            Profil
+            Profil 
+            <!-- Kalo online --> <img src="/assets/online.png" title="Online" class="status">
+            <!-- Kalo offline --> <!-- <img src="/assets/offline.png" title="Offline" class="status"> -->
+            
+            <!-- Kalo diri sendiri yang liat -->
             @if (Auth::user())
                 @if (Auth::user()->id == $user->id)
                     <div style="float:right;" align="right">
@@ -17,6 +21,19 @@
                     </div>
                 @endif
             @endif
+
+            <!-- Kalo orang lain yang liat -->
+            {{-- @if (Auth::user()) --}}
+                {{-- @if (Auth::user()->id == $user->id) --}}
+                    <!-- <div style="float:right;" align="right">
+                        <a href="#">
+                        <button class="button1">
+                            Tambahkan Teman
+                        </button>
+                        </a>
+                    </div> -->
+                {{-- @endif --}}
+            {{-- @endif --}}
         </div>
     </section>
 
@@ -116,8 +133,8 @@
                     </div>
                     <div style="line-height: 30px;">
                         <img src="/assets/whatsapp.png" width="20"> {{$user->whatsapp_number}}<br>
-                        <img src="/assets/fb.png" width="20"> <a href="https://www.facebook.com/search/top/?q={{$user->facebook_id}}"> {{$user->facebook_id}} </a> <br>
-                        <img src="/assets/twitter.png" width="20"> <a href="https://www.twitter.com/{{$user->twitter_id}}">  {{$user->twitter_id}} </a> <br>
+                        <img src="/assets/fb.png" width="20"> <a href="https://www.facebook.com/search/top/?q={{$user->facebook_id}}" class="socialmedia" target="_blank"> {{$user->facebook_id}} </a> <br>
+                        <img src="/assets/twitter.png" width="20"> <a href="https://www.twitter.com/{{$user->twitter_id}}" class="socialmedia" target="_blank">  {{$user->twitter_id}} </a> <br>
                     </div>
                 </div>
                 <div class="row top-buffer">
@@ -133,7 +150,7 @@
                         </div>
 
                         <div id="organizationImage" style="width: 100%;">
-                            <img src="{{$user->organization_structure}}" alt="Struktur Organisasi">
+                            <img src="{{$user->organization_structure}}" alt="Struktur Organisasi" width="800" height="280">
                         </div>
 
                         <style type="text/css">
@@ -195,6 +212,16 @@
                                     </div>
                                     <div class="value">
                                         {{ $user->needs }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="key">
+                                        <i class="fa fa-asterisk"></i> Produk
+                                    </div>
+                                    <div class="value">
+                                        {{ $user->products }}
                                     </div>
                                 </div>
                             </div>

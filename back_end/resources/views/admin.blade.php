@@ -130,7 +130,7 @@
 					<button class="button1" onclick="window.location.href=''">CHAT</button>
 				</div>
 				<div class="section-title">
-					Import Data
+					Import Data (User)
 				</div>
 				<div class="section-content">
 				{!! Form::open(['method' => 'post', 'url' => url("import"), 'files' => true]) !!}

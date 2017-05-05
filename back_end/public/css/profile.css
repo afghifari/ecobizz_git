@@ -101,6 +101,15 @@ button:hover {
 	border: solid 1px #DCDCDC;
 }
 
+.socialmedia {
+	color: black;
+}
+
+.socialmedia:hover {
+	cursor: pointer;
+	color: #00aa44;
+}
+
 #organizationTitle {
 	float:left;
 	width: 700px;
@@ -119,9 +128,9 @@ button:hover {
 	color: #FFFFFF; 
 	font-size: 26px;
 	background-color: #696969;
-	padding-top: 20px;
+	/*padding-top: 20px;
 	padding-left: 30px;
-	padding-right: 20px;
+	padding-right: 20px;*/
 	text-align: left;
 	border: solid 1px #DCDCDC;
 }
@@ -225,6 +234,10 @@ hr {
 	text-align: center;
 	vertical-align: middle;
 	border: solid 1px #DCDCDC;
+}
+
+.status:hover {
+	cursor: pointer;
 }
 
 .section3 {
