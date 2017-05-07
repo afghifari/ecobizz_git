@@ -84,7 +84,7 @@ button:hover {
 }
 
 .container2 {
-	width: 1100px;
+	/*width: 1100px;*/
 }
 
 #activities {
@@ -271,23 +271,15 @@ li span {
 	margin: auto;
 }
 
-#footer-sect {
+.footer-sect {
 	margin-top: 60px;
-	float:left;
-	width: 200px;
-	color: #FFFFFF; 
-	font-size: 20px; 
-}
-
-#footer-sect-center {
-	margin-top: 60px;
-	float:left;
-	width: 400px;
-	color: #FFFFFF; 
-	font-size: 20px; 
+	/*float:left;
+	max-width: 200px;*/
+	color: #FFFFFF;
+	font-size: 20px;
 }
 
 .footer {
-	font-size: 14px; 
+	font-size: 14px;
 	line-height: 25px;
 }

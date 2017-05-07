@@ -138,7 +138,7 @@
                     </div>
                 </div>
                 <div class="row top-buffer">
-                    <button class="btn btn-danger">Verifikasi Akun</button>
+                    <button class="btn btn-danger" style="margin-bottom: 100px;">Verifikasi Akun</button>
                 </div>
             </div>
             <div class="col-md-8" style="margin-top: 2px;">
@@ -150,7 +150,7 @@
                         </div>
 
                         <div id="organizationImage" style="width: 100%;">
-                            <img src="{{$user->organization_structure}}" alt="Struktur Organisasi" width="800" height="280">
+                            <img src="{{$user->organization_structure}}" alt="Struktur Organisasi">
                         </div>
 
                         <style type="text/css">

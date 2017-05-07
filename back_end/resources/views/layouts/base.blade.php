@@ -205,36 +205,6 @@
                 <button><img src="/assets/gplus.png" height="25"></button>
                 <br>
             </div>
-                <!-- <div class = "container3">
-                    <div id="footer-sect">Site Map
-                        <br>
-                        <a href="/">Home</a><br>
-                        <a href="forum">Forum</a><br>
-                        <a href="register">Daftar</a><br>
-                        <a href="login">Login</a>
-                    </div>
-                    <div id="footer-sect-center">Kontak
-                        <br>
-                        <div class="footer">
-                            Ecobiz KUKM Jawa Barat<br>
-                            Jalan Ganesha No. 12<br>
-                            Bandung, Jawa Barat<br>
-                            40135<br>
-                            ☎ 022 - 11111
-                        </div>
-                    </div>
-                    <div id="footer-sect">Fitur Utama
-                        <br>
-                        <div class="footer">
-                            Profil Pelaku Bisnis<br>
-                            Interaksi Ekosistem Bisnis<br>
-                            Forum<br>
-                            Menyerupai Facebook<br>
-                            & Kaskus
-                        </div>
-                    </div>
-                </div>
-                <div style="clear: both;"> -->
             <div class="row">
                 <div class="col-xs-4">
                     <div class="footer-sect">Site Map
@@ -270,9 +240,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <br><br>
-        Copyright © 2017 Ecobiz KUKM Jabar
         </div>
     </section>
     <!-- Scripts -->

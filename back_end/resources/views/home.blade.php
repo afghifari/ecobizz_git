@@ -51,21 +51,21 @@
                 <p style="margin-bottom: 10px;">Daftarkan diri / organisasi Anda dan mulailah membangun agribisnis Jabar dengan seluruh anggota kami</p>
                 </center> -->
                 <!-- <img src = "/assets/circles.png" vspace="10px" style="margin-bottom: 50px"> -->
-                <div class="col-md-4">
+                <div class="col-xs-4">
                     <div id="number">207</div>
                     <div class="category">Anggota Terdaftar</div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-xs-4">
                     <div id="number">57</div>
                     <div class="category">Grup Agribisnis</div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-xs-4">
                     <div id="number">61</div>
                     <div class="category">Topik Forum</div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-8 col-md-offset-2">
+                <div class="col-xs-8 col-xs-offset-2">
                     <p>Daftarkan diri / organisasi Anda dan mulailah membangun agribisnis Jabar dengan seluruh anggota kami</p>
                 </div>
             </div>
