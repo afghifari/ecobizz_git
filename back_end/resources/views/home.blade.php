@@ -1,7 +1,7 @@
 @extends('layouts.base')
 
 @section('content')
-    <header id="header">
+    <section id="header">
         <br><br><br><br>
         @if (Session::has('success'))
             <div class="alert alert-success">
@@ -21,31 +21,55 @@
         <div class="down-button">
             <center><button class="button1" style="border:none" onclick="location.href='#ecobiz'"><img src="/assets/down_arrow.png"></button></center>
         </div>
-    </header>
+    </section>
 
     <section class="section1" id="ecobiz">
-        <img src = "/assets/ecobiz_hitam.png" height="40" vspace="30px" style="margin-top: 50px">
-        <center><p>
-            Donec eget ullamcorper dolor. Maecenas sed libero aliquam, aliquet nunc quis, ornare ex. Integer sit amet turpis vestibulum, aliquet tortor et, blandit risus. Duis vestibulum augue quis luctus rutrum. Nulla porta non ligula nec iaculis. Aliquam sed felis viverra, dictum massa in, faubicus lacus. Sed eleifend, est nec scelerisque ullamcorper, augue velit, tempor lectus, non hendrerit tortor augue eget nibh. Aenean at condimentum ligula. Donec a metus at nunc viverra pellentesque.
-        </p></center>
-        <hr>
-
-
-        <div class = "container1">
-            <div id="number">207
-            <div class="category"><br>Anggota Terdaftar</div>
+        <div class="container">
+            <div class="row">
+                <img src = "/assets/ecobiz_hitam.png" height="40" vspace="30px" style="margin-top: 50px">
             </div>
-            <div id="number">57
-            <div class="category"><br>Grup Agribisnis</div>
+            <div class="row">
+                <center><p>
+                    Donec eget ullamcorper dolor. Maecenas sed libero aliquam, aliquet nunc quis, ornare ex. Integer sit amet turpis vestibulum, aliquet tortor et, blandit risus. Duis vestibulum augue quis luctus rutrum. Nulla porta non ligula nec iaculis. Aliquam sed felis viverra, dictum massa in, faubicus lacus. Sed eleifend, est nec scelerisque ullamcorper, augue velit, tempor lectus, non hendrerit tortor augue eget nibh. Aenean at condimentum ligula. Donec a metus at nunc viverra pellentesque.
+                </p></center>
+                <hr>
             </div>
-            <div id="number">61
-            <div class="category"><br>Topik Forum</div>
+
+            <div class="row">
+                <!-- <div class = "container1">
+                    <div id="number">207
+                    <div class="category"><br>Anggota Terdaftar</div>
+                    </div>
+                    <div id="number">57
+                    <div class="category"><br>Grup Agribisnis</div>
+                    </div>
+                    <div id="number">61
+                    <div class="category"><br>Topik Forum</div>
+                    </div>
+                </div>
+                <center>
+                <p style="margin-bottom: 10px;">Daftarkan diri / organisasi Anda dan mulailah membangun agribisnis Jabar dengan seluruh anggota kami</p>
+                </center> -->
+                <!-- <img src = "/assets/circles.png" vspace="10px" style="margin-bottom: 50px"> -->
+                <div class="col-md-4">
+                    <div id="number">207</div>
+                    <div class="category">Anggota Terdaftar</div>
+                </div>
+                <div class="col-md-4">
+                    <div id="number">57</div>
+                    <div class="category">Grup Agribisnis</div>
+                </div>
+                <div class="col-md-4">
+                    <div id="number">61</div>
+                    <div class="category">Topik Forum</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <p>Daftarkan diri / organisasi Anda dan mulailah membangun agribisnis Jabar dengan seluruh anggota kami</p>
+                </div>
             </div>
         </div>
-        <center>
-        <p style="margin-bottom: 10px;">Daftarkan diri / organisasi Anda dan mulailah membangun agribisnis Jabar dengan seluruh anggota kami</p>
-        </center>
-        <img src = "/assets/circles.png" vspace="10px" style="margin-bottom: 50px">
     </section>
 
     <section class="section2">
@@ -56,7 +80,7 @@
         @endif
     </section>
 
-    <section class="section3">
+    <!-- <section class="section3">
         <div class="title">
             FITUR UTAMA PLATFORM ECOBIZ KUKM JAWA BARAT
         </div>
@@ -80,6 +104,43 @@
 
             <div id="feature"> Menyerupai Facebook & Kaskus
                 <div class="feature-expl">Apabila Anda pernah menggunakan sosmed Facebook & forum Kaskus, Ecobiz KUKM Jawa Barat menggabungkan keunggulan keduanya untuk interaksi Anda
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <section class="section3">
+        <div class="container">
+            <div class="row">
+                <div class="title">
+                    FITUR UTAMA PLATFORM ECOBIZ KUKM JAWA BARAT
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-3">
+                    <div class="feature">
+                        Profil Pelaku Bisnis<br>
+                        <div class="feature-expl">Kenali dan carilah setiap pelaku bisnis Jawa Barat mulai dari profil, lingkup usaha, alamat, kebutuhan, dan kontak mereka</div>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="feature">
+                        Interaksi Ekosistem Bisnis<br>
+                        <div class="feature-expl">Fasilitas untuk memulai percakapan pribadi, membuat persetujuan dan untuk bekerja sama, dan membuat grup untuk keberjalanan ekosistem bisnis Anda</div>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="feature">
+                        Forum<br>
+                        <div class="feature-expl">Ecobiz KUKM Jawa Barat didukung oleh forum yang kuat tempat Anda bertanya dan berbagi apa saja dengan seluruh anggota platform<br><br>
+                        <button class="button1" style="margin-top: 0; margin-left: 0;" onclick="window.location.href='/forum'">FORUM</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="feature">
+                        Menyerupai Facebook & Kaskus<br>
+                        <div class="feature-expl">Apabila Anda pernah menggunakan sosmed Facebook & forum Kaskus, Ecobiz KUKM Jawa Barat menggabungkan keunggulan keduanya untuk interaksi Anda</div>
+                    </div>
                 </div>
             </div>
         </div>

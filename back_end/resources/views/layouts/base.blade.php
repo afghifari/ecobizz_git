@@ -195,43 +195,82 @@
     @yield('content')
 
     <section class="section4">
-        <img src = "/assets/ecobiz_putih.png" height="40" vspace="30px" style="margin-top: 50px">
-        <br>
-        <button><img src="/assets/fb.png" height="25"></button>
-        <button><img src="/assets/twitter.png" height="25"></button>
-        <button><img src="/assets/linkedin.png" height="25"></button>
-        <button><img src="/assets/gplus.png" height="25"></button>
-        <br>
-        <div class = "container3">
-            <div id="footer-sect">Site Map
+        <div class="container">
+            <div class="row">
+                <img src = "/assets/ecobiz_putih.png" height="40" vspace="30px" style="margin-top: 50px">
                 <br>
-                <a href="/">Home</a><br>
-                <a href="forum">Forum</a><br>
-                <a href="register">Daftar</a><br>
-                <a href="login">Login</a>
+                <button><img src="/assets/fb.png" height="25"></button>
+                <button><img src="/assets/twitter.png" height="25"></button>
+                <button><img src="/assets/linkedin.png" height="25"></button>
+                <button><img src="/assets/gplus.png" height="25"></button>
+                <br>
             </div>
-            <div id="footer-sect-center">Kontak
-                <br>
-                <div class="footer">
-                    Ecobiz KUKM Jawa Barat<br>
-                    Jalan Ganesha No. 12<br>
-                    Bandung, Jawa Barat<br>
-                    40135<br>
-                    ☎ 022 - 11111
+                <!-- <div class = "container3">
+                    <div id="footer-sect">Site Map
+                        <br>
+                        <a href="/">Home</a><br>
+                        <a href="forum">Forum</a><br>
+                        <a href="register">Daftar</a><br>
+                        <a href="login">Login</a>
+                    </div>
+                    <div id="footer-sect-center">Kontak
+                        <br>
+                        <div class="footer">
+                            Ecobiz KUKM Jawa Barat<br>
+                            Jalan Ganesha No. 12<br>
+                            Bandung, Jawa Barat<br>
+                            40135<br>
+                            ☎ 022 - 11111
+                        </div>
+                    </div>
+                    <div id="footer-sect">Fitur Utama
+                        <br>
+                        <div class="footer">
+                            Profil Pelaku Bisnis<br>
+                            Interaksi Ekosistem Bisnis<br>
+                            Forum<br>
+                            Menyerupai Facebook<br>
+                            & Kaskus
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div id="footer-sect">Fitur Utama
-                <br>
-                <div class="footer">
-                    Profil Pelaku Bisnis<br>
-                    Interaksi Ekosistem Bisnis<br>
-                    Forum<br>
-                    Menyerupai Facebook<br>
-                    & Kaskus
+                <div style="clear: both;"> -->
+            <div class="row">
+                <div class="col-xs-4">
+                    <div class="footer-sect">Site Map
+                        <br>
+                        <a href="/">Home</a><br>
+                        <a href="forum">Forum</a><br>
+                        <a href="register">Daftar</a><br>
+                        <a href="login">Login</a>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="footer-sect">Kontak
+                        <br>
+                        <div class="footer">
+                            Ecobiz KUKM Jawa Barat<br>
+                            Jalan Ganesha No. 12<br>
+                            Bandung, Jawa Barat<br>
+                            40135<br>
+                            ☎ 022 - 11111
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="footer-sect">Fitur Utama
+                        <br>
+                        <div class="footer">
+                            Profil Pelaku Bisnis<br>
+                            Interaksi Ekosistem Bisnis<br>
+                            Forum<br>
+                            Menyerupai Facebook<br>
+                            & Kaskus
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div style="clear: both;">
         <br><br>
         Copyright © 2017 Ecobiz KUKM Jabar
         </div>
