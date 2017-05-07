@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ForumView extends Model
 {
-    public static function newView(User $user, Thread $viewed) {
+    public static function newView($user, Thread $viewed) {
         $userId = $user ? $user->id : null;
 
         if ($userId) {
