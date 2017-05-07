@@ -41,33 +41,33 @@
 	</style>
 
 	<div class="row">
-		<div class="col-md-10 col-md-offset-1 search-section" style="padding: 0">
+		<div class="col-xs-10 col-xs-offset-1 search-section" style="padding: 0">
 			<!-- <input type="text" name="search" placeholder="Search"> <input type="submit" name="submit" value=""> -->
 		</div>
 	</div>
 	<div class="row forum">
-		<div class="col-md-10 col-md-offset-1">
+		<div class="col-xs-10 col-xs-offset-1">
 			<div class="row f-header head-md">
-				<div class="col-md-10">
+				<div class="col-xs-7">
 					Forum
 				</div>
-				<div class="col-md-1">
+				<div class="col-xs-2">
 					Topik
 				</div>
-				<div class="col-md-1">
+				<div class="col-xs-1">
 					Postingan
 				</div>
 			</div>
 			@if(sizeof($forums) == 0)
 			<div class="row f-header">
-				<div class="col-md-12">
+				<div class="col-xs-12">
 					Tidak ada forum
 				</div>
 			</div>
 			@endif
 			@foreach($forums as $forum)
 			<div class="row f-header">
-				<div class="col-md-10">
+				<div class="col-xs-7">
 					<div class="x-header">
 						<a href="{{url("forum/".$forum->id)}}" style="color: unset">{{ $forum->name }}</a>
 					</div>
@@ -78,10 +78,10 @@
 						{{ (new Carbon\Carbon($forum->updated_at))->diffForHumans() }}
 					</div>
 				</div>
-				<div class="col-md-1">
+				<div class="col-xs-2">
 					{{count($forum->threads)}}
 				</div>
-				<div class="col-md-1">
+				<div class="col-xs-1">
 					{{ $forum->postCount() }}
 				</div>
 			</div>
