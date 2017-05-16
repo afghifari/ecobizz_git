@@ -4,6 +4,7 @@
     <link href="{{asset('css/bootstrap.css')}}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{asset('css/creative.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/editprofile.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <style type="text/css">
         .navbar{
@@ -37,56 +38,64 @@
 	<section class="editprofile-section1">
         <div id="profile">
             Edit Profil
-            <div style="float:right;" align="right">
-                <input type="submit" name="Save" value="SAVE" class="button1">
-            </div>
         </div>
     </section>
 
     <section class="editprofile-section2">
-        <div class="container2">
-            <div id="user">
-                <center>
-                    <img id="image" src="{{$user->profile_picture}}" height="120px" style="margin-top: 60px;"><br>
-                    <input type="file" name="photo" id="photo" class="button2" onchange="readURL(this);" />
-                    <label for="photo">change</label>
-                </center>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="user">
+                        <center>
+                            <img id="image" src="{{$user->profile_picture}}" height="120px" style="margin-top: 60px;"><br>
+                            <input type="file" name="photo" id="photo" class="button2" onchange="readURL(this);" />
+                            <label for="photo">change</label>
+                        </center>
 
-                <div style="font-size: 14px;">
-                    <form id="editProfile">
-                        <input type="text" name="name" placeholder="Nama" value="{{ $user->name }}"> </br>
-                        <input type="text" name="address" placeholder="Alamat" value="{{ $user->address }}"></br>
-                        <input type="text" name="email" placeholder="E-mail" value="{{ $user->email }}"></br>
-                        <input type="text" name="hp" placeholder="No. Handphone" value="{{ $user->mobile_number }}"></br>
-                        <input type="text" name="whatsapp" placeholder="WhatsApp" value="{{ $user->whatsapp_number }}"></br>
-                        <input type="text" name="facebook" placeholder="Facebook" value="{{ $user->facebook_id }}"></br>
-                        <input type="text" name="twitter" placeholder="Twitter" value="{{ $user->twitter_id }}"></br>
+                        <div style="font-size: 14px;">
+                            <form id="editProfile">
+                                Nama: <input type="text" name="name" placeholder="Nama" value="{{ $user->name }}"> </br></br>
+                                Alamat: <input type="text" name="address" placeholder="Alamat" value="{{ $user->address }}"></br></br>
+                                E-mail: <input type="email" name="email" placeholder="E-mail" value="{{ $user->email }}"></br></br>
+                                No. Handphone: <input type="tel" name="hp" placeholder="No. Handphone" value="{{ $user->mobile_number }}"></br></br>
+                                Whatsapp: <input type="tel" name="whatsapp" placeholder="WhatsApp" value="{{ $user->whatsapp_number }}"></br></br>
+                                Facebook: <input type="text" name="facebook" placeholder="Facebook" value="{{ $user->facebook_id }}"></br></br>
+                                Twitter: <input type="text" name="twitter" placeholder="Twitter" value="{{ $user->twitter_id }}"></br></br>
+                        </div>
+                    </div>
+                    <br><br>
+                </div>
+
+                <div class="col-md-6">
+                    <div id="organizationName">
+                        <input type="text" name="organizationName" placeholder="Nama Organisasi" value="{{$user->organization_name}}"></br>
+                    </div>
+
+                    <div id="organizationImage">
+                        <input type="file" name="organizationImage" id="organizationImage" class="button3" />
+                            <label for="organizationImage">upload struktur organisasi</label>
+                        <br>
+                    </div>
+
+                    <div id="organizationProfile">
+                        Deskripsi: 
+                        <textarea placeholder="Deskripsi" name="deskripsi">{{$user->description}}</textarea></br></br>
+                        Kategori: {!! Form::select('kategori', App\Role::pluck('name', 'id'), $user->role_id, ['class' => 'form-control'] ) !!}</br>
+                        Pemilik: <input type="text" name="pemilik" placeholder="Pemilik" value="{{ $user->owner }}"></br></br>
+                        Website: <input type="url" name="website" placeholder="Website" value="{{ $user->website }}"></br></br>
+                        Kebutuhan: <input type="text" name="kebutuhan" placeholder="Kebutuhan" value="{{ $user->needs }}"></br></br>
+                        Produk: <input type="text" name="produk" placeholder="Produk" value="{{ $user->products }}"></br></br>
+                    </div>
+                    
                 </div>
             </div>
-
-            <div id="organizationName">
-                <input type="text" name="organizationName" placeholder="Nama Organisasi" style="width: 600px;" value="{{$user->organization_name}}"></br>
+            <div class="row">
+                <br><br>
+                <input type="submit" name="Save" value="Save" class="button4">
+                </form>
             </div>
-
-            <div id="organizationImage">
-                <input type="file" name="organizationImage" id="organizationImage" class="button3" />
-                    <label for="organizationImage">upload struktur organisasi</label>
-                <br>
-            </div>
-
-            <div id="organizationProfile">
-                <!-- <input type="textarea" name="deskripsi" placeholder="Deskripsi" value="{{$user->description}}"> </br> -->
-                <textarea placeholder="Deskripsi" name="deskripsi">{{$user->description}}</textarea></br>
-                {!! Form::select('kategori', App\Role::pluck('name', 'id'), $user->role_id, ['class' => 'form-control'] ) !!}
-                <input type="text" name="pemilik" placeholder="Pemilik" style="width: 600px;" value="{{ $user->owner }}"></br>
-                <input type="text" name="website" placeholder="Website" style="width: 600px;" value="{{ $user->website }}"></br>
-                <input type="text" name="kebutuhan" placeholder="Kebutuhan" style="width: 600px;" value="{{ $user->needs }}"></br>
-                <input type="text" name="produk" placeholder="Produk" style="width: 600px;" value="{{ $user->products }}"></br>
-            </div>
-            </form>
+            
         </div>
-        <div style="clear:both;"><br>
-        <input type="submit" name="Save" value="Save" class="button4">
     </section>
 
 @endsection
