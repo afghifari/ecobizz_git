@@ -79,6 +79,28 @@ bText {
     margin-left: 10%;
     box-sizing: border-box;
 }
+.reg-section5 input[type=tel], .reg-section5 select, .reg-section3 input[type=tel], .reg-section3 select {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: black;
+    margin-left: 10%;
+    box-sizing: border-box;
+}
+.reg-section5 input[type=url], .reg-section5 select, .reg-section3 input[type=url], .reg-section3 select {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: black;
+    margin-left: 10%;
+    box-sizing: border-box;
+}
 .reg-section5 input[type=checkbox], .reg-section3 input[type=checkbox], .reg-section6 input[type=checkbox] {
     margin-left: 10%;
     margin-right: 10px;

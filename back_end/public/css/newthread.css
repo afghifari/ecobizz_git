@@ -19,9 +19,7 @@
 
 .newthread-section2 {
 	background-color: #FFFFFF;
-	min-height: 400px;
-	max-height: 800px;
-	overflow-y: auto;
+	height: 650px;
 	text-align: left;
 	color: #00aa44;
 	margin-left: 100px;
@@ -51,6 +49,16 @@ input[type=textarea] {
     color: black;
     box-sizing: border-box;	
     vertical-align: top;
+}
+
+@media (max-width: 500px) {
+	input[type=textarea], input[type=text]{
+		width: 100%;
+	}
+
+	.newthread-section2 {
+		margin-left: 0;
+	}
 }
 
 .button1 {

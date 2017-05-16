@@ -71,10 +71,8 @@ button:hover {
 .thread-section2 {
 	background-color: #FFFFFF;
 	min-height: 400px;
-	max-height: 550px;
 	text-align: center;
 	color: #FFFFFF;
-	overflow-y: auto;
 }
 
 #timestamp {
@@ -115,6 +113,11 @@ button:hover {
 	border-left: 1px solid #DCDCDC;
 	border-right: 1px solid #DCDCDC;
 	border-bottom: 1px solid #DCDCDC;
+}
+
+.comment {
+	width: 100%;
+	padding: 10px;
 }
 
 .link {

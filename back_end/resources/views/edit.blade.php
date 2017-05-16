@@ -75,7 +75,8 @@
             </div>
 
             <div id="organizationProfile">
-                <input type="textarea" name="deskripsi" placeholder="Deskripsi" value="{{$user->description}}"> </br>
+                <!-- <input type="textarea" name="deskripsi" placeholder="Deskripsi" value="{{$user->description}}"> </br> -->
+                <textarea placeholder="Deskripsi" name="deskripsi">{{$user->description}}</textarea></br>
                 {!! Form::select('kategori', App\Role::pluck('name', 'id'), $user->role_id, ['class' => 'form-control'] ) !!}
                 <input type="text" name="pemilik" placeholder="Pemilik" style="width: 600px;" value="{{ $user->owner }}"></br>
                 <input type="text" name="website" placeholder="Website" style="width: 600px;" value="{{ $user->website }}"></br>

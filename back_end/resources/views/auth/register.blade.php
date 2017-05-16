@@ -37,9 +37,9 @@
                 <h6>Password</h6><br>
                 <input type="password" name="password" placeholder="Re-password"></br>
                 <h6>Re-password</h6><br>
-                <input type="text" name="hp" placeholder="No. Handphone" value="{{request()->old('hp')}}"></br>
+                <input type="tel" name="hp" placeholder="No. Handphone" value="{{request()->old('hp')}}"></br>
                 <h6>Nomor Handphone. Misal = 085641234567</h6>
-                <input type="text" name="whatsapp" placeholder="WhatsApp" value=""></br>
+                <input type="tel" name="whatsapp" placeholder="WhatsApp" value=""></br>
                 <h6>Masukkan nomor yang Anda gunakan pada WhatsApp (jika ada)</h6>
                 <input type="text" name="facebook" placeholder="Facebook" ></br>
                 <h6>Nama yang Anda gunakan pada Facebook (jika ada)</h6>
@@ -58,7 +58,7 @@
                 <h6>Deskripsikan bisnis yang anda jalankan secara singkat, padat, dan jelas</h6><br>
                 <input type="text" name="pemilik" placeholder="Pemilik" value="{{request()->old('pemilik')}}"></br>
                 <h6>Tuliskan nama pemilik bisnis tersebut, jika anda adalah pemiliknya maka tuliskan nama anda sendiri</h6><br>
-                <input type="text" name="web" placeholder="Website" value="{{request()->old('web')}}"></br>
+                <input type="url" name="web" placeholder="Website" value="{{request()->old('web')}}"></br>
                 <h6>Berikan alamat website dari bisnis Anda jika ada</h6><br>
                 <textarea name="produk" placeholder="Produk">{{request()->old('produk')}}</textarea>
                 <h6>Tuliskan produk apa yang bisnis Anda sediakan</h6><br>
@@ -66,15 +66,8 @@
                 <h6>Tuliskan kebutuhan bisnis Anda</h6><br>
         </section>
 
-        <section class="reg-section2">
-            <div class="reg-mainText"> <bText>3</bText> Konfirmasi</div>
-        </section>
-
         <section class="reg-section6">
-            <input type="checkbox" name="info" value="information">  Informasi saya sudah benar </br></br>
-            <input type="checkbox" name="tnc" value="tnc">  Saya telah membaca dan menyetujui Syarat dan Ketentuan </br></br>
             <input class="registerButton" type="submit" value="REGISTER">
-            </form>
         </section>
     </form>
 

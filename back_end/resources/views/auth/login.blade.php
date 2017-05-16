@@ -13,7 +13,7 @@
                 @endif
                 <br><br>
                 <form action='/login' method='post'>
-                    <input type="text" id="fname" name="email" placeholder="E-mail"> </br>
+                    <input type="email" id="fname" name="email" placeholder="E-mail"> </br>
                     <input type="password" id="paswod" name="password" placeholder="Password"></br></br>
                     <input type="submit" value="Login">
                 </form>

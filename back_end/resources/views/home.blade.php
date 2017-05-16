@@ -36,21 +36,6 @@
             </div>
 
             <div class="row">
-                <!-- <div class = "container1">
-                    <div id="number">207
-                    <div class="category"><br>Anggota Terdaftar</div>
-                    </div>
-                    <div id="number">57
-                    <div class="category"><br>Grup Agribisnis</div>
-                    </div>
-                    <div id="number">61
-                    <div class="category"><br>Topik Forum</div>
-                    </div>
-                </div>
-                <center>
-                <p style="margin-bottom: 10px;">Daftarkan diri / organisasi Anda dan mulailah membangun agribisnis Jabar dengan seluruh anggota kami</p>
-                </center> -->
-                <!-- <img src = "/assets/circles.png" vspace="10px" style="margin-bottom: 50px"> -->
                 <div class="col-xs-4">
                     <div id="number">207</div>
                     <div class="category">Anggota Terdaftar</div>
@@ -79,35 +64,7 @@
             <button class="button2" onclick="location.href='register'">JOIN US</button>
         @endif
     </section>
-
-    <!-- <section class="section3">
-        <div class="title">
-            FITUR UTAMA PLATFORM ECOBIZ KUKM JAWA BARAT
-        </div>
-
-        <div class="container2">
-            <div id="feature"> Profil Pelaku Bisnis<br>
-                <div class="feature-expl">Kenali dan carilah setiap pelaku bisnis Jawa Barat mulai dari profil, lingkup usaha, alamat, kebutuhan, dan kontak mereka
-                </div>
-            </div>
-
-            <div id="feature"> Interaksi Ekosistem Bisnis
-                <div class="feature-expl">Fasilitas untuk memulai percakapan pribadi, membuat persetujuan dan untuk bekerja sama, dan membuat grup untuk keberjalanan ekosistem bisnis Anda
-                </div>
-            </div>
-
-            <div id="feature"> Forum
-                <div class="feature-expl">Ecobiz KUKM Jawa Barat didukung oleh forum yang kuat tempat Anda bertanya dan berbagi apa saja dengan seluruh anggota platform<br><br>
-                <button class="button1" style="margin-top: 0; margin-left: 0;" onclick="window.location.href='/forum'">FORUM</button>
-                </div>
-            </div>
-
-            <div id="feature"> Menyerupai Facebook & Kaskus
-                <div class="feature-expl">Apabila Anda pernah menggunakan sosmed Facebook & forum Kaskus, Ecobiz KUKM Jawa Barat menggabungkan keunggulan keduanya untuk interaksi Anda
-                </div>
-            </div>
-        </div>
-    </section> -->
+    
     <section class="section3">
         <div class="container">
             <div class="row">
