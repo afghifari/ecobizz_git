@@ -27,7 +27,7 @@
 }
 
 input[type=text], select {
-	width: 900px;
+	width: 70%;
 	padding: 5px 20px;
 	margin: 8px 0;
 	display: inline-block;
@@ -38,8 +38,8 @@ input[type=text], select {
 	/*margin-bottom: 60px;*/
 }
 
-input[type=textarea] {
-	width: 900px;
+textarea {
+	width: 70%;
 	height: 150px;
     padding: 5px 20px;
     margin: 8px 0;
@@ -49,4 +49,13 @@ input[type=textarea] {
     color: black;
     box-sizing: border-box;	
     vertical-align: top;
+}
+
+@media (max-width: 500px) {
+	.newmessage-section2 {
+		margin-left: 10px;
+	}
+	input[type=text], textarea {
+		width: 95%;
+	}
 }

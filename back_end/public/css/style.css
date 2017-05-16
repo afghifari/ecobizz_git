@@ -54,9 +54,9 @@ input[type=email], input[type=password], select {
 }
 
 @media (max-width: 500px) {
-   input[type=email], input[type=password], select {
-      width: 100%;
-  }
+	input[type=email], input[type=password], select {
+		width: 100%;
+	}
 }
 
 

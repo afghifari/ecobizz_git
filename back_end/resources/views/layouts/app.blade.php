@@ -255,7 +255,7 @@
 
                                 <ul class="dropdown-menu" role="menu">
                                     <li><a href="{{ '/user/' . Auth::user()->id }}">Profil</a></li>
-                                    <li><a href="#">Pesan</a></li>
+                                    <li><a href="/messagelist">Pesan</a></li>
                                     <li class="divider"></li>
                                     <li>
                                         <a href="{{ route('logout') }}"

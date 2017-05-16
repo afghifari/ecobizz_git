@@ -11,12 +11,12 @@
 
 	<section class="message-section2">
 		<div class="row">
-			<div class="col-md-10 col-md-offset-1">
+			<div class="col-xs-10 col-xs-offset-1">
 				<div class="row">
-					<div class="col-md-1">
-						<!-- profile picture --> <img src="/assets/circle.png" width="50">
+					<div class="col-xs-1">
+						<!-- profile picture --> <img src="/assets/circle.png" width="50"><br><br>
 					</div>
-					<div class="col-md-9 f-header-sender">
+					<div class="col-xs-9 f-header-sender">
 						<div class="x-date">
 							1 April 2017 @ 20.17 WIB
 						</div>
@@ -27,7 +27,7 @@
 				</div>
 
 				<div class="row">
-					<div class="col-md-9 f-header-receiver col-md-offset-3">
+					<div class="col-xs-9 f-header-receiver col-xs-offset-3">
 						<div class="x-date">
 							1 April 2017 @ 20.17 WIB
 						</div>
@@ -38,10 +38,10 @@
 				</div>
 
 				<div class="row">
-					<div class="col-md-1">
-						<!-- profile picture --> <img src="/assets/circle.png" width="50">
+					<div class="col-xs-1">
+						<!-- profile picture --> <img src="/assets/circle.png" width="50"><br><br>
 					</div>
-					<div class="col-md-9 f-header-sender">
+					<div class="col-xs-9 f-header-sender">
 						<div class="x-date">
 							1 April 2017 @ 20.17 WIB
 						</div>
@@ -52,7 +52,7 @@
 				</div>
 
 				<div class="row">
-					<div class="col-md-9 f-header-receiver col-md-offset-3">
+					<div class="col-xs-9 f-header-receiver col-xs-offset-3">
 						<div class="x-date">
 							1 April 2017 @ 20.17 WIB
 						</div>
@@ -63,7 +63,7 @@
 				</div>
 				<br>
 				<div class="row">
-					<div class="col-md-12">
+					<div class="col-xs-12">
 						<textarea placeholder="Tulis pesan.." wrap="hard" style="padding: 10px;"></textarea>
 						<br>
 						<button class="btn btn-success pull-right" style="margin-right: 30px;">Kirim</button>

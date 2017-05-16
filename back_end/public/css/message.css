@@ -53,3 +53,13 @@
 	font-size: 12px;
 	margin-bottom: 10px;
 }
+textarea {
+	width: 100%;
+}
+
+
+@media (max-width: 500px) {
+	.f-header-sender{
+		margin-left: 40px;
+	}
+}

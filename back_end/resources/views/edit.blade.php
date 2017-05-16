@@ -16,6 +16,15 @@
         .bg-transparent{
             background-color: #00aa44;
         }
+        @media (max-width: 500px) {
+            .footer-sect {
+                font-size: 16px;
+            }
+            .footer {
+                font-size: 8px;
+                line-height: 15px;
+            }
+        }
     </style>
 
     <script type="text/javascript">

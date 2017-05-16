@@ -10,26 +10,28 @@
 	</section>
 
 	<section class="newmessage-section2">
-		<div class="row">
-			<div class="col-md-12 col-md-offset-2">
-				Kepada: <br>
-				<input type="text" name="kepada">
-			</div>		
-		</div>
-		<br>
-		<div class="row">
-			<div class="col-md-12 col-md-offset-2">
-				Pesan: <br>
-				<input type="textarea" name="pesan" wrap="hard" style="vertical-align: top;">
+		<form>
+			<div class="row">
+				<div class="col-md-12 col-md-offset-2">
+					Kepada: <br>
+					<input type="text" name="kepada">
+				</div>
 			</div>
-		</div>
-		<br>
-		<div class="row">
-			<div class="col-md-11">
-				<button class="btn btn-success pull-right">Kirim</button></div>
+			<br>
+			<div class="row">
+				<div class="col-md-12 col-md-offset-2">
+					Pesan: <br>
+					<textarea name="pesan" wrap="hard"></textarea>
+				</div>
 			</div>
-			
-		</div>
+			<br>
+			<div class="row">
+				<div class="col-md-11">
+					<button class="btn btn-success pull-right" style="margin-right: 20px;">Kirim</button></div>
+				</div>
+				
+			</div>
+		</form>
 		
 
 	</section>
