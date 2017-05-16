@@ -407,4 +407,16 @@ Route::get('/newmessage', function () {
     return view('newmessage');
 });
 
+Route::get('/grouplist', function() {
+    return view('grouplist');
+});
+
+Route::get('/group', function () {
+    return view('group');
+});
+
+Route::get('/newgroup', function () {
+    return view('newmessage');
+});
+
 Route::get('/search', 'SearchHandler@search');

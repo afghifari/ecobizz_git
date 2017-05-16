@@ -126,6 +126,9 @@
                             <option value="topik">
                                 Topik
                             </option>
+                            <option value="grup">
+                                Grup
+                            </option>
                         </select>
                         <button type="submit" class="btn btn-default search-barx-submit">
                             <i class="fa fa-search"></i>

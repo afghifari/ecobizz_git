@@ -160,17 +160,6 @@
 				<form class="form-inline">
 					<div class="row">
 						<div class="col-md-3 col-md-offset-1">
-							<!-- <div class="dropdown">
-								<b>Kategori:</b>
-								<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Forum
-								<span class="caret"></span></button>
-								<ul class="dropdown-menu">
-									<li><a href="#">Forum 1</a></li>
-									<li><a href="#">Forum 2</a></li>
-									<li><a href="#">Forum 3</a></li>
-								</ul>
-								<br><br>
-							</div> -->
 							<b>Forum: </b>{!! Form::select('forum', App\Forum::pluck('name', 'id'), null, ['class' => 'form-control input-sm'] ) !!}
 						</div>
 						<div class="col-md-3">
@@ -209,6 +198,27 @@
 					</div>
 				</div>
 				@endforeach
+			@endif
+
+			@if($type == "grup")
+				<div class="row f-header">
+					<div class="col-md-10">
+						<div class="row search-result-item">
+							<div class="col-xs-12">
+								<div class="nama">
+									Group 1
+								</div>
+								<div class="organization">
+									<i>Dibuat oleh</i> Test
+									<br><br>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2 view-profile" onclick="window.location.href = '/thread/' + {{ $data->id }};">
+						Lihat Grup
+					</div>
+				</div>
 			@endif
 		</div>
 	</div>
