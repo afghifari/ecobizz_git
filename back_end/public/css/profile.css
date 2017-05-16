@@ -273,8 +273,6 @@ li span {
 
 .footer-sect {
 	margin-top: 60px;
-	/*float:left;
-	max-width: 200px;*/
 	color: #FFFFFF;
 	font-size: 20px;
 }
@@ -282,4 +280,14 @@ li span {
 .footer {
 	font-size: 14px;
 	line-height: 25px;
+}
+
+@media (max-width: 500px) {
+	.footer-sect {
+		font-size: 16px;
+	}
+	.footer {
+		font-size: 8px;
+		line-height: 15px;
+	}
 }

@@ -24,7 +24,7 @@
 			</div>
 			<div class="row">
 				<div class="col-xs-12">
-					<input type="textarea" name="isi" wrap="hard" style="vertical-align: top;">
+					<textarea name="isi" wrap="hard"></textarea>
 				</div>
 			</div>
 			<div class="row">

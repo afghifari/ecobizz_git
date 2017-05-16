@@ -38,7 +38,7 @@ input[type=text], select {
 	/*margin-bottom: 60px;*/
 }
 
-input[type=textarea] {
+textarea {
 	width: 900px;
 	height: 300px;
     padding: 5px 20px;
@@ -52,7 +52,7 @@ input[type=textarea] {
 }
 
 @media (max-width: 500px) {
-	input[type=textarea], input[type=text]{
+	textarea, input[type=text]{
 		width: 100%;
 	}
 
