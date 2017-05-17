@@ -30,7 +30,8 @@ Route::post('/import', function () {
         $user->email = $data->email;
         $user->password = bcrypt($data->mobile_number);
         $user->address = $data->address;
-        $user->description = $data->description;
+        if ($data->description)
+            $user->description = $data->description;
         $user->organization_name = $data->organization_name;
         $user->role_id = App\Role::where('name', $data->role)->first() ? App\Role::where('name', $data->role)->first()->id : null;
         $user->website = $data->website;
