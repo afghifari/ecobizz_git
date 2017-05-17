@@ -7,6 +7,8 @@
   position: relative;
   z-index: -1;
   padding: 10px;
+  border-bottom: 1px solid #A0A0A0;
+  padding-top: 30px;
 }
 .reg-section1:after{
   content: "";

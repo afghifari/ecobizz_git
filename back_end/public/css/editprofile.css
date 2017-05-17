@@ -123,6 +123,7 @@ input[type=submit]:hover {
 	-o-background-size: cover;
 	background-size: cover;
 	position: relative;
+    border-bottom: 1px solid #A0A0A0;
 }
 
 #profile {

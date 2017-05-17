@@ -18,9 +18,9 @@
 	<br>
 
 	<div class="row">
-		<div class="col-xs-1 col-xs-offset-8">
+		<center>
 			<button class="btn btn-success" onclick="window.location.href='/newmessage'">Pesan Baru</button>
-		</div>
+		</center>
 		<br><br><br>
 	</div>
 

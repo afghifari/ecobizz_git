@@ -136,8 +136,8 @@
             margin: 0px !important;
             border: solid 1px rgba(0, 0, 0, .1) !important;
             border-radius: 0px !important;
-            padding: 20px 24px !important;
-            margin-top: -8px !important;
+            /*padding: 20px 24px !important;*/
+            /*margin-top: -8px !important;*/
             width: 100% !important;
             border-top-left-radius: 24px !important;
             border-bottom-left-radius: 24px !important;
@@ -150,8 +150,8 @@
             margin-left: -20px !important;
             margin-right: -2px !important;
             position: relative !important;
-            height: 42px !important;
-            top: -3px !important;
+            height: 33px !important;
+            /*top: -3px !important;*/
             width: unset !important;
             background-color: white !important;
             font-size: 15px !important;
@@ -164,12 +164,12 @@
             border: solid 1px rgba(0, 0, 0, .1) !important;
             border-radius: 0px !important;
             position: relative;
-            padding: 10px !important;
+            /*padding: 10px !important;*/
             margin-left: -15px !important;
             width: 24px !important;
             border-top-right-radius: 24px !important;
             border-bottom-right-radius: 24px !important;
-            top: -4px;
+            /*top: -4px;*/
             width: unset !important;
         }
 
@@ -305,15 +305,15 @@
 
     <section class="section4">
         <div class="container">
-            <div class="row">
-                <img src = "/assets/ecobiz_putih.png" height="40" vspace="30px" style="margin-top: 50px">
+            <!-- <div class="row"> -->
+                <img src = "/assets/ecobiz_putih.png" height="40" vspace="30px">
                 <br>
                 <button><img src="/assets/fb.png" height="25"></button>
                 <button><img src="/assets/twitter.png" height="25"></button>
                 <button><img src="/assets/linkedin.png" height="25"></button>
                 <button><img src="/assets/gplus.png" height="25"></button>
                 <br>
-            </div>
+            <!-- </div> -->
             <div class="row">
                 <div class="col-xs-4">
                     <div class="footer-sect">Site Map

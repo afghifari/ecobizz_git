@@ -43,7 +43,7 @@
                 </div>
                 <div class="col-xs-4">
                     <div id="number">57</div>
-                    <div class="category">Grup Agribisnis</div>
+                    <div class="category">Grup Terdaftar</div>
                 </div>
                 <div class="col-xs-4">
                     <div id="number">{{count(App\Thread::all())}}</div>
