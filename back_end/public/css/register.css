@@ -200,3 +200,9 @@ button:hover {
   width: 800px;
   margin: auto;
 }
+
+@media (max-width: 500px) {
+  .reg-section5 input[type=text], .reg-section5 select, .reg-section3 input[type=text], .reg-section3 select,  .reg-section3 input[type=password], .reg-section3 input[type=email], .reg-section5 input[type=tel], .reg-section3 input[type=tel], .reg-section5 input[type=url], .reg-section3 textarea, .reg-section5 textarea {
+    width: 85%;
+  }
+}
