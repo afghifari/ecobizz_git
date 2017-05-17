@@ -123,13 +123,19 @@
 				<form class="form-inline" action="#" method="GET">
 					<div class="row">
 						<div class="col-md-3 col-md-offset-1">
-							<b>Kategori: </b>{!! Form::select('kategori', App\Role::pluck('name', 'id'), null, ['class' => 'form-control input-sm'] ) !!}
+						<?php
+							$roles = App\Role::pluck('name', 'id');
+							$roles[0] = "Semua"
+						?>
+							<b>Kategori: </b>{!! Form::select('kategori', $roles, request()->kategori ? request()->kategori : 0, ['class' => 'form-control input-sm'] ) !!}
 						</div>
 						<div class="col-md-3 col-md-offset-1">
 							<b>Lokasi:</b>
-							<input type="text" name="kota" placeholder="Kota/Kabupaten" style="width: 150px; padding-top: 0; padding-bottom: 0;">
+							<input type="text" name="lokasi" placeholder="Kota/Kabupaten" style="width: 150px; padding-top: 0; padding-bottom: 0;" value="{{request()->lokasi ? request()->lokasi : ""}}">
 							<br><br>
 						</div>
+						<input type="hidden" name="type" value="{{request()->type}}">
+						<input type="hidden" name="q" value="{{request()->q}}">
 						<div class="col-md-3 col-md-offset-1">
 							<button type="submit" class="btn btn-success">Cari</button>
 						</div>
@@ -169,19 +175,25 @@
 			@if($type == "topik")
 				<form class="form-inline">
 					<div class="row">
+						<?php
+							$forums = App\Forum::pluck('name', 'id');
+							$forums[0] = "Semua";
+						?>
 						<div class="col-md-3 col-md-offset-1">
-							<b>Forum: </b>{!! Form::select('forum', App\Forum::pluck('name', 'id'), null, ['class' => 'form-control input-sm'] ) !!}
+							<b>Forum: </b>{!! Form::select('forum', $forums, request()->forum ? request()->forum : 0, ['class' => 'form-control input-sm'] ) !!}
 						</div>
 						<div class="col-md-3">
 							<b>Tanggal dibuat:</b><br>
-							Tanggal awal: <br><input type="date" name="start" style="width: 70%;"><br><br>
-							Tanggal akhir: <br><input type="date" name="end" style="width: 70%"><br><br><br>
+							Tanggal awal: <br><input type="date" name="start" style="width: 70%;" value="{{request()->start ? request()->start : null}}"><br><br>
+							Tanggal akhir: <br><input type="date" name="end" style="width: 70%" value="{{request()->end ? request()->end : null}}"><br><br><br>
 						</div>
 						<div class="col-md-3">
 							<b>Jumlah Postingan:</b><br>
-							Minimal: <br><input type="number" name="min" value=1 style="width: 50%;"><br><br>
-							Maksimal: <br><input type="number" name="max" style="width: 50%"><br><br><br>
+							Minimal: <br><input type="number" name="min" style="width: 50%;" value="{{request()->min ? request()->min : 1}}"><br><br>
+							Maksimal: <br><input type="number" name="max" style="width: 50%" value="{{request()->max ? request()->max : null}}"><br><br><br>
 						</div>
+						<input type="hidden" name="type" value="{{request()->type}}">
+						<input type="hidden" name="q" value="{{request()->q}}">
 						<div class="col-md-2">
 							<button type="submit" class="btn btn-success">Cari</button>
 						</div>

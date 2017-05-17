@@ -80,7 +80,7 @@
 	<br>
 
 	<div class="container">
-		<div class="row user"> 
+		<div class="row user">
 			<div class="col-md-2">
 				<div class="row f-filterheader head-filter">
 					Peran
