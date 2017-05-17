@@ -57,6 +57,7 @@ button:hover {
 	-o-background-size: cover;
 	background-size: cover;
 	position: relative;
+	border-bottom: 1px solid #A0A0A0;
 }
 
 #profile {
@@ -281,7 +282,7 @@ li span {
 }
 
 .footer-sect {
-	margin-top: 60px;
+	margin-top: 20px;
 	color: #FFFFFF;
 	font-size: 20px;
 }

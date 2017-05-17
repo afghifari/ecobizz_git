@@ -18,97 +18,76 @@
 	<br>
 
 	<div class="row">
-		<div class="col-xs-1 col-xs-offset-8">
-			<button class="btn btn-success" onclick="window.location.href='/newgroup'">Grup Baru</button>
-		</div>
+		<center><button class="btn btn-success" onclick="window.location.href='/newgroup'">Grup Baru</button></center>
 		<br><br><br>
 	</div>
 
 	<div class="row group">
 		<div class="col-md-10 col-md-offset-1">
-			<div class="row f-header">
-				<div class="col-md-10">
-					<div class="x-header">
-						<a href="#"><b>Nama Grup</b></a>
-					</div>
-					<div class="x-sender">
-						<!-- Deskripsi Grup --> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce est erat, fermentum id odio quis, scelerisque ultricies erat.
-					</div>
-					<div class="x-date">
-						100 anggota
-					</div>
-					<br>
+			<div class="col-md-3 f-header">
+				<div class="x-header">
+					<a href="/group"><b>Grup Peternak Lele</b></a>
 				</div>
-
-				<div class="col-md-1"  style="margin-left: 20px;">
-					<div class="row view-profile" onclick="window.location.href='/group'">
-						Lihat Grup
-					</div>
+				<div class="x-sender">
+					<!-- Deskripsi Grup --> Peternak Daerah Subang yang fokus meningkatkan kualitas lele den berbagi strategi pemasaran yang baik
 				</div>
+				<div class="x-date">
+					6 anggota
+				</div>
+				<br>
 			</div>
 
-			<div class="row f-header">
-				<div class="col-md-10">
-					<div class="x-header">
-						<a href="#"><b>Nama Grup</b></a>
-					</div>
-					<div class="x-sender">
-						<!-- Deskripsi Grup --> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce est erat, fermentum id odio quis, scelerisque ultricies erat.
-					</div>
-					<div class="x-date">
-						100 anggota
-					</div>
-					<br>
+			<div class="col-md-3 f-header">
+				<div class="x-header">
+					<a href="/group"><b>KSP Kabupaten Tasikmalaya</b></a>
 				</div>
-
-				<div class="col-md-1"  style="margin-left: 20px;">
-					<div class="row view-profile" onclick="window.location.href='/group'">
-						Lihat Grup
-					</div>
+				<div class="x-sender">
+					<!-- Deskripsi Grup --> Pertemanan KSP-KSP yang ada di kota dan kabupaten tasikmalaya
 				</div>
+				<div class="x-date">
+					34 anggota
+				</div>
+				<br>
 			</div>
 
-			<div class="row f-header">
-				<div class="col-md-10">
-					<div class="x-header">
-						<a href="#"><b>Nama Grup</b></a>
-					</div>
-					<div class="x-sender">
-						<!-- Deskripsi Grup --> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce est erat, fermentum id odio quis, scelerisque ultricies erat.
-					</div>
-					<div class="x-date">
-						100 anggota
-					</div>
-					<br>
+			<div class="col-md-3 f-header">
+				<div class="x-header">
+					<a href="/group"><b>Grup Pengerajin Rotal</b></a>
 				</div>
-
-				<div class="col-md-1"  style="margin-left: 20px;">
-					<div class="row view-profile" onclick="window.location.href='/group'">
-						Lihat Grup
-					</div>
+				<div class="x-sender">
+					<!-- Deskripsi Grup --> Mengumpulkan inovasi untuk seluruh pengerajin rotan Jawa Barat
 				</div>
+				<div class="x-date">
+					3 anggota
+				</div>
+				<br>
 			</div>
 
-			<div class="row f-header">
-				<div class="col-md-10">
-					<div class="x-header">
-						<a href="#"><b>Nama Grup</b></a>
-					</div>
-					<div class="x-sender">
-						<!-- Deskripsi Grup --> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce est erat, fermentum id odio quis, scelerisque ultricies erat.
-					</div>
-					<div class="x-date">
-						100 anggota
-					</div>
-					<br>
+			<div class="col-md-3 f-header">
+				<div class="x-header">
+					<a href="/group"><b>Susu Olahan Sudimakmur</b></a>
 				</div>
-				<div class="col-md-1"  style="margin-left: 20px;">
-					<div class="row view-profile" onclick="window.location.href='/group'">
-						Lihat Grup
-					</div>
+				<div class="x-sender">
+					<!-- Deskripsi Grup --> Perkumpulan Petani, Pengolah, dan Pemasar untuk produk susu lembang
 				</div>
+				<div class="x-date">
+					18 anggota
+				</div>
+				<br>
 			</div>
 			
+			<div class="col-md-3 f-header">
+				<div class="x-header">
+					<a href="/group"><b>Koperasi Pengerajin Kerupuk</b></a>
+				</div>
+				<div class="x-sender">
+					<!-- Deskripsi Grup --> Pengerajin dan komsumen kerupuk sekala besar ayo masuk
+				</div>
+				<div class="x-date">
+					4 anggota
+				</div>
+				<br>
+			</div>
 		</div>
 	</div>
 

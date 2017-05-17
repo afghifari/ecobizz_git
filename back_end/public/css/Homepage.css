@@ -107,8 +107,7 @@ button:hover {
 
 .section4 {
 	background-color: #00aa44;
-	min-height: 450px;
-	text-align: center;
+	text-align: left;
 	color: #FFFFFF;
 }
 
@@ -182,7 +181,7 @@ hr {
 }
 
 .footer-sect {
-	margin-top: 60px;
+	margin-top: 20px;
 	/*float:left;
 	max-width: 200px;*/
 	color: #FFFFFF;

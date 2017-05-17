@@ -201,15 +201,15 @@
 
     <section class="section4">
         <div class="container">
-            <div class="row">
-                <img src = "/assets/ecobiz_putih.png" height="40" vspace="30px" style="margin-top: 50px">
+            <!-- <div class="row"> -->
+                <img src = "/assets/ecobiz_putih.png" height="40" vspace="30px">
                 <br>
                 <button><img src="/assets/fb.png" height="25"></button>
                 <button><img src="/assets/twitter.png" height="25"></button>
                 <button><img src="/assets/linkedin.png" height="25"></button>
                 <button><img src="/assets/gplus.png" height="25"></button>
                 <br>
-            </div>
+            <!-- </div> -->
             <div class="row">
                 <div class="col-xs-4">
                     <div class="footer-sect">Site Map
