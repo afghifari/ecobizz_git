@@ -153,7 +153,9 @@
                         </div>
 
                         <div id="organizationImage" style="width: 100%;">
-                            <img src="{{$user->organization_structure}}" alt="Struktur Organisasi">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <img src="{{$user->organization_structure}}" alt="Struktur Organisasi" class="embed-responsive-item">
+                            </div>
                         </div>
 
                         <style type="text/css">
