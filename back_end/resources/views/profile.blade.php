@@ -42,6 +42,8 @@
         <style type="text/css">
             .left-section{
                 text-align: center;
+                border: 1px solid #DCDCDC;
+                border-radius: 3px;
             }
             .row{
                 padding: 0;
