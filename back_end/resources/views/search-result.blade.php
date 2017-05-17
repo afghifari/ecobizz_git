@@ -164,9 +164,11 @@
 						<div class="row view-profile" onclick="window.location.href = '/user/' + {{ $data->id }};">
 							Lihat Profil
 						</div>
-						<div class="row view-profile">
+						@if ($data->id != Auth::user()->id && App\FriendList::where('own_id', Auth::user()->id)->where('friend_id', $data->id)->first() == null)
+						<div class="row view-profile" onclick="window.location.href = '/add_friend/' + {{ $data->id }};">
 							Tambahkan Teman
 						</div>
+						@endif
 					</div>
 				</div>
 				@endforeach

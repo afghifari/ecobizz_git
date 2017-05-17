@@ -418,3 +418,9 @@ Route::get('/newgroup', function () {
 });
 
 Route::get('/search', 'SearchHandler@search');
+
+Route::get('/add_friend/{id}', function($id) {
+    $friend = App\User::find($id);
+    App\FriendList::addFriend(Auth::user(), $friend);
+    return redirect()->back()->with(['success' => 1, 'message' => "Penambahan teman berhasil"]);
+});
