@@ -54,7 +54,15 @@ class User extends Authenticatable
 
     public function getProfilePictureAttribute($value) {
         if ($value == null || $value == "") {
-            return "https://poppin.imgix.net/products/swatch/swatch_light_gray.jpg?w=600&h=600";
+            return asset('assets/default_pp.jpg');
+        } else {
+            return $value;
+        }
+    }
+
+    public function getOrganizationStructureAttribute($value) {
+        if ($value == null || $value == "") {
+            return asset('assets/default_os.jpg');
         } else {
             return $value;
         }
