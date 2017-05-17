@@ -1,6 +1,47 @@
 @extends('layouts.base')
 
 @section('content')
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style type="text/css">
+        .kukm {
+            font-size: 120px;
+        }
+        .subtitle {
+            font-size: 30px;
+        }
+        .partner1 {
+            height:110px;
+            margin-top: 50px; 
+            margin-bottom: 100px;
+        }
+        .partner2 {
+            height: 100px;
+            margin-top: 50px; 
+            margin-bottom: 100px; 
+            margin-left: 40px;
+        }
+        @media (max-width: 500px) {
+            .kukm {
+                font-size: 80px;
+            }
+            .subtitle {
+                font-size: 20px;
+            }
+            body {
+                font-size: 10px;
+            }
+            .partner1 {
+                height: 80px;
+            }
+            .partner2 {
+                height: 70px;
+                margin-left: 20px;
+            }
+        }
+    </style>
+
     <section id="header">
         <br><br><br><br>
         @if (Session::has('success'))
@@ -9,9 +50,9 @@
             </div>
         @endif
         <div class="start">
-            <b><div style="font-size:70px">KUKM</div></b>
+            <b><div class="kukm">KUKM</div></b>
             <br>
-            <div style="font-size:20px">Membangun ekosistem bisnis dengan berbagi informasi</div>
+            <div class="subtitle">Membangun ekosistem bisnis dengan berbagi informasi</div>
         </div>
         <br>
         @if (Auth::guest())
@@ -59,7 +100,7 @@
     </section>
 
     <section class="section2">
-        <div class="title">BERGABUNGLAH DENGAN KAMI DAN MULAILAH <b>BERINTERAKSI</b></div>
+        <div class="title">BERGABUNGLAH DENGAN KAMI DAN MULAILAH <b>BERINTERAKSI</b></div><br>
         <center><p style="color: white; font-size: 18px; margin-bottom: 40px">Mulai dari pemilik tanah hingga retailer, pemerintah hingga universitas, organisasi bantuan finantsial hingga bantuan hukum, semuanya adalah anggota potensial untuk platform Ecobiz KUKM Jawa Barat. Kenalilah setiap aktor bisnis - profil, lingkup usaha, dan kebutuhan - dan mulailah berinteraksi untuk membangun ekosistem bisnis Jawa Barat.</p></center>
         @if (Auth::guest())
             <button class="button2" onclick="location.href='register'">BERGABUNG</button>
@@ -74,19 +115,19 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-3">
+                <div class="col-md-3">
                     <div class="feature">
                         Profil Pelaku Bisnis<br>
                         <div class="feature-expl">Kenali dan carilah setiap pelaku bisnis Jawa Barat mulai dari profil, lingkup usaha, alamat, kebutuhan, dan kontak mereka</div>
                     </div>
                 </div>
-                <div class="col-xs-3">
+                <div class="col-md-3">
                     <div class="feature">
                         Interaksi Ekosistem Bisnis<br>
                         <div class="feature-expl">Fasilitas untuk memulai percakapan pribadi, membuat persetujuan dan untuk bekerja sama, dan membuat grup untuk keberjalanan ekosistem bisnis Anda</div>
                     </div>
                 </div>
-                <div class="col-xs-3">
+                <div class="col-md-3">
                     <div class="feature">
                         Forum<br>
                         <div class="feature-expl">Ecobiz KUKM Jawa Barat didukung oleh forum yang kuat tempat Anda bertanya dan berbagi apa saja dengan seluruh anggota platform<br><br>
@@ -94,7 +135,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-3">
+                <div class="col-md-3">
                     <div class="feature">
                         Menyerupai Facebook & Kaskus<br>
                         <div class="feature-expl">Apabila Anda pernah menggunakan sosmed Facebook & forum Kaskus, Ecobiz KUKM Jawa Barat menggabungkan keunggulan keduanya untuk interaksi Anda</div>
@@ -112,8 +153,8 @@
         <center><p><b>Untung</b> - Koperasi Buah Eksotis</p></center>
         <hr>
         <div class="title">PARTNER KAMI</div>
-        <a href="http://dekopinwiljabar.org/koperasi" target="blank"><img src = "/assets/logo_koperasi.png" height="110" vspace="30px" style="margin-top: 50px; margin-bottom: 100px;"></a>
-        <a href="http://www.sbm.itb.ac.id/" target="blank"><img src = "/assets/logo_sbm.png" height="100" vspace="30px" style="margin-top: 50px; margin-bottom: 100px; margin-left: 40px;"></a>
+        <a href="http://dekopinwiljabar.org/koperasi" target="blank"><img src = "/assets/logo_koperasi.png" class="partner1"></a>
+        <a href="http://www.sbm.itb.ac.id/" target="blank"><img src = "/assets/logo_sbm.png" height="100" class="partner2"></a>
     </section>
 
 @endsection

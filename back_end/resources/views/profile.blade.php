@@ -178,60 +178,60 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="key">
-                                            <i class="fa fa-user"></i> Nama Organisasi
+                                            <i class="fa fa-user"></i><b> Nama Organisasi</b>
                                         </div>
                                         <div class="value">
-                                            <b>{{ $user->organization_name }}</b>
+                                            {{ $user->organization_name }}
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="key">
-                                            <i class="fa fa-book"></i> Deskripsi
+                                            <i class="fa fa-book"></i><b> Deskripsi</b>
                                         </div>
                                         <div class="value">
-                                            <b>{{$user->description}}</b>
+                                            {{$user->description}}
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="key">
-                                            <i class="fa fa-diamond"></i> Peran
+                                            <i class="fa fa-diamond"></i><b> Peran</b>
                                         </div>
                                         <div class="value">
-                                            <b>{{ $user->role ? $user->role->name : null}}</b>
+                                            {{ $user->role ? $user->role->name : null}}
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="key">
-                                            <i class="fa fa-globe"></i> Website
+                                            <i class="fa fa-globe"></i><b> Website</b>
                                         </div>
                                         <div class="value">
-                                            <b>{{ $user->website }}</b>
+                                            {{ $user->website }}
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="key">
-                                            <i class="fa fa-rss"></i> Kebutuhan
+                                            <i class="fa fa-rss"></i><b> Kebutuhan</b>
                                         </div>
                                         <div class="value">
-                                            <b>{{ $user->needs }}</b>
+                                            {{ $user->needs }}
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="key">
-                                            <i class="fa fa-asterisk"></i> Produk
+                                            <i class="fa fa-asterisk"></i><b> Produk</b>
                                         </div>
                                         <div class="value">
-                                            <b>{{ $user->products }}</b>
+                                            {{ $user->products }}
                                         </div>
                                     </div>
                                 </div>
