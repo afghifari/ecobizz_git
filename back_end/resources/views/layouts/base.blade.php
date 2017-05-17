@@ -53,29 +53,26 @@
             border-radius: 0px !important;
             padding: 20px 24px !important;
             margin-top: -8px !important;
-            width: 250px !important;
+            width: 100% !important;
             border-top-left-radius: 24px !important;
             border-bottom-left-radius: 24px !important;
             transition: 0.5s;
         }
-        /*.search-barx:focus{
-            width: 300px !important;
-            background: rgba(0, 0, 0, .05);
-        }*/
 
         .search-barx-option{
-            border: none !important;
             border-radius: 0px !important;
-            margin-left: -70px !important;
+            border: none !important;
+            margin-left: -20px !important;
+            margin-right: -2px !important;
             position: relative !important;
             height: 42px !important;
-            /*padding: 9px !important;*/
-            /*padding-top: 20px !important;*/
             top: -3px !important;
             width: unset !important;
-            background: transparent !important;
+            background-color: white !important;
             font-size: 15px !important;
             -webkit-border-radius: 0px !important;
+            border-top-right-radius: 0px !important;
+            display: inline-block;
         }
 
         .search-barx-submit{
@@ -83,7 +80,7 @@
             border-radius: 0px !important;
             position: relative;
             padding: 10px !important;
-            margin-left: -4px !important;
+            margin-left: -15px !important;
             width: 24px !important;
             border-top-right-radius: 24px !important;
             border-bottom-right-radius: 24px !important;
@@ -115,18 +112,15 @@
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
-                    &nbsp;&nbsp;&nbsp;
-                </ul>
 
                 <!-- Search Bar -->
-                @if (\Auth::user() && \Auth::user()->verified)
+                {{-- @if (\Auth::user() && \Auth::user()->verified) --}}
                 <form class="navbar-form navbar-left" action="/search" method="GET">
-                    <div class="form-group">
+                    <ul class="list-inline">
+                    <li><div class="form-group">
                         <input type="text" name="q" class="form-control search-barx" placeholder="Cari user atau topik...">
-                    </div>
-                    <select class="search-barx-option" name="type">
+                    </div></li>
+                    <li><select class="search-barx-option" name="type">
                         <option value="user">
                             User
                         </option>
@@ -136,25 +130,21 @@
                         <option value="grup">
                             Grup
                         </option>
-                    </select>
-                    <button type="submit" class="btn btn-default search-barx-submit">
+                    </select></li>
+                    <li><button type="submit" class="btn btn-default search-barx-submit">
                         <i class="fa fa-search"></i>
-                    </button>
+                    </button></li>
+                    </ul>
                 </form>
-                @endif
+                {{-- @endif --}}
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li style="margin-top: 4px;"><a href="/forum">Forum</a></li>
-                        <li style="margin-top: 4px;"><a href="#">Apa itu Ecobiz</a></li>
                         <li style="margin-top: 4px;"><a href="{{ route('login') }}" id="bar-login">Login</a></li>
                     @else
-                        @if (Auth::user()->is_admin)
-                            <li style="margin-top: 4px;"><a href="/admin">Admin</a></li>
-                        @endif
                         <li style="margin-top: 4px;"><a href="/forum">Forum</a></li>
-                        <li style="margin-top: 4px;"><a href="/grouplist">Grup</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 {{ Auth::user()->name }} &nbsp;
@@ -164,6 +154,10 @@
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ '/user/' . Auth::user()->id }}">Profil</a></li>
                                 <li><a href="/messagelist">Pesan</a></li>
+                                <li><a href="/grouplist">Grup</a></li>
+                                @if (Auth::user()->is_admin)
+                                    <li><a href="/admin">Admin</a></li>
+                                @endif
                                 <li class="divider"></li>
                                 <li>
                                     <a href="{{ route('logout') }}"
