@@ -5,7 +5,7 @@
     <section class="section1">
         <div class="row">
             <div class="col-xs-3">
-                <div id="profile">
+                <div id="group">
                     Nama Grup
                 </div>
             </div>
