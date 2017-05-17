@@ -52,6 +52,16 @@ input[type=text], select {
     color: black;
     box-sizing: border-box;
 }
+input[type=email] {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: black;
+    box-sizing: border-box;
+}
 input[type=submit] {
     color: #FFFFFF;
     font-size: 14px;
