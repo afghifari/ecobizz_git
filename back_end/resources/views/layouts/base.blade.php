@@ -53,7 +53,7 @@
             border-radius: 0px !important;
             padding: 20px 24px !important;
             margin-top: -8px !important;
-            width: 300px !important;
+            width: 100% !important;
             border-top-left-radius: 24px !important;
             border-bottom-left-radius: 24px !important;
             transition: 0.5s;
@@ -64,14 +64,18 @@
         }*/
 
         .search-barx-option{
-            border: solid 1px rgba(0, 0, 0, .1) !important;
+            border: none !important;
             border-radius: 0px !important;
-            margin-left: -4px !important;
-            position: relative;
-            padding: 9px !important;
-            padding-top: 10px !important;
-            top: -2px;
+            margin-left: -30px !important;
+            position: relative !important;
+            height: 42px !important;
+            /*padding: 9px !important;*/
+            /*padding-top: 20px !important;*/
+            top: -3px !important;
             width: unset !important;
+            background: #DCDCDC !important;
+            font-size: 15px !important;
+            -webkit-border-radius: 0px !important;
         }
 
         .search-barx-submit{
@@ -89,111 +93,111 @@
     </style>
 </head>
 <body>
-        <nav class="navbar navbar-default navbar-static-top eco-nav">
-            <div class="container">
-                <div class="navbar-header">
+    <nav class="navbar navbar-default navbar-static-top eco-nav">
+        <div class="container">
+            <div class="navbar-header">
 
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+                <!-- Collapsed Hamburger -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
 
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        <img src="/img/ecobiz_putih.png" style="height: 100%;">
-                    </a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;&nbsp;&nbsp;
-                    </ul>
-
-                    <!-- Search Bar -->
-                    @if (\Auth::user() && \Auth::user()->verified)
-                    <form class="navbar-form navbar-left" action="/search" method="GET">
-                        <div class="form-group">
-                            <input type="text" name="q" class="form-control search-barx" placeholder="Cari user atau topik...">
-                        </div>
-                        <select class="search-barx-option" name="type">
-                            <option value="user">
-                                User
-                            </option>
-                            <option value="topik">
-                                Topik
-                            </option>
-                            <option value="grup">
-                                Grup
-                            </option>
-                        </select>
-                        <button type="submit" class="btn btn-default search-barx-submit">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </form>
-                    @endif
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
-                        @if (Auth::guest())
-                            <li style="margin-top: 4px;"><a href="/forum">Forum</a></li>
-                            <li style="margin-top: 4px;"><a href="#">Apa itu Ecobiz</a></li>
-                            <li style="margin-top: 4px;"><a href="{{ route('login') }}" id="bar-login">Login</a></li>
-                        @else
-                            @if (Auth::user()->is_admin)
-                                <li style="margin-top: 4px;"><a href="/admin">Admin</a></li>
-                            @endif
-                            <li style="margin-top: 4px;"><a href="/forum">Forum</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} &nbsp;
-                                    <img src="{{Auth::user()->profile_picture }}" style="height: 32px; width: 32px; border-radius: 50%;">
-                                </a>
-
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="{{ '/user/' . Auth::user()->id }}">Profil</a></li>
-                                    <li><a href="/messagelist">Pesan</a></li>
-                                    <li class="divider"></li>
-                                    <li>
-                                        <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
-                            </li>
-                        @endif
-                    </ul>
-                </div>
+                <!-- Branding Image -->
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    <img src="/img/ecobiz_putih.png" style="height: 100%;">
+                </a>
             </div>
-        </nav>
-        <script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
-        <script type="text/javascript">
+
+            <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                <!-- Left Side Of Navbar -->
+                <ul class="nav navbar-nav">
+                    &nbsp;&nbsp;&nbsp;
+                </ul>
+
+                <!-- Search Bar -->
+                @if (\Auth::user() && \Auth::user()->verified)
+                <form class="navbar-form navbar-left" action="/search" method="GET">
+                    <div class="form-group">
+                        <input type="text" name="q" class="form-control search-barx" placeholder="Cari user atau topik...">
+                    </div>
+                    <select class="search-barx-option" name="type">
+                        <option value="user">
+                            User
+                        </option>
+                        <option value="topik">
+                            Topik
+                        </option>
+                        <option value="grup">
+                            Grup
+                        </option>
+                    </select>
+                    <button type="submit" class="btn btn-default search-barx-submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+                @endif
+                <!-- Right Side Of Navbar -->
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- Authentication Links -->
+                    @if (Auth::guest())
+                        <li style="margin-top: 4px;"><a href="/forum">Forum</a></li>
+                        <li style="margin-top: 4px;"><a href="#">Apa itu Ecobiz</a></li>
+                        <li style="margin-top: 4px;"><a href="{{ route('login') }}" id="bar-login">Login</a></li>
+                    @else
+                        @if (Auth::user()->is_admin)
+                            <li style="margin-top: 4px;"><a href="/admin">Admin</a></li>
+                        @endif
+                        <li style="margin-top: 4px;"><a href="/forum">Forum</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                {{ Auth::user()->name }} &nbsp;
+                                <img src="{{Auth::user()->profile_picture }}" style="height: 32px; width: 32px; border-radius: 50%;">
+                            </a>
+
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="{{ '/user/' . Auth::user()->id }}">Profil</a></li>
+                                <li><a href="/messagelist">Pesan</a></li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                        Logout
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        {{ csrf_field() }}
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+                    @endif
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+    <script type="text/javascript">
+        if(!window.posx)
+            $('.eco-nav').addClass('bg-transparent');
+        var last_scroll = 0;
+        var scroll = 0;
+        $(window).scroll(function (event) {
+            last_scroll = scroll;
+            scroll = $(window).scrollTop();
+            console.log(scroll);
             if(!window.posx)
-                $('.eco-nav').addClass('bg-transparent');
-            var last_scroll = 0;
-            var scroll = 0;
-            $(window).scroll(function (event) {
-                last_scroll = scroll;
-                scroll = $(window).scrollTop();
-                console.log(scroll);
-                if(!window.posx)
-                    if(last_scroll - scroll > 0){
-                        $('.eco-nav').addClass('bg-transparent');
-                    }else{
-                        $('.eco-nav').removeClass('bg-transparent');
-                    }
-                // Do something
-            });
-        </script>
+                if(last_scroll - scroll > 0){
+                    $('.eco-nav').addClass('bg-transparent');
+                }else{
+                    $('.eco-nav').removeClass('bg-transparent');
+                }
+            // Do something
+        });
+    </script>
 
     @yield('content')
 

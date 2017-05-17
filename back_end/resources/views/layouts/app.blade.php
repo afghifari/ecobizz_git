@@ -154,7 +154,7 @@
             border-radius: 0px !important;
             padding: 20px 24px !important;
             margin-top: -8px !important;
-            width: 300px !important;
+            width: 200px !important;
             border-top-left-radius: 24px !important;
             border-bottom-left-radius: 24px !important;
             transition: 0.5s;
@@ -165,14 +165,18 @@
         }*/
 
         .search-barx-option{
-            border: solid 1px rgba(0, 0, 0, .1) !important;
+            border: none !important;
             border-radius: 0px !important;
-            margin-left: -4px !important;
-            position: relative;
-            padding: 9px !important;
-            padding-top: 10px !important;
-            top: -2px;
+            margin-left: -30px !important;
+            position: relative !important;
+            height: 42px !important;
+            /*padding: 9px !important;*/
+            /*padding-top: 20px !important;*/
+            top: -3px !important;
             width: unset !important;
+            background: #DCDCDC !important;
+            font-size: 15px !important;
+            -webkit-border-radius: 0px !important;
         }
 
         .search-barx-submit{
@@ -186,6 +190,23 @@
             border-bottom-right-radius: 24px !important;
             top: -4px;
             width: unset !important;
+        }
+
+        
+        @media (max-width: 500px) {
+            .search-barx {
+                border-radius: 0px !important;
+                padding-right: 10px !important;
+                font-size: 11px !important;
+            }
+
+            .search-barx-option {
+                margin-left: 0px !important;
+                top: 0px !important;
+            }
+            .search-barx-submit {
+                border-radius: 0px !important;
+            }
         }
     </style>
 </head>
