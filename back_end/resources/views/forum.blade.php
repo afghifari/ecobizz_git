@@ -34,7 +34,7 @@
 			background: #00AA44;
 			color: white;
 			font-weight: bold;
-			border-radius: 10px 10px 0px 0px;
+			border-radius: 3px 3px 0px 0px;
 		}
 		.search-section{
 			margin-top: 30px;

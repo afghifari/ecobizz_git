@@ -20,7 +20,7 @@
 			/*background: rgba(0, 0, 0, .2);*/
 			border: solid 1px rgba(0, 0, 0, .1);
 			margin-top: -1px;
-			border-radius: 10px;
+			border-radius: 3px;
 		}
 		.forum .f-header:hover{
 			border: solid 1px #00AA44;

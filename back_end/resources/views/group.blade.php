@@ -147,29 +147,6 @@
                         </form>
                     </div>
                 </div>
-
-                <!-- <div class="the-post row">
-                    <div class="col-md-12" style="padding: 0">
-                        <div class="row">
-                            <div class="col-md-1" style="padding: 0">
-                                <img src="/assets/circle.png" class="image-post">
-                            </div>
-                            <div class="col-md-11" style="padding: 0; margin-top: 5px;">
-                                <div style="font-weight: bold;">
-                                    Albert Einstein
-                                </div>
-                                <div class="tanggal-post">
-                                    7 Mei 2017 @ 16.02 WIB
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row" style="padding: 0">
-                            <div class="col-md-12 text-post" style="padding: 0">
-                                Message
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
                 <div class="row">
                     <div class="col-xs-12">
                         <div id="timestamp">
