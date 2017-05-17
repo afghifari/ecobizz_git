@@ -9,7 +9,8 @@ body {
   width: 100%;
 }
 body {
-  font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
+  /*font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;*/
+  font-family: "Verdana";
 }
 hr {
   border-color: #F05F40;
