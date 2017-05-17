@@ -393,16 +393,24 @@ Route::get('/messagelist', function() {
         return Redirect::back();
     }
 	$user = Auth::user();
-	$friend_lists = $user->friends();
-	return view('messagelist', ['friend_lists' => $friend_lists]);
+
+	return view('messagelist', ['chats' => $user->chats()]);
 });
 
-Route::get('/message', function () {
-    return view('message');
+Route::get('/message/{id}', function ($id) {
+    $friend = App\User::find($id);
+    $messages = Auth::user()->getMessages($friend)->get();
+
+    return view('message', ['messages' => $messages, "target" => $friend]);
 });
 
 Route::get('/newmessage', function () {
-    return view('newmessage');
+    if (!Auth::user()) {
+        return Redirect::back();
+    }
+    $user = Auth::user();
+    $friend_lists = $user->friends();
+    return view('newmessage', ['friends' => $friend_lists]);
 });
 
 Route::get('/grouplist', function() {
@@ -423,4 +431,15 @@ Route::get('/add_friend/{id}', function($id) {
     $friend = App\User::find($id);
     App\FriendList::addFriend(Auth::user(), $friend);
     return redirect()->back()->with(['success' => 1, 'message' => "Penambahan teman berhasil"]);
+});
+
+Route::post('send-message', function() {
+    $message = new App\Message;
+    $message->source_id = Auth::user()->id;
+    $message->target_id = request()->target_id;
+    $message->message = request()->pesan;
+
+    $message->save();
+
+    return redirect('message/'. request()->target_id)->with(['success' => 1, 'message' => "Pengiriman Pesan Berhasil"]);
 });

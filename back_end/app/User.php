@@ -110,12 +110,11 @@ class User extends Authenticatable
     }
 
     public function getMessages($friend) {
-        $own = Message::where("source_id", $this->id)->where("target_id", $friend->id)->get();
-        $theirs = Message::where("source_id", $friend->id)->where("target_id", $this->id)->get();
-        return [
-            "own" => $own,
-            "theirs" => $theirs
-        ];
+        return Message::where(function ($query) use ($friend) {
+            $query->where("source_id", $this->id)->where("target_id", $friend->id);
+        })->orWhere(function ($query) use ($friend) {
+            $query->where("source_id", $friend->id)->where("target_id", $this->id);
+        });
     }
 
     public function timelines() {
@@ -144,5 +143,34 @@ class User extends Authenticatable
 
     public function getActivityScoreAttribute() {
         return 0.2*count($this->friends) + 0.05*count($this->views) + 0.5*count($this->posts) + count($this->threads) + 0.5*count($this->timeline_post);
+    }
+
+    public function chats() {
+        $chats = Message::where('source_id', $this->id)
+                        ->orWhere('target_id', $this->id)
+                        ->select('target_id', 'source_id')
+                        ->groupBy('target_id', 'source_id')
+                        ->get();
+        $target_ids = [];
+        foreach ($chats as $chat) {
+            if ($chat->target_id != $this->id) {
+                if (!in_array($chat->target_id, $target_ids)) {
+                    array_push($target_ids, $chat->target_id);
+                }
+            } else {
+                if (!in_array($chat->source_id, $target_ids)) {
+                    array_push($target_ids, $chat->source_id);
+                }
+            }
+        }
+
+        $conversations = [];
+
+        foreach ($target_ids as $target_id) {
+            $friend = User::find($target_id);
+            $lastMessage = $this->getMessages($friend)->orderBy('created_at', 'desc')->first();
+            array_push($conversations, ["user" => User::find($target_id), "message" => $lastMessage]);
+        }
+        return $conversations;
     }
 }

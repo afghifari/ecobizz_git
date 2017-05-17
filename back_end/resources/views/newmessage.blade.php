@@ -10,11 +10,11 @@
 	</section>
 
 	<section class="newmessage-section2">
-		<form>
+		<form method="POST" action="send-message">
 			<div class="row">
 				<div class="col-md-12 col-md-offset-2">
 					Kepada: <br>
-					<input type="text" name="kepada">
+					{!! Form::select('target_id', Auth::user()->friends()->pluck('name', 'friend_lists.friend_id'), null, ['class' => 'form-control input-sm'] ) !!}
 				</div>
 			</div>
 			<br>
@@ -29,10 +29,10 @@
 				<div class="col-md-11">
 					<button class="btn btn-success pull-right" style="margin-right: 20px;">Kirim</button></div>
 				</div>
-				
+
 			</div>
 		</form>
-		
+
 
 	</section>
 
