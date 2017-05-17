@@ -28,7 +28,7 @@
 
 	<section class="admin-section2">
 		<div class="container">
-			<div class="row">				
+			<div class="row">
 				<div class="col-md-5">
 					<div class="row">
 						<div class="section-title">
@@ -82,7 +82,7 @@
 								@foreach ($roles as $role)
 									{{$role->name}}: <b>{{count($role->users)}}</b> orang<br>
 								@endforeach
-									Unknown: <b> {{count(App\User::where('role_id', null))}}</b> orang<br>
+									Unknown: <b> {{count(App\User::where('role_id', null)->get())}}</b> orang<br>
 								</justify>
 							</div>
 							<br>
@@ -91,9 +91,9 @@
 				</div>
 
 				<div class="col-md-1">
-					
+
 				</div>
-				
+
 				<div class="col-md-6">
 					<div class="row">
 						<div class="section-title">
