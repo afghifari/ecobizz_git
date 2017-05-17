@@ -13,8 +13,8 @@ class SearchHandler extends Controller{
         \App\UserActivity::searchActivity("Search $type, Query = $query");
 
     	if($type == "user"){
-			$user_result = DB::table('users')
-						 -> where('name', 'LIKE', "%$query%")
+			$user_result = \App\User::
+						 where('name', 'LIKE', "%$query%")
                          /*->orWhere('address', 'LIKE', "%$query%")*/
                          ->orWhere('needs', 'LIKE', "%$query%")
                          ->orWhere('products', 'LIKE', "%$query%")
@@ -35,8 +35,8 @@ class SearchHandler extends Controller{
 	        return view('search-result', ['result' => $user_result, 'query' => $query, 'type' => $type]);
 	    }
     	if($type == "topik"){
-			$thread_result = DB::table('threads')
-						   -> join('users', 'users.id', '=', 'threads.owner_id')
+			$thread_result = \App\Thread::
+						   join('users', 'users.id', '=', 'threads.owner_id')
                            -> join('forum_posts', "forum_posts.thread_id", '=', "threads.id")
                            -> select('threads.*', 'users.name AS thread_maker', \DB::raw('count(*) as post_count'))
                            -> groupBy("threads.id")
