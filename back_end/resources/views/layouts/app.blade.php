@@ -271,6 +271,7 @@
                                 <li style="margin-top: 4px;"><a href="/admin">Admin</a></li>
                             @endif
                             <li style="margin-top: 4px;"><a href="/forum">Forum</a></li>
+                            <li style="margin-top: 4px;"><a href="/grouplist">Grup</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} &nbsp;
