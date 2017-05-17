@@ -3,6 +3,7 @@
 @section('content')
 
     </div>
+    <link rel="stylesheet" href="{{asset('css/admin.css')}}" type="text/css">
     <section class="section1">
         <div id="profile">
             Profil 
