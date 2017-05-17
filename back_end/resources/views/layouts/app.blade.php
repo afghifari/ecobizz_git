@@ -239,7 +239,7 @@
                         &nbsp;&nbsp;&nbsp;
                     </ul>
                     <!-- Search Bar -->
-                    @if (\Auth::user() && \Auth::user()->verified)
+                    {{-- @if (\Auth::user() && \Auth::user()->verified) --}}
                     <form class="navbar-form navbar-left" action="/search" method="GET">
                         <div class="form-group">
                             <input type="text" name="q" class="form-control search-barx" placeholder="Cari user atau topik...">
@@ -259,7 +259,7 @@
                             <i class="fa fa-search"></i>
                         </button>
                     </form>
-                    @endif
+                    {{-- @endif --}}
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
 

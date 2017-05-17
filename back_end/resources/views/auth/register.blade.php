@@ -39,11 +39,11 @@
                 <h6>Re-password</h6><br>
                 <input type="tel" name="hp" placeholder="No. Handphone" value="{{request()->old('hp')}}"></br>
                 <h6>Nomor Handphone. Misal = 085641234567</h6>
-                <input type="tel" name="whatsapp" placeholder="WhatsApp" value=""></br>
+                <input type="tel" name="whatsapp" placeholder="WhatsApp" value="{{request()->old('whatsapp')}}"></br>
                 <h6>Masukkan nomor yang Anda gunakan pada WhatsApp (jika ada)</h6>
-                <input type="text" name="facebook" placeholder="Facebook" ></br>
+                <input type="text" name="facebook" placeholder="Facebook" value="{{request()->old('facebook')}}"></br>
                 <h6>Nama yang Anda gunakan pada Facebook (jika ada)</h6>
-                <input type="text" name="twitter" placeholder="Twitter" ></br>
+                <input type="text" name="twitter" placeholder="Twitter" value="{{request()->old('twitter')}}"></br>
                 <h6>Username Twitter Anda (jika ada)</h6>
         </section>
 
@@ -62,7 +62,7 @@
                 <h6>Berikan alamat website dari bisnis Anda jika ada</h6><br>
                 <textarea name="produk" placeholder="Produk">{{request()->old('produk')}}</textarea>
                 <h6>Tuliskan produk apa yang bisnis Anda sediakan</h6><br>
-                <input type="text" name="kebutuhan" placeholder="Kebutuhan" value="{{request()->old('needs')}}"></br>
+                <textarea name="kebutuhan" placeholder="Kebutuhan">{{request()->old('kebutuhan')}}</textarea>
                 <h6>Tuliskan kebutuhan bisnis Anda</h6><br>
         </section>
 

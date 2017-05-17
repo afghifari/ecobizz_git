@@ -38,7 +38,7 @@
 
             <div class="row">
                 <div class="col-xs-4">
-                    <div id="number">207</div>
+                    <div id="number">{{ count(App\User::all()) }}</div>
                     <div class="category">Anggota Terdaftar</div>
                 </div>
                 <div class="col-xs-4">
@@ -46,7 +46,7 @@
                     <div class="category">Grup Agribisnis</div>
                 </div>
                 <div class="col-xs-4">
-                    <div id="number">61</div>
+                    <div id="number">{{count(App\Thread::all())}}</div>
                     <div class="category">Topik Forum</div>
                 </div>
             </div>
