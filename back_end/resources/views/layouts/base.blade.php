@@ -24,27 +24,11 @@
     <style type="text/css">
         .navbar{
             background-color: #00aa44;
-            /*color: #333 !important;
-            background-color: #FEFEFE;
-            box-shadow: 0 1px 1px rgba(0, 0, 0, .5) !important;*/
             position: fixed;
             width: 100%;
             border: none;
         }
-        /*.navbar-brand img{
-            margin-top: 6px !important;
-        }
-        .nav{
-            margin-top: 6px !important;
-        }
-        .nav a{
-            color: #333 !important;
-            font-weight: normal !important;
-        }*/
         .bg-transparent{
-            /*color: #333 !important;
-            background-color: #FEFEFE !important;
-            opacity: 0;*/
             background-color: #00aa44;
         }
         .search-barx{
@@ -87,6 +71,16 @@
             top: -4px;
             width: unset !important;
         }
+
+        @media (max-width: 500px) {
+            .search-barx-option {
+                top: 0px !important;
+            }
+            .search-barx-submit {
+                top: -1px !important;
+            }
+        }
+
         .a-footer {
             text-decoration: underline;
         }
@@ -240,7 +234,7 @@
                         <a href="http://www.insw.go.id" class="a-footer">INSW</a><br>
                         <a href="http://eservice.insw.go.id" class="a-footer">INTR</a><br>
                         <a href="http://dekopinwil-jabar.blogspot.com/" class="a-footer">Dekopinwil Jabar</a><br>
-                        <a href="http://dekopinwiljabar.org/koperasi/" class="a-footer">Jaringan Usaha Koperasi</a>
+                        <a href="http://dekopinwiljabar.org/koperasi/" class="a-footer">Jaringan Usaha Koperasi</a><br><br>
                     </div>
                 </div>
             </div>

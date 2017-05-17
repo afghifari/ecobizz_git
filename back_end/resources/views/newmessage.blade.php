@@ -14,7 +14,7 @@
 			<div class="row">
 				<div class="col-md-12 col-md-offset-2">
 					Kepada: <br>
-					{!! Form::select('target_id', Auth::user()->friends()->pluck('name', 'friend_lists.friend_id'), null, ['class' => 'form-control input-sm'] ) !!}
+					{!! Form::select('target_id', Auth::user()->friends()->pluck('name', 'friend_lists.friend_id'), null ) !!}
 				</div>
 			</div>
 			<br>

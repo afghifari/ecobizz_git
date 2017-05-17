@@ -113,7 +113,7 @@
         <hr>
         <div class="title">PARTNER KAMI</div>
         <a href="http://dekopinwiljabar.org/koperasi" target="blank"><img src = "/assets/logo_koperasi.png" height="110" vspace="30px" style="margin-top: 50px; margin-bottom: 100px;"></a>
-        <a href="http://www.sbm.itb.ac.id/" target="blank"><img src = "/assets/logo_sbm.png" height="100" vspace="30px" style="margin-top: 50px; margin-bottom: 100px;"></a>
+        <a href="http://www.sbm.itb.ac.id/" target="blank"><img src = "/assets/logo_sbm.png" height="100" vspace="30px" style="margin-top: 50px; margin-bottom: 100px; margin-left: 40px;"></a>
     </section>
 
 @endsection

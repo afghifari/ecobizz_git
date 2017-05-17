@@ -1,12 +1,18 @@
 @extends("layouts.app")
 
 @section('content')
-
+    
+    <style type="text/css">
+        .form-control {
+            color: white;
+        }
+    </style>
+    
     <form class="form-horizontal" role="form" method="POST" action="{{ route('register') }}">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <section class="reg-section1">
             <div id="createAccount">
-                <br><br>
+                <br>
                 Membuat Akun Baru <br><br>
             </div>
         </section>
@@ -28,15 +34,15 @@
             @endif
             <form id="registerForm">
                 <input type="text" name="name" placeholder="Nama" value="{{request()->old('name')}}"> </br>
-                <h6>Nama lengkap, berupa huruf tanpa simbol dan angka</h6><br>
+                <h6>Nama lengkap, berupa huruf tanpa simbol dan angka</h6>
                 <input type="text" name="address" placeholder="Alamat" value="{{request()->old('address')}}"></br>
-                <h6>Alamat lengkap, tuliskan kecamatan, kelurahan, RT RW jika ada dan kode pos alamat</h6><br>
+                <h6>Alamat lengkap, tuliskan kecamatan, kelurahan, RT RW jika ada dan kode pos alamat</h6>
                 <input type="email" name="email" placeholder="E-mail" value="{{request()->old('email')}}"></br>
-                <h6>Email harus valid, misal wauda@itb.com</h6><br>
+                <h6>Email harus valid, misal wahuda.ismail@gmail.com</h6>
                 <input type="password" name="password_confirm" placeholder="Password"></br>
-                <h6>Password</h6><br>
+                <h6>Password</h6>
                 <input type="password" name="password" placeholder="Re-password"></br>
-                <h6>Re-password</h6><br>
+                <h6>Ketik password sekali lagi</h6>
                 <input type="tel" name="hp" placeholder="No. Handphone" value="{{request()->old('hp')}}"></br>
                 <h6>Nomor Handphone. Misal = 085641234567</h6>
                 <input type="tel" name="whatsapp" placeholder="WhatsApp" value="{{request()->old('whatsapp')}}"></br>
@@ -52,22 +58,22 @@
         </section>
 
         <section class="reg-section5">
-                {!! Form::select('kategori', App\Role::pluck('name', 'id'), null, ['class' => 'form-control input-lg'] ) !!}
-                <h6>Silahkan pilih peran organisasi anda</h6><br>
+                <div style="color: white;">{!! Form::select('kategori', App\Role::pluck('name', 'id'), null, ['class' => 'form-control input-lg'] ) !!}</div>
+                <h6>Silahkan pilih peran organisasi atau bisnis anda</h6>
                 <input type="text" name="pemilik" placeholder="Nama Organisasi" value="{{request()->old('pemilik')}}"></br>
-                <h6>Tuliskan nama organisasi bisnis Anda</h6><br>
+                <h6>Tuliskan nama organisasi atau bisnis Anda</h6>
                 <textarea name="deskripsi" placeholder="Deskripsi">{{request()->old('deskripsi')}}</textarea>
-                <h6>Deskripsikan bisnis yang anda jalankan secara singkat, padat, dan jelas</h6><br>
+                <h6>Deskripsikan organisasi atau bisnis yang anda jalankan secara singkat, padat, dan jelas</h6>
                 <input type="text" name="web" placeholder="Website" value="{{request()->old('web')}}"></br>
-                <h6>Berikan alamat website dari bisnis Anda jika ada</h6><br>
+                <h6>Berikan alamat website dari organisasi atau bisnis Anda jika ada</h6>
                 <textarea name="produk" placeholder="Produk">{{request()->old('produk')}}</textarea>
-                <h6>Tuliskan produk apa yang bisnis Anda sediakan</h6><br>
+                <h6>Tuliskan produk apa yang organisasi atau bisnis Anda sediakan</h6>
                 <textarea name="kebutuhan" placeholder="Kebutuhan">{{request()->old('kebutuhan')}}</textarea>
-                <h6>Tuliskan kebutuhan bisnis Anda</h6><br>
+                <h6>Tuliskan kebutuhan organisasi atau bisnis Anda</h6>
         </section>
 
         <section class="reg-section6">
-            <input class="registerButton" type="submit" value="REGISTER">
+            <input class="registerButton" type="submit" value="REGISTER"><br><br>
         </section>
     </form>
 

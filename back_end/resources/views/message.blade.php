@@ -18,23 +18,27 @@
 							<div class="col-xs-1">
 								<!-- profile picture --> <img src="{{$target->profile_picture}}" width="50"><br><br>
 							</div>
-							<div class="col-xs-9 f-header-sender">
-								<div class="x-date">
-									{{$message->created_at}}
-								</div>
-								<div class="x-sender">
-									{{$message->message}}
+							<div class="col-xs-9">
+								<div class="f-header-sender">
+									<div class="x-date">
+										{{$message->created_at}}
+									</div>
+									<div class="x-sender">
+										{{$message->message}}
+									</div>
 								</div>
 							</div>
 						</div>
 					@else
 						<div class="row">
-							<div class="col-xs-9 f-header-receiver col-xs-offset-3">
-								<div class="x-date">
-									{{$message->created_at}}
-								</div>
-								<div class="x-sender">
-									{{$message->message}}
+							<div class="col-xs-9 col-xs-offset-3">
+								<div class="f-header-receiver">
+									<div class="x-date">
+										{{$message->created_at}}
+									</div>
+									<div class="x-sender">
+										{{$message->message}}
+									</div>
 								</div>
 							</div>
 						</div>

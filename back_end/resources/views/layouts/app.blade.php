@@ -41,7 +41,6 @@
       background-size: cover;
       padding: 10px;
       height: 100vh !important;
-      /*color: #333 !important;*/
       color: white;
     }
 
@@ -50,7 +49,8 @@
       margin-top: 0;
       margin-bottom: 0;
       font-size: 30px;
-      color: #333 !important;
+      /*color: #333 !important;*/
+      color: white;
     }
 
     input[type=text] {
@@ -242,7 +242,6 @@
                         <!-- Authentication Links -->
                         @if (Auth::guest())
                             <li style="margin-top: 4px;"><a href="/forum">Forum</a></li>
-                            <li style="margin-top: 4px;"><a href="#">Apa itu Ecobiz</a></li>
                             <li style="margin-top: 4px;"><a href="{{ route('login') }}" id="bar-login">Login</a></li>
                             <!-- <li><a href="{{ route('register') }}" id="bar-register">Register</a></li> -->
                         @else
@@ -344,7 +343,7 @@
                         <a href="http://www.insw.go.id" class="a-footer">INSW</a><br>
                         <a href="http://eservice.insw.go.id" class="a-footer">INTR</a><br>
                         <a href="http://dekopinwil-jabar.blogspot.com/" class="a-footer">Dekopinwil Jabar</a><br>
-                        <a href="http://dekopinwiljabar.org/koperasi/" class="a-footer">Jaringan Usaha Koperasi</a>
+                        <a href="http://dekopinwiljabar.org/koperasi/" class="a-footer">Jaringan Usaha Koperasi</a><br><br>
                     </div>
                 </div>
             </div>
