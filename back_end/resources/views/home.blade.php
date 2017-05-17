@@ -15,7 +15,7 @@
         </div>
         <br>
         @if (Auth::guest())
-            <center><button class="button1" onclick="window.location.href='/register'">JOIN US</button></center>
+            <center><button class="button1" onclick="window.location.href='/register'">BERGABUNG</button></center>
         @endif
         <br>
         <div class="down-button">
@@ -30,7 +30,8 @@
             </div>
             <div class="row">
                 <center><p>
-                    Donec eget ullamcorper dolor. Maecenas sed libero aliquam, aliquet nunc quis, ornare ex. Integer sit amet turpis vestibulum, aliquet tortor et, blandit risus. Duis vestibulum augue quis luctus rutrum. Nulla porta non ligula nec iaculis. Aliquam sed felis viverra, dictum massa in, faubicus lacus. Sed eleifend, est nec scelerisque ullamcorper, augue velit, tempor lectus, non hendrerit tortor augue eget nibh. Aenean at condimentum ligula. Donec a metus at nunc viverra pellentesque.
+                    Setahun yang lalu saya merasa kesulitan untuk mencari pengolah kopi yang juga menyediakan jasa transport dari perkebunan ke pabrik pengolahan kopi. Suatu saat saya mencoba bergabung dengan KUKM Ecobiz dan menulis kebutuhan saya, dan tidak lama ada sebuah perusahaan pengolah kopi yang menghubungi saya yang menyediakan jasa transport yang saya butuhkan dengan harga beli yang lebih stabil. Hingga saat ini saya masih bekerja sama dengan perusahaan tersebut. Saya menghimbau seluruh petani kopi dapat bergabung dalam KUKM Ecobiz ini.<br><br>
+                    <b>Dede</b> - Petani Kopi di Gunung Halu
                 </p></center>
                 <hr>
             </div>
@@ -61,7 +62,7 @@
         <div class="title">BERGABUNGLAH DENGAN KAMI DAN MULAILAH <b>BERINTERAKSI</b></div>
         <center><p style="color: white; font-size: 18px; margin-bottom: 40px">Mulai dari pemilik tanah hingga retailer, pemerintah hingga universitas, organisasi bantuan finantsial hingga bantuan hukum, semuanya adalah anggota potensial untuk platform Ecobiz KUKM Jawa Barat. Kenalilah setiap aktor bisnis - profil, lingkup usaha, dan kebutuhan - dan mulailah berinteraksi untuk membangun ekosistem bisnis Jawa Barat.</p></center>
         @if (Auth::guest())
-            <button class="button2" onclick="location.href='register'">JOIN US</button>
+            <button class="button2" onclick="location.href='register'">BERGABUNG</button>
         @endif
     </section>
     
@@ -106,9 +107,9 @@
     <section class="section1">
         <img src = "/assets/quote.png" height="40" vspace="30px" style="margin-top: 50px">
         <center><p style="margin-bottom: 10px">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Kami mengalami masalah di mana buah-buahan kami hampir selalu ditolak oleh retailer dengan alasan melebihi permintaan konsumen. Terpaksa kami menjual buah-buahan yang berlebih ke pasar tradisional namun dengan biaya transportasi yang lebih tinggi. Salah satu anggota kami menyarankan untuk mendaftar sebagai anggota KUKM Ecobiz dan ternyata retailer tersebut juga adalah anggota KUKM Ecobiz. Di sana retailer tersebut dengan rinci menjelaskan berapa kebutuhan buah-buahan yang dibutuhkan. Informasi ini sangat berguna bagi kami sehingga kami dapat menanam komoditas selain buah-buahan sebagai ganti hasil panen buah-buahan yang berlebih.
         </p></center>
-        <center><p><b>John Smith</b> - PT LAPI ITB</p></center>
+        <center><p><b>Untung</b> - Koperasi Buah Eksotis</p></center>
         <hr>
         <div class="title">PARTNER KAMI</div>
         <a href="http://dekopinwiljabar.org/koperasi" target="blank"><img src = "/assets/logo_koperasi.png" height="110" vspace="30px" style="margin-top: 50px; margin-bottom: 100px;"></a>

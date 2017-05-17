@@ -53,7 +53,7 @@
             border-radius: 0px !important;
             padding: 20px 24px !important;
             margin-top: -8px !important;
-            width: 100% !important;
+            width: 250px !important;
             border-top-left-radius: 24px !important;
             border-bottom-left-radius: 24px !important;
             transition: 0.5s;
@@ -66,14 +66,14 @@
         .search-barx-option{
             border: none !important;
             border-radius: 0px !important;
-            margin-left: -30px !important;
+            margin-left: -70px !important;
             position: relative !important;
             height: 42px !important;
             /*padding: 9px !important;*/
             /*padding-top: 20px !important;*/
             top: -3px !important;
             width: unset !important;
-            background: #DCDCDC !important;
+            background: transparent !important;
             font-size: 15px !important;
             -webkit-border-radius: 0px !important;
         }
@@ -89,6 +89,9 @@
             border-bottom-right-radius: 24px !important;
             top: -4px;
             width: unset !important;
+        }
+        .a-footer {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -217,10 +220,10 @@
                 <div class="col-xs-4">
                     <div class="footer-sect">Site Map
                         <br>
-                        <a href="/">Home</a><br>
-                        <a href="forum">Forum</a><br>
-                        <a href="register">Daftar</a><br>
-                        <a href="login">Login</a>
+                        <a href="/" class="a-footer">Home</a><br>
+                        <a href="forum" class="a-footer">Forum</a><br>
+                        <a href="register" class="a-footer">Daftar</a><br>
+                        <a href="login" class="a-footer">Login</a>
                     </div>
                 </div>
                 <div class="col-xs-4">
@@ -236,15 +239,14 @@
                     </div>
                 </div>
                 <div class="col-xs-4">
-                    <div class="footer-sect">Fitur Utama
+                    <div class="footer-sect">Mitra Utama
                         <br>
-                        <div class="footer">
-                            Profil Pelaku Bisnis<br>
-                            Interaksi Ekosistem Bisnis<br>
-                            Forum<br>
-                            Menyerupai Facebook<br>
-                            & Kaskus
-                        </div>
+                        <a href="http://www.kemendag.go.id/" class="a-footer">Kementrian Perdagangan</a><br>
+                        <a href="http://inatrade.kemendag.go.id" class="a-footer">Inatrade</a><br>
+                        <a href="http://www.insw.go.id" class="a-footer">INSW</a><br>
+                        <a href="http://eservice.insw.go.id" class="a-footer">INTR</a><br>
+                        <a href="http://dekopinwil-jabar.blogspot.com/" class="a-footer">Dekopinwil Jabar</a><br>
+                        <a href="http://dekopinwiljabar.org/koperasi/" class="a-footer">Jaringan Usaha Koperasi</a>
                     </div>
                 </div>
             </div>

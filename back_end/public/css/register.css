@@ -17,17 +17,17 @@
   z-index: 0;
   width: 100%;
   height: 100%;
-  background-color: #00aa44;
+  background-color: #FFFFFF;
 }
 #createAccount {
   position: relative;
   left: 10%;
-  color: white;
+  color: #696969;
   z-index: 1;
   font-size: 25px;
 }
 .reg-section2 {
-  background-color:  #d5ffd5;
+  background-color:  #FFFFFF;
   max-height: 120px;
 }
 .reg-mainText {
@@ -40,10 +40,10 @@ bText {
   font-size: 50px;
 }
 .reg-section3 {
-  background-color: #8b9f8b;
+  background-color: #FFFFFF;
 }
 .reg-section1 h6, .reg-section2 h6, .reg-section4 h6, .reg-section5 h6, .reg-section3 h6 {
-  color: white;
+  color: #696969;
   margin-left: 11%;
 }
 .reg-section5 input[type=text], .reg-section5 select, .reg-section3 input[type=text], .reg-section3 select {
@@ -128,7 +128,7 @@ bText {
     border:2px solid #000000;
 }
 .reg-section5 {
-  background-color: #6bb36b;
+  background-color: #FFFFFF;
 }
 .reg-section3 textarea, .reg-section5 textarea {
   width: 60%;
@@ -141,20 +141,20 @@ bText {
     color: black;
 }
 .reg-section6 {
-  background-color: #56c356;
+  background-color: #FFFFFF;
   color: white;
 }
 .reg-section6 > input[type=submit] {
-  color: #00aa44;
+    color: #FFFFFF;
     font-size: 14px;
-    background-color: white;
+    background-color: #00aa44;
     text-decoration: none;
     padding: 10px 40px;
     margin-top: 10px;
     margin-right: 10px;
     margin-left: 10%;
     border-radius: 8px;
-    border:2px solid #FFFFFF;
+    border:2px solid #00aa44;
 }
 
 

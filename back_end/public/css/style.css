@@ -64,7 +64,7 @@ input[type=email], input[type=password], select {
 input[type=submit] {
     color: #FFFFFF;
     font-size: 14px;
-    background-color: transparent;
+    background-color: #00aa44;
     text-decoration: none;
     padding: 10px 40px;
     margin-top: 10px;
