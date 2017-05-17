@@ -132,14 +132,11 @@ button:hover {
 
 #organizationImage {
 	float:left;
-	width: 700px;
-	height: 280px;
+	/*width: 700px;*/
+	/*min-height: 450px;*/
 	color: #FFFFFF; 
 	font-size: 26px;
 	background-color: #696969;
-	/*padding-top: 20px;
-	padding-left: 30px;
-	padding-right: 20px;*/
 	text-align: left;
 	border: solid 1px #DCDCDC;
 }
