@@ -228,7 +228,7 @@
                             Jalan Ganesha No. 12<br>
                             Bandung, Jawa Barat<br>
                             40135<br>
-                            ☎ 022 - 11111
+                            ☎ (022) 2500935
                         </div>
                     </div>
                 </div>
