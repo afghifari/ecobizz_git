@@ -416,7 +416,7 @@ Route::get('/group', function () {
 });
 
 Route::get('/newgroup', function () {
-    return view('newmessage');
+    return view('newgroup');
 });
 
 Route::get('/search', 'SearchHandler@search');
