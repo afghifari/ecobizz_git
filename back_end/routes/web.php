@@ -24,16 +24,13 @@ Route::post('/import', function () {
         $user = App\User::where('email', $data->email)->first();
         if ($user)
             continue;
-
         $count++;
-        return $data;
         $user = new App\User;
         $user->name = $data->name;
         $user->email = $data->email;
         $user->password = bcrypt($data->mobile_number);
         $user->address = $data->address;
         $user->description = $data->description;
-        $user->owner = $data->owner;
         $user->organization_name = $data->organization_name;
         $user->role_id = App\Role::where('name', $data->role)->first() ? App\Role::where('name', $data->role)->first()->id : null;
         $user->website = $data->website;
