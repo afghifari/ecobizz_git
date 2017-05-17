@@ -94,6 +94,8 @@ button:hover {
 	border-left: 1px solid #DCDCDC;
 	border-right: 1px solid #DCDCDC;
 	border-top: 1px solid #DCDCDC;
+	border-radius: 10px 10px 0px 0px;
+
 }
 
 #sender {
@@ -121,11 +123,13 @@ button:hover {
 	border-left: 1px solid #DCDCDC;
 	border-right: 1px solid #DCDCDC;
 	border-bottom: 1px solid #DCDCDC;
+	border-radius: 0px 0px 10px 10px;
 }
 
 .comment {
 	width: 100%;
 	padding: 10px;
+	border-radius: 10px;
 }
 
 .link {

@@ -20,6 +20,7 @@
 			/*background: rgba(0, 0, 0, .2);*/
 			border: solid 1px rgba(0, 0, 0, .1);
 			margin-top: -1px;
+			border-radius: 10px;
 		}
 		.forum .f-header:hover{
 			border: solid 1px #00AA44;
@@ -82,11 +83,20 @@
 			padding: 5px 0;
 			margin-bottom: 5px;
 			transition: .1s;
+			border-radius: 8px;
 		}
 		.view-profile:hover{
 			background: #00AA44;
 			color: white;
 			cursor: pointer;
+		}
+		.btn-success{
+			border-radius: 5px;
+		}
+		input[type=date], input[type=number] {
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			padding: 3px;
 		}
 	</style>
 

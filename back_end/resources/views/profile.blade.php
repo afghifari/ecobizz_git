@@ -66,6 +66,7 @@
                 padding: 12px;
                 padding-bottom: 0;
                 background: rgba(220, 220, 220, 0.4);
+                border-radius: 10px;
             }
             .image-post{
                 width: 48px;
@@ -106,6 +107,7 @@
             }
             .btn-danger {
                 font-size: 12px;
+                border-radius: 10px;
             }
         </style>
         <div class="row rowx">
