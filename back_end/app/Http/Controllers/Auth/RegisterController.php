@@ -81,7 +81,7 @@ class RegisterController extends Controller
         $user->address = $data['address'];
         $user->description = $data['deskripsi'];
         $user->owner = $data['pemilik'];
-        $user->organization_name = "Organisasi milik " . $data['pemilik'];
+        $user->organization_name = $data['pemilik'];
         $user->role_id = $data['kategori'];
         $user->website = $data['web'];
         $user->mobile_number = $data['hp'];

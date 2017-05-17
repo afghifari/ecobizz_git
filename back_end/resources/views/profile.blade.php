@@ -169,20 +169,20 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="key">
-                                        <i class="fa fa-book"></i> Deskripsi
+                                        <i class="fa fa-user"></i> Nama Organisasi
                                     </div>
                                     <div class="value">
-                                        {{$user->description}}
+                                        {{ $user->organization_name }}
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="key">
-                                        <i class="fa fa-user"></i> Pemilik
+                                        <i class="fa fa-book"></i> Deskripsi
                                     </div>
                                     <div class="value">
-                                        {{ $user->owner }}
+                                        {{$user->description}}
                                     </div>
                                 </div>
                             </div>

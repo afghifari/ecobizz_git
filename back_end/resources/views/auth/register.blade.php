@@ -54,10 +54,10 @@
         <section class="reg-section5">
                 {!! Form::select('kategori', App\Role::pluck('name', 'id'), null, ['class' => 'form-control input-lg'] ) !!}
                 <h6>Silahkan pilih peran organisasi anda</h6><br>
+                <input type="text" name="pemilik" placeholder="Nama Organisasi" value="{{request()->old('pemilik')}}"></br>
+                <h6>Tuliskan nama organisasi bisnis Anda</h6><br>
                 <textarea name="deskripsi" placeholder="Deskripsi">{{request()->old('deskripsi')}}</textarea>
                 <h6>Deskripsikan bisnis yang anda jalankan secara singkat, padat, dan jelas</h6><br>
-                <input type="text" name="pemilik" placeholder="Pemilik" value="{{request()->old('pemilik')}}"></br>
-                <h6>Tuliskan nama pemilik bisnis tersebut, jika anda adalah pemiliknya maka tuliskan nama anda sendiri</h6><br>
                 <input type="url" name="web" placeholder="Website" value="{{request()->old('web')}}"></br>
                 <h6>Berikan alamat website dari bisnis Anda jika ada</h6><br>
                 <textarea name="produk" placeholder="Produk">{{request()->old('produk')}}</textarea>
