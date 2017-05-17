@@ -91,7 +91,7 @@
                         <textarea placeholder="Deskripsi" name="deskripsi">{{$user->description}}</textarea></br></br>
                         Kategori: {!! Form::select('kategori', App\Role::pluck('name', 'id'), $user->role_id, ['class' => 'form-control'] ) !!}</br>
                         Pemilik: <input type="text" name="pemilik" placeholder="Pemilik" value="{{ $user->owner }}"></br></br>
-                        Website: <input type="url" name="website" placeholder="Website" value="{{ $user->website }}"></br></br>
+                        Website: <input type="text" name="website" placeholder="Website" value="{{ $user->website }}"></br></br>
                         Kebutuhan: <input type="text" name="kebutuhan" placeholder="Kebutuhan" value="{{ $user->needs }}"></br></br>
                         Produk: <input type="text" name="produk" placeholder="Produk" value="{{ $user->products }}"></br></br>
                     </div>

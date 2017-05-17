@@ -18,7 +18,7 @@
 	<br>
 
 	<div class="row">
-		<div class="col-md-1 col-md-offset-10">
+		<div class="col-xs-1 col-xs-offset-8">
 			<button class="btn btn-success" onclick="window.location.href='/newgroup'">Grup Baru</button>
 		</div>
 		<br><br><br>
@@ -26,14 +26,6 @@
 
 	<div class="row group">
 		<div class="col-md-10 col-md-offset-1">
-			
-			<!-- JIKA TIDAK ADA GRUP -->
-			<!-- <div class="row f-header">
-				<div class="col-md-12">
-					Tidak ada grup masuk
-				</div>
-			</div> -->
-
 			<div class="row f-header">
 				<div class="col-md-10">
 					<div class="x-header">

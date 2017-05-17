@@ -1,5 +1,5 @@
 .group-section1 {
-	background: url('../assets/bg3.png') no-repeat;
+	background: white;
 	-webkit-background-size: cover;
 	-moz-background-size: contain;
 	-o-background-size: cover;
@@ -13,8 +13,15 @@
 	color: #000000;
 	z-index: 1;
 	font-size: 25px;
-	margin-top: 180px;
+	margin-top: 50px;
 	font-size: 30px;
+}
+
+@media (max-width: 500px) {
+	#group {
+		margin-left: 30px;
+		margin-bottom: -50px;
+	}
 }
 
 .group-section2 {

@@ -50,7 +50,8 @@ button:hover {
 }
 
 .section1 {
-	background: url('/assets/bg3.png') no-repeat;
+	/*background: url('/assets/bg3.png') no-repeat;*/
+	background-color: white;
 	-webkit-background-size: cover;
 	-moz-background-size: contain;
 	-o-background-size: cover;
@@ -64,8 +65,15 @@ button:hover {
 	color: #000000;
 	z-index: 1;
 	font-size: 25px;
-	margin-top: 180px;
+	margin-top: 50px;
 	font-size: 30px;
+}
+
+@media (max-width: 500px) {
+	#profile {
+		margin-left: 30px;
+		margin-bottom: -50px;
+	}
 }
 
 #title {

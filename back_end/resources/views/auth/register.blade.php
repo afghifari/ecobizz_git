@@ -58,7 +58,7 @@
                 <h6>Tuliskan nama organisasi bisnis Anda</h6><br>
                 <textarea name="deskripsi" placeholder="Deskripsi">{{request()->old('deskripsi')}}</textarea>
                 <h6>Deskripsikan bisnis yang anda jalankan secara singkat, padat, dan jelas</h6><br>
-                <input type="url" name="web" placeholder="Website" value="{{request()->old('web')}}"></br>
+                <input type="text" name="web" placeholder="Website" value="{{request()->old('web')}}"></br>
                 <h6>Berikan alamat website dari bisnis Anda jika ada</h6><br>
                 <textarea name="produk" placeholder="Produk">{{request()->old('produk')}}</textarea>
                 <h6>Tuliskan produk apa yang bisnis Anda sediakan</h6><br>
