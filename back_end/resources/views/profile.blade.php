@@ -42,6 +42,8 @@
         <style type="text/css">
             .left-section{
                 text-align: center;
+                border: 1px solid #DCDCDC;
+                border-radius: 3px;
             }
             .row{
                 padding: 0;
@@ -66,7 +68,7 @@
                 padding: 12px;
                 padding-bottom: 0;
                 background: rgba(220, 220, 220, 0.4);
-                border-radius: 10px;
+                border-radius: 3px;
             }
             .image-post{
                 width: 48px;
@@ -107,7 +109,7 @@
             }
             .btn-danger {
                 font-size: 12px;
-                border-radius: 10px;
+                border-radius: 3px;
             }
         </style>
         <div class="row rowx">

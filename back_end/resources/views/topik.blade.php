@@ -20,7 +20,7 @@
 			border: solid 1px rgba(0, 0, 0, .1);
 			margin-top: -1px;
 			margin-bottom: 8px;
-			border-radius: 10px;
+			border-radius: 3px;
 			
 		}
 		.forum .f-header:hover{
@@ -41,7 +41,7 @@
 			background: #00AA44;
 			color: white;
 			font-weight: bold;
-			border-radius: 10px;
+			border-radius: 3px;
 		}
 		.search-section{
 			margin-top: 30px;

@@ -39,8 +39,8 @@
 	/*background: rgba(0, 0, 0, .2);*/
 	border: solid 1px rgba(0, 0, 0, .1);
 	margin-top: -1px;
-	border-radius: 10px;
-	margin-bottom: 10px;
+	border-radius: 3px;
+	margin-bottom: 5px;
 }
 .message .f-header .x-header a{
 	font-size: 1.2em;
@@ -65,10 +65,10 @@
 .view-profile{
 	text-align: center;
 	background: rgba(0, 0, 0, .1);
-	padding: 5px 0;
+	padding: 5px 2px;
 	margin-bottom: 5px;
 	transition: .1s;
-	border-radius: 10px;
+	border-radius: 3px;
 }
 .view-profile:hover{
 	background: #00AA44;
@@ -76,5 +76,5 @@
 	cursor: pointer;
 }
 .btn-success {
-	border-radius: 10px;
+	border-radius: 3px;
 }

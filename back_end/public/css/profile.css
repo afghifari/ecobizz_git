@@ -127,7 +127,7 @@ button:hover {
 	padding: 20px;
 	text-align: left;
 	border: solid 1px #DCDCDC;
-	border-radius: 10px 10px 0px 0px;
+	border-radius: 3px 3px 0px 0px;
 }
 
 #organizationImage {
@@ -151,7 +151,7 @@ button:hover {
 	padding: 20px;
 	text-align: left;
 	border: solid 1px #DCDCDC;
-	border-radius: 0px 0px 10px 10px;
+	border-radius: 0px 0px 3px 3px;
 
 }
 
@@ -166,7 +166,7 @@ textarea {
 	resize: none;
 	border: solid 1px #DCDCDC;
 	padding: 2px;
-	border-radius: 10px;
+	border-radius: 3px;
 }
 
 .button2 {
