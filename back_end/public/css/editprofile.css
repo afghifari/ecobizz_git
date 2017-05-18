@@ -129,11 +129,13 @@ input[type=submit]:hover {
 #profile {
 	position: relative;
 	margin-left: 100px;
-	color: #000000;
+	color: #696969;
 	z-index: 1;
 	font-size: 25px;
 	margin-top: 50px;
 	font-size: 30px;
+	font-weight: bold;
+	
 }
 
 @media (max-width: 500px) {

@@ -5,7 +5,7 @@
 
 	<section class="message-section1">
 		<div id="message">
-			Albert
+			{{$friend->name}}
 		</div>
 	</section>
 

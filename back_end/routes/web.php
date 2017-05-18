@@ -166,6 +166,7 @@ Route::post('user/{id}/edit', function($id) {
     $user->whatsapp_number = $data['whatsapp'] ? $data['whatsapp'] : "";
     $user->facebook_id = $data['facebook'] ? $data['facebook'] : "";
     $user->twitter_id = $data['twitter'] ? $data['twitter'] : "";
+    $user->products = $data['produk'] ? $data['produk'] : "";
 
     $user->save();
 
@@ -401,7 +402,7 @@ Route::get('/message/{id}', function ($id) {
     $friend = App\User::find($id);
     $messages = Auth::user()->getMessages($friend)->get();
 
-    return view('message', ['messages' => $messages, "target" => $friend]);
+    return view('message', ['messages' => $messages, "target" => $friend, 'friend' => $friend]);
 });
 
 Route::get('/newmessage', function () {
@@ -440,6 +441,7 @@ Route::post('send-message', function() {
     $message->message = request()->pesan;
 
     $message->save();
+    $user = Auth::user();
 
     return redirect('message/'. request()->target_id)->with(['success' => 1, 'message' => "Pengiriman Pesan Berhasil"]);
 });
