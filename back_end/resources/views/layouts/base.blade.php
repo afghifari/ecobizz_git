@@ -80,6 +80,18 @@
                 top: -1px !important;
             }
         }
+        @media only screen and (max-width: 766px) {
+            
+            .collapsing ul li a, .in ul li a {
+                color: #FFFFFF!important;
+            }
+            .collapsing ul li a:hover, .in ul li a:hover {
+                color: #000000 !important;
+            }
+            .collapsing ul li a:focus, .in ul li a:focus {
+                color: #000000 !important;
+            }
+        }
 
         .a-footer {
             text-decoration: underline;
