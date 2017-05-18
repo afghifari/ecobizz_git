@@ -35,8 +35,6 @@
             margin: 0px !important;
             border: solid 1px rgba(0, 0, 0, .1) !important;
             border-radius: 0px !important;
-            padding: 20px 24px !important;
-            margin-top: -8px !important;
             width: 100% !important;
             border-top-left-radius: 24px !important;
             border-bottom-left-radius: 24px !important;
@@ -47,10 +45,6 @@
             border-radius: 0px !important;
             border: none !important;
             margin-left: -20px !important;
-            margin-right: -2px !important;
-            position: relative !important;
-            height: 42px !important;
-            top: -3px !important;
             width: unset !important;
             background-color: white !important;
             font-size: 15px !important;
@@ -63,22 +57,11 @@
             border: solid 1px rgba(0, 0, 0, .1) !important;
             border-radius: 0px !important;
             position: relative;
-            padding: 10px !important;
-            margin-left: -15px !important;
+            margin-left: -2px !important;
             width: 24px !important;
             border-top-right-radius: 24px !important;
             border-bottom-right-radius: 24px !important;
-            top: -4px;
             width: unset !important;
-        }
-
-        @media (max-width: 500px) {
-            .search-barx-option {
-                top: 0px !important;
-            }
-            .search-barx-submit {
-                top: -1px !important;
-            }
         }
         @media only screen and (max-width: 766px) {
             
@@ -122,25 +105,23 @@
                 <!-- Search Bar -->
                 @if (\Auth::user())
                 <form class="navbar-form navbar-left" action="/search" method="GET">
-                    <ul class="list-inline">
-                    <li><div class="form-group">
+                    <div class="input-group">
                         <input type="text" name="q" class="form-control search-barx" placeholder="Cari user atau topik...">
-                    </div></li>
-                    <li><select class="search-barx-option" name="type">
-                        <option value="user">
-                            User
-                        </option>
-                        <option value="topik">
-                            Topik
-                        </option>
-                        <option value="grup">
-                            Grup
-                        </option>
-                    </select></li>
-                    <li><button type="submit" class="btn btn-default search-barx-submit">
-                        <i class="fa fa-search"></i>
-                    </button></li>
-                    </ul>
+                        <span class="input-group-addon" style="width:0px; padding-left:0px; padding-right:0px; border:none;"></span>
+                        <select class="form-control search-barx-option" name="type">
+                            <option value="user">
+                                User
+                            </option>
+                            <option value="topik">
+                                Topik
+                            </option>
+                            <option value="grup">
+                                Grup
+                            </option>
+                        </select>
+                        <span class="input-group-addon" style="width:0px; padding-left:0px; padding-right:0px; border:none;"></span>
+                        <button class="form-control btn btn-default search-barx-submit" type="submit"><i class="fa fa-search"></i></button>
+                    </div>
                 </form>
                 @endif
                 <!-- Right Side Of Navbar -->
