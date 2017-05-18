@@ -1,13 +1,7 @@
 @extends("layouts.app")
 
 @section('content')
-    
-    <style type="text/css">
-        .form-control {
-            color: white;
-        }
-    </style>
-    
+
     <form class="form-horizontal" role="form" method="POST" action="{{ route('register') }}">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <section class="reg-section1">
@@ -58,7 +52,7 @@
         </section>
 
         <section class="reg-section5">
-                <div style="color: white;">{!! Form::select('kategori', App\Role::pluck('name', 'id'), null, ['class' => 'form-control input-lg'] ) !!}</div>
+                {!! Form::select('kategori', App\Role::pluck('name', 'id'), null, ['class' => 'form-control', 'style' => 'color: #696969; font-size: 14px;'] ) !!}
                 <h6>Silahkan pilih peran organisasi atau bisnis anda</h6>
                 <input type="text" name="pemilik" placeholder="Nama Organisasi" value="{{request()->old('pemilik')}}"></br>
                 <h6>Tuliskan nama organisasi atau bisnis Anda</h6>

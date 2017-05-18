@@ -103,6 +103,7 @@
             .title-post-section{
                 border: none;
                 background: unset;
+                color: #00aa44;
             }
             .top-buffer{
                 margin-top: 60px;
@@ -120,7 +121,7 @@
                         <img src="{{$user->profile_picture}}" height="120px" style="margin-top: 60px; margin-bottom: 60px;">
                     </div>
                     <div>
-                        {{ $user->name }}
+                        <b>{{ $user->name }}</b>
                     </div>
                     <div style="font-size: 14px;">
                         <div>
@@ -136,7 +137,7 @@
                     <br>
                     <div style="font-size: 15px;">
                         <div>
-                            Media Sosial
+                            <b>Media Sosial</b>
                         </div>
                         <div style="line-height: 30px;">
                             <img src="/assets/whatsapp.png" width="20"> {{$user->whatsapp_number}}<br>
@@ -154,7 +155,7 @@
                     <div class="the-post row" style="background: unset; border: none; padding: 0;">
                         <div class="col-md-12" style="padding: 0">
                             <div id="organizationTitle" style="width: 100%;">
-                                {{$user->organization_name}}
+                                <b>{{$user->organization_name}}</b>
                             </div>
 
                             <div id="organizationImage" style="width: 100%;">
@@ -241,7 +242,7 @@
                     <hr style="border: solid 1px rgba(0, 0, 0, .1); margin: 0; margin-top: 32px; width: 100%; max-width: unset;" />
                     <div class="the-post row title-post-section">
                         <div class="col-md-12" style="padding: 0">
-                            TIMELINE
+                            <b>TIMELINE</b>
                         </div>
                     </div>
 

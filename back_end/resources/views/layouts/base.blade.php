@@ -108,7 +108,7 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
 
                 <!-- Search Bar -->
-                {{-- @if (\Auth::user() && \Auth::user()->verified) --}}
+                @if (\Auth::user())
                 <form class="navbar-form navbar-left" action="/search" method="GET">
                     <ul class="list-inline">
                     <li><div class="form-group">
@@ -130,7 +130,7 @@
                     </button></li>
                     </ul>
                 </form>
-                {{-- @endif --}}
+                @endif
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
