@@ -41,7 +41,7 @@
 					</div>
 					<div class="col-md-9">
 						<div class="x-header">
-							<a href="#"><b>{{$chat['user']->name}}</b></a>
+							<a href="/message/{{$chat['user']->id}}"><b>{{$chat['user']->name}}</b></a>
 						</div>
 						<div class="x-sender">
 							<!-- preview --> {{$chat['message']->message}}
